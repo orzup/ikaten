@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		B15A909AA67ED85BA717F7E6 /* Pods_ikaten.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C867FD8CEF3CED506E69059A /* Pods_ikaten.framework */; };
 		C4A9AFEB1C8ADBDB00F8AA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9AFEA1C8ADBDB00F8AA45 /* AppDelegate.swift */; };
-		C4A9AFED1C8ADBDB00F8AA45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9AFEC1C8ADBDB00F8AA45 /* ViewController.swift */; };
 		C4A9AFF01C8ADBDB00F8AA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A9AFEE1C8ADBDB00F8AA45 /* Main.storyboard */; };
 		C4A9AFF21C8ADBDB00F8AA45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A9AFF11C8ADBDB00F8AA45 /* Assets.xcassets */; };
 		C4A9AFF51C8ADBDB00F8AA45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A9AFF31C8ADBDB00F8AA45 /* LaunchScreen.storyboard */; };
 		C4A9B0001C8ADBDB00F8AA45 /* ikatenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9AFFF1C8ADBDB00F8AA45 /* ikatenTests.swift */; };
 		C4A9B00B1C8ADBDB00F8AA45 /* ikatenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9B00A1C8ADBDB00F8AA45 /* ikatenUITests.swift */; };
+		C4FC6A861C8B01D50023A85A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A851C8B01D50023A85A /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +37,7 @@
 /* Begin PBXFileReference section */
 		B14EA4370DA8B3D025055265 /* Pods-ikaten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ikaten.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ikaten/Pods-ikaten.debug.xcconfig"; sourceTree = "<group>"; };
 		C4A9AFE71C8ADBDB00F8AA45 /* ikaten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ikaten.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4A9AFEA1C8ADBDB00F8AA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4A9AFEC1C8ADBDB00F8AA45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C4A9AFEA1C8ADBDB00F8AA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
 		C4A9AFEF1C8ADBDB00F8AA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4A9AFF11C8ADBDB00F8AA45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4A9AFF41C8ADBDB00F8AA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		C4A9B0061C8ADBDB00F8AA45 /* ikatenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ikatenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A9B00A1C8ADBDB00F8AA45 /* ikatenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ikatenUITests.swift; sourceTree = "<group>"; };
 		C4A9B00C1C8ADBDB00F8AA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4FC6A851C8B01D50023A85A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Classes/Controllers/ViewController.swift; sourceTree = "<group>"; };
 		C867FD8CEF3CED506E69059A /* Pods_ikaten.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ikaten.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD469AA50F2B35819609DF3B /* Pods-ikaten.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ikaten.release.xcconfig"; path = "Pods/Target Support Files/Pods-ikaten/Pods-ikaten.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,8 +121,8 @@
 		C4A9AFE91C8ADBDB00F8AA45 /* ikaten */ = {
 			isa = PBXGroup;
 			children = (
+				C4FC6A821C8B01B00023A85A /* Classes */,
 				C4A9AFEA1C8ADBDB00F8AA45 /* AppDelegate.swift */,
-				C4A9AFEC1C8ADBDB00F8AA45 /* ViewController.swift */,
 				C4A9AFEE1C8ADBDB00F8AA45 /* Main.storyboard */,
 				C4A9AFF11C8ADBDB00F8AA45 /* Assets.xcassets */,
 				C4A9AFF31C8ADBDB00F8AA45 /* LaunchScreen.storyboard */,
@@ -147,6 +147,30 @@
 				C4A9B00C1C8ADBDB00F8AA45 /* Info.plist */,
 			);
 			path = ikatenUITests;
+			sourceTree = "<group>";
+		};
+		C4FC6A821C8B01B00023A85A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C4FC6A831C8B01BB0023A85A /* Models */,
+				C4FC6A841C8B01C30023A85A /* Controllers */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		C4FC6A831C8B01BB0023A85A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C4FC6A841C8B01C30023A85A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C4FC6A851C8B01D50023A85A /* ViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,7 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4A9AFED1C8ADBDB00F8AA45 /* ViewController.swift in Sources */,
+				C4FC6A861C8B01D50023A85A /* ViewController.swift in Sources */,
 				C4A9AFEB1C8ADBDB00F8AA45 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
