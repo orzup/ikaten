@@ -61,3 +61,8 @@ Carthage/Build
 
 fastlane/report.xml
 fastlane/screenshots
+
+# bundler state
+/.bundle
+/vendor/bundle/
+/vendor/ruby/
