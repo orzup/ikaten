@@ -1,10 +1,16 @@
 PODS:
   - Alamofire (3.2.1)
+  - KeychainAccess (2.3.3)
+  - SVProgressHUD (1.1.3)
 
 DEPENDENCIES:
   - Alamofire
+  - KeychainAccess
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
+  KeychainAccess: 9b7e49e48277e329b1b3195e54697ed313d30acf
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
 COCOAPODS: 0.39.0

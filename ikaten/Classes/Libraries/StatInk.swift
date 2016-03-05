@@ -7,6 +7,8 @@
 //
 
 import Alamofire
+import KeychainAccess
+import SVProgressHUD
 
 class StatInk {
     func createButtle(
@@ -22,5 +24,27 @@ class StatInk {
                         print(error)
                 }
             }
+    }
+    
+    func checkAPIKey(
+        APIKey: String,
+        onSuccess: () -> Void,
+        onFailure: () -> Void
+        ) -> Void {
+        Alamofire.request(Router.CheckAPIKey(APIKey)).responseJSON { (response) -> Void in
+            switch response.result {
+            case .Success(let data):
+                let value: AnyObject? = data["error"]
+                if value != nil {
+                    onFailure()
+                } else {
+                    let keychain = Keychain(service: NSBundle.mainBundle().bundleIdentifier!)
+                    keychain["APIKey"] = APIKey
+                    onSuccess()
+                }
+            case .Failure:
+                onFailure()
+            }
+        }
     }
 }
