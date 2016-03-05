@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B15A909AA67ED85BA717F7E6 /* Pods_ikaten.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C867FD8CEF3CED506E69059A /* Pods_ikaten.framework */; };
+		C40248EC1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */; };
+		C40248ED1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */; };
+		C40248EF1C8B3B55007A3EF9 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EE1C8B3B55007A3EF9 /* Battle.swift */; };
+		C40248F01C8B3B55007A3EF9 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EE1C8B3B55007A3EF9 /* Battle.swift */; };
+		C40248F21C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */; };
+		C40248F31C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */; };
 		C4A9AFEB1C8ADBDB00F8AA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9AFEA1C8ADBDB00F8AA45 /* AppDelegate.swift */; };
 		C4A9AFF01C8ADBDB00F8AA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A9AFEE1C8ADBDB00F8AA45 /* Main.storyboard */; };
 		C4A9AFF21C8ADBDB00F8AA45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A9AFF11C8ADBDB00F8AA45 /* Assets.xcassets */; };
@@ -41,6 +47,9 @@
 
 /* Begin PBXFileReference section */
 		B14EA4370DA8B3D025055265 /* Pods-ikaten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ikaten.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ikaten/Pods-ikaten.debug.xcconfig"; sourceTree = "<group>"; };
+		C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreparationViewController.swift; path = Classes/Controllers/PreparationViewController.swift; sourceTree = "<group>"; };
+		C40248EE1C8B3B55007A3EF9 /* Battle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Battle.swift; path = Classes/Models/Battle.swift; sourceTree = "<group>"; };
+		C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateButtleViewController.swift; path = Classes/Controllers/CreateButtleViewController.swift; sourceTree = "<group>"; };
 		C4A9AFE71C8ADBDB00F8AA45 /* ikaten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ikaten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A9AFEA1C8ADBDB00F8AA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
 		C4A9AFEF1C8ADBDB00F8AA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -171,6 +180,7 @@
 		C4FC6A831C8B01BB0023A85A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C40248EE1C8B3B55007A3EF9 /* Battle.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -179,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				C4FC6A851C8B01D50023A85A /* ViewController.swift */,
+				C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */,
+				C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -384,9 +396,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4FC6A861C8B01D50023A85A /* ViewController.swift in Sources */,
+				C40248EC1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */,
 				C4FC6A881C8B11C70023A85A /* Router.swift in Sources */,
 				C4FC6A8C1C8B19BD0023A85A /* StatInk.swift in Sources */,
 				C4A9AFEB1C8ADBDB00F8AA45 /* AppDelegate.swift in Sources */,
+				C40248F21C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */,
+				C40248EF1C8B3B55007A3EF9 /* Battle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,9 +410,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4FC6A8F1C8B1F370023A85A /* StatInkTests.swift in Sources */,
+				C40248ED1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */,
 				C4FC6A8A1C8B18D40023A85A /* Router.swift in Sources */,
 				C4FC6A901C8B1F510023A85A /* StatInk.swift in Sources */,
 				C4A9B0001C8ADBDB00F8AA45 /* ikatenTests.swift in Sources */,
+				C40248F31C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */,
+				C40248F01C8B3B55007A3EF9 /* Battle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

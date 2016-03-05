@@ -12,7 +12,7 @@ enum Router: URLRequestConvertible {
     static let baseURLString = "https://stat.ink/api/v1"
     static var OAuthToken: String?
 
-    case CreateBattle([String: AnyObject])
+    case CreateBattle(Battle)
 
     var method: Alamofire.Method {
         switch self {
@@ -34,7 +34,10 @@ enum Router: URLRequestConvertible {
         mutableURLRequest.HTTPMethod = method.rawValue
 
         switch self {
-        case .CreateBattle(let params):
+        case .CreateBattle(let battle):
+            var params = battle.decode()
+            params["apikey"] = ""
+            params["test"]   = "dry_run"
             return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: params).0
         }
     }
