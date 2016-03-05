@@ -7,18 +7,24 @@ class SessionViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         if Keychain()[string: "APIKey"] != nil {
-            self.performSegueWithIdentifier("toLobbyViewController",sender: nil)
+            goToLobbyViewController()
         }
     }
     
     @IBAction func touchUpInsideSubmitButton(sender: AnyObject) {
         SVProgressHUD.show()
+        checkAPIKey()
+    }
+    
+    private func goToLobbyViewController() {
+        performSegueWithIdentifier("toLobbyViewController", sender: nil)
+    }
+    
+    private func checkAPIKey() {
         StatInk().checkAPIKey(self.APIKeyTextField.text!,
             onSuccess: { () -> Void in
-                let keychain = Keychain(service: NSBundle.mainBundle().bundleIdentifier!)
-                keychain["APIKey"] = self.APIKeyTextField.text
                 SVProgressHUD.dismiss()
-                self.performSegueWithIdentifier("toLobbyViewController", sender: nil)
+                self.goToLobbyViewController()
             }) { (errorResponse) -> Void in
                 SVProgressHUD.showErrorWithStatus("失敗")
         }

@@ -44,7 +44,6 @@ enum Router: URLRequestConvertible {
         case .CheckAPIKey(let APIKey):
             let params = ["apikey": APIKey, "test": "dry_run"]
             return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: params).0
-
         }
     }
 }

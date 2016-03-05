@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import KeychainAccess
 import SVProgressHUD
 
 class StatInk {
@@ -37,11 +38,12 @@ class StatInk {
                 if value != nil {
                     onFailure()
                 } else {
+                    let keychain = Keychain(service: NSBundle.mainBundle().bundleIdentifier!)
+                    keychain["APIKey"] = APIKey
                     onSuccess()
                 }
-            case .Failure(let error):
-                SVProgressHUD.dismiss()
-                print(error)
+            case .Failure:
+                onFailure()
             }
         }
     }
