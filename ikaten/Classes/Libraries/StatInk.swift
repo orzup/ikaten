@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import SVProgressHUD
 
 class StatInk {
     func createButtle(
@@ -22,5 +23,26 @@ class StatInk {
                         print(error)
                 }
             }
+    }
+    
+    func checkAPIKey(
+        APIKey: String,
+        onSuccess: () -> Void,
+        onFailure: () -> Void
+        ) -> Void {
+        Alamofire.request(Router.CheckAPIKey(APIKey)).responseJSON { (response) -> Void in
+            switch response.result {
+            case .Success(let data):
+                let value: AnyObject? = data["error"]
+                if value != nil {
+                    onFailure()
+                } else {
+                    onSuccess()
+                }
+            case .Failure(let error):
+                SVProgressHUD.dismiss()
+                print(error)
+            }
+        }
     }
 }

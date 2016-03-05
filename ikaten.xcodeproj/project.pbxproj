@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		466595DE1C8B357500258E42 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466595DD1C8B357500258E42 /* SessionViewController.swift */; };
+		466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466595DD1C8B357500258E42 /* SessionViewController.swift */; };
 		B15A909AA67ED85BA717F7E6 /* Pods_ikaten.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C867FD8CEF3CED506E69059A /* Pods_ikaten.framework */; };
 		C4A9AFEB1C8ADBDB00F8AA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9AFEA1C8ADBDB00F8AA45 /* AppDelegate.swift */; };
 		C4A9AFF01C8ADBDB00F8AA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A9AFEE1C8ADBDB00F8AA45 /* Main.storyboard */; };
@@ -40,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		466595DD1C8B357500258E42 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionViewController.swift; path = Classes/Controllers/SessionViewController.swift; sourceTree = "<group>"; };
 		B14EA4370DA8B3D025055265 /* Pods-ikaten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ikaten.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ikaten/Pods-ikaten.debug.xcconfig"; sourceTree = "<group>"; };
 		C4A9AFE71C8ADBDB00F8AA45 /* ikaten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ikaten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A9AFEA1C8ADBDB00F8AA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				C4FC6A851C8B01D50023A85A /* ViewController.swift */,
+				466595DD1C8B357500258E42 /* SessionViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -386,6 +390,7 @@
 				C4FC6A861C8B01D50023A85A /* ViewController.swift in Sources */,
 				C4FC6A881C8B11C70023A85A /* Router.swift in Sources */,
 				C4FC6A8C1C8B19BD0023A85A /* StatInk.swift in Sources */,
+				466595DE1C8B357500258E42 /* SessionViewController.swift in Sources */,
 				C4A9AFEB1C8ADBDB00F8AA45 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +402,7 @@
 				C4FC6A8F1C8B1F370023A85A /* StatInkTests.swift in Sources */,
 				C4FC6A8A1C8B18D40023A85A /* Router.swift in Sources */,
 				C4FC6A901C8B1F510023A85A /* StatInk.swift in Sources */,
+				466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */,
 				C4A9B0001C8ADBDB00F8AA45 /* ikatenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

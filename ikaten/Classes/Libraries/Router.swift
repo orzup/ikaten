@@ -13,10 +13,13 @@ enum Router: URLRequestConvertible {
     static var OAuthToken: String?
 
     case CreateBattle([String: AnyObject])
+    case CheckAPIKey(String)
 
     var method: Alamofire.Method {
         switch self {
         case .CreateBattle:
+            return .POST
+        case .CheckAPIKey:
             return .POST
         }
     }
@@ -24,6 +27,8 @@ enum Router: URLRequestConvertible {
     var path: String {
         switch self {
         case .CreateBattle:
+            return "/battle"
+        case .CheckAPIKey:
             return "/battle"
         }
     }
@@ -36,6 +41,10 @@ enum Router: URLRequestConvertible {
         switch self {
         case .CreateBattle(let params):
             return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: params).0
+        case .CheckAPIKey(let APIKey):
+            let params = ["apikey": APIKey, "test": "dry_run"]
+            return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: params).0
+
         }
     }
 }
