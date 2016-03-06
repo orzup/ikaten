@@ -8,7 +8,7 @@ class PreparationViewController: UITableViewController {
         }
     }
 
-    func params() -> Dictionary<String, AnyObject> {
+    private func params() -> Dictionary<String, AnyObject> {
         return [
             "lobby":    "squad_2",
             "rule":     "area",
