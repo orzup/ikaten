@@ -10,12 +10,12 @@
 		466595DE1C8B357500258E42 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466595DD1C8B357500258E42 /* SessionViewController.swift */; };
 		466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466595DD1C8B357500258E42 /* SessionViewController.swift */; };
 		B15A909AA67ED85BA717F7E6 /* Pods_ikaten.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C867FD8CEF3CED506E69059A /* Pods_ikaten.framework */; };
-		C40248EC1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */; };
 		C40248ED1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */; };
 		C40248EF1C8B3B55007A3EF9 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EE1C8B3B55007A3EF9 /* Battle.swift */; };
 		C40248F01C8B3B55007A3EF9 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EE1C8B3B55007A3EF9 /* Battle.swift */; };
 		C40248F21C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */; };
 		C40248F31C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */; };
+		C40248F71C8C2007007A3EF9 /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */; };
 		C4A9AFEB1C8ADBDB00F8AA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9AFEA1C8ADBDB00F8AA45 /* AppDelegate.swift */; };
 		C4A9AFF01C8ADBDB00F8AA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A9AFEE1C8ADBDB00F8AA45 /* Main.storyboard */; };
 		C4A9AFF21C8ADBDB00F8AA45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A9AFF11C8ADBDB00F8AA45 /* Assets.xcassets */; };
@@ -401,6 +401,7 @@
 				466595DE1C8B357500258E42 /* SessionViewController.swift in Sources */,
 				C4A9AFEB1C8ADBDB00F8AA45 /* AppDelegate.swift in Sources */,
 				C40248F21C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */,
+				C40248F71C8C2007007A3EF9 /* PreparationViewController.swift in Sources */,
 				C40248EF1C8B3B55007A3EF9 /* Battle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
