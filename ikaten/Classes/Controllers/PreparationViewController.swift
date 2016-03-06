@@ -4,7 +4,7 @@ class PreparationViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toCreateBattleView" {
             let nextViewController = segue.destinationViewController as! CreateButtleViewController
-            nextViewController.battle = Battle(data: params())
+            nextViewController.params = params()
         }
     }
 

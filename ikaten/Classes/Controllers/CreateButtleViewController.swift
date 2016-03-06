@@ -2,7 +2,7 @@ import UIKit
 import SVProgressHUD
 
 class CreateButtleViewController: UIViewController {
-    var battle: Battle!
+    var params: Dictionary<String, AnyObject>!
 
     @IBAction func touchUpInsideNextBattleButton(sender: AnyObject) {
         createButtle()
@@ -10,9 +10,9 @@ class CreateButtleViewController: UIViewController {
 
     private func createButtle() {
         SVProgressHUD.show()
-        setButtle()
+        setParams()
 
-        StatInk().createButtle(battle,
+        StatInk().createButtle(Battle(data: params),
             onSuccess: { (response) -> Void in
                 SVProgressHUD.showSuccessWithStatus("キロク OK!")
             }, onFailure: { (errorResponse) -> Void in
@@ -20,12 +20,12 @@ class CreateButtleViewController: UIViewController {
         })
     }
 
-    private func setButtle() {
-        battle.rankAfter    = ""
-        battle.rankExpAfter = 0
-        battle.result       = ""
-        battle.kill         = 0
-        battle.death        = 0
-        battle.knockOut     = false
+    private func setParams() {
+        params["rankAfter"]    = ""
+        params["rankExpAfter"] = 0
+        params["result"]       = ""
+        params["kill"]         = 0
+        params["death"]        = 0
+        params["knockOut"]     = false
     }
 }
