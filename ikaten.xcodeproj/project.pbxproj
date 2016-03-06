@@ -7,14 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		466595DE1C8B357500258E42 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466595DD1C8B357500258E42 /* SessionViewController.swift */; };
+		466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466595DD1C8B357500258E42 /* SessionViewController.swift */; };
 		B15A909AA67ED85BA717F7E6 /* Pods_ikaten.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C867FD8CEF3CED506E69059A /* Pods_ikaten.framework */; };
+		C40248ED1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */; };
+		C40248EF1C8B3B55007A3EF9 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EE1C8B3B55007A3EF9 /* Battle.swift */; };
+		C40248F01C8B3B55007A3EF9 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EE1C8B3B55007A3EF9 /* Battle.swift */; };
+		C40248F21C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */; };
+		C40248F31C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */; };
+		C40248F71C8C2007007A3EF9 /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */; };
+		C47C68881C8C5EEF003FADF7 /* ikamodoki.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C47C68871C8C5EEF003FADF7 /* ikamodoki.ttf */; };
 		C4A9AFEB1C8ADBDB00F8AA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9AFEA1C8ADBDB00F8AA45 /* AppDelegate.swift */; };
 		C4A9AFF01C8ADBDB00F8AA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A9AFEE1C8ADBDB00F8AA45 /* Main.storyboard */; };
 		C4A9AFF21C8ADBDB00F8AA45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A9AFF11C8ADBDB00F8AA45 /* Assets.xcassets */; };
 		C4A9AFF51C8ADBDB00F8AA45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A9AFF31C8ADBDB00F8AA45 /* LaunchScreen.storyboard */; };
 		C4A9B0001C8ADBDB00F8AA45 /* ikatenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9AFFF1C8ADBDB00F8AA45 /* ikatenTests.swift */; };
 		C4A9B00B1C8ADBDB00F8AA45 /* ikatenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9B00A1C8ADBDB00F8AA45 /* ikatenUITests.swift */; };
-		C4FC6A861C8B01D50023A85A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A851C8B01D50023A85A /* ViewController.swift */; };
+		C4AC83B61C8C5908006DF92C /* RoundedCornersButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC83B51C8C5908006DF92C /* RoundedCornersButton.swift */; };
+		C4FC6A881C8B11C70023A85A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A871C8B11C70023A85A /* Router.swift */; };
+		C4FC6A8A1C8B18D40023A85A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A871C8B11C70023A85A /* Router.swift */; };
+		C4FC6A8C1C8B19BD0023A85A /* StatInk.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A8B1C8B19BD0023A85A /* StatInk.swift */; };
+		C4FC6A8F1C8B1F370023A85A /* StatInkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A8E1C8B1F370023A85A /* StatInkTests.swift */; };
+		C4FC6A901C8B1F510023A85A /* StatInk.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A8B1C8B19BD0023A85A /* StatInk.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		466595DD1C8B357500258E42 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionViewController.swift; path = Classes/Controllers/SessionViewController.swift; sourceTree = "<group>"; };
 		B14EA4370DA8B3D025055265 /* Pods-ikaten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ikaten.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ikaten/Pods-ikaten.debug.xcconfig"; sourceTree = "<group>"; };
+		C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreparationViewController.swift; path = Classes/Controllers/PreparationViewController.swift; sourceTree = "<group>"; };
+		C40248EE1C8B3B55007A3EF9 /* Battle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Battle.swift; path = Classes/Models/Battle.swift; sourceTree = "<group>"; };
+		C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateButtleViewController.swift; path = Classes/Controllers/CreateButtleViewController.swift; sourceTree = "<group>"; };
+		C47C68871C8C5EEF003FADF7 /* ikamodoki.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ikamodoki.ttf; path = OtherFiles/ikamodoki.ttf; sourceTree = "<group>"; };
 		C4A9AFE71C8ADBDB00F8AA45 /* ikaten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ikaten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A9AFEA1C8ADBDB00F8AA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
 		C4A9AFEF1C8ADBDB00F8AA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +67,10 @@
 		C4A9B0061C8ADBDB00F8AA45 /* ikatenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ikatenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A9B00A1C8ADBDB00F8AA45 /* ikatenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ikatenUITests.swift; sourceTree = "<group>"; };
 		C4A9B00C1C8ADBDB00F8AA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4FC6A851C8B01D50023A85A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Classes/Controllers/ViewController.swift; sourceTree = "<group>"; };
+		C4AC83B51C8C5908006DF92C /* RoundedCornersButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedCornersButton.swift; path = Classes/Views/RoundedCornersButton.swift; sourceTree = "<group>"; };
+		C4FC6A871C8B11C70023A85A /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Classes/Libraries/Router.swift; sourceTree = "<group>"; };
+		C4FC6A8B1C8B19BD0023A85A /* StatInk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatInk.swift; path = Classes/Libraries/StatInk.swift; sourceTree = "<group>"; };
+		C4FC6A8E1C8B1F370023A85A /* StatInkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatInkTests.swift; path = Libraries/StatInkTests.swift; sourceTree = "<group>"; };
 		C867FD8CEF3CED506E69059A /* Pods_ikaten.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ikaten.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD469AA50F2B35819609DF3B /* Pods-ikaten.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ikaten.release.xcconfig"; path = "Pods/Target Support Files/Pods-ikaten/Pods-ikaten.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +118,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C47C68861C8C5EB9003FADF7 /* OtherFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C47C68871C8C5EEF003FADF7 /* ikamodoki.ttf */,
+			);
+			name = OtherFiles;
+			sourceTree = "<group>";
+		};
 		C4A9AFDE1C8ADBDB00F8AA45 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				C4FC6A821C8B01B00023A85A /* Classes */,
+				C47C68861C8C5EB9003FADF7 /* OtherFiles */,
 				C4A9AFEA1C8ADBDB00F8AA45 /* AppDelegate.swift */,
 				C4A9AFEE1C8ADBDB00F8AA45 /* Main.storyboard */,
 				C4A9AFF11C8ADBDB00F8AA45 /* Assets.xcassets */,
@@ -135,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				C4A9AFFF1C8ADBDB00F8AA45 /* ikatenTests.swift */,
+				C4FC6A8D1C8B1F090023A85A /* Libraries */,
 				C4A9B0011C8ADBDB00F8AA45 /* Info.plist */,
 			);
 			path = ikatenTests;
@@ -149,11 +181,21 @@
 			path = ikatenUITests;
 			sourceTree = "<group>";
 		};
+		C4AC83B41C8C58A6006DF92C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C4AC83B51C8C5908006DF92C /* RoundedCornersButton.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		C4FC6A821C8B01B00023A85A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				C4FC6A831C8B01BB0023A85A /* Models */,
 				C4FC6A841C8B01C30023A85A /* Controllers */,
+				C4FC6A891C8B16340023A85A /* Libraries */,
+				C4AC83B41C8C58A6006DF92C /* Views */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -161,6 +203,7 @@
 		C4FC6A831C8B01BB0023A85A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C40248EE1C8B3B55007A3EF9 /* Battle.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -168,9 +211,28 @@
 		C4FC6A841C8B01C30023A85A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C4FC6A851C8B01D50023A85A /* ViewController.swift */,
+				466595DD1C8B357500258E42 /* SessionViewController.swift */,
+				C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */,
+				C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C4FC6A891C8B16340023A85A /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C4FC6A871C8B11C70023A85A /* Router.swift */,
+				C4FC6A8B1C8B19BD0023A85A /* StatInk.swift */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		C4FC6A8D1C8B1F090023A85A /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C4FC6A8E1C8B1F370023A85A /* StatInkTests.swift */,
+			);
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4A9AFF51C8ADBDB00F8AA45 /* LaunchScreen.storyboard in Resources */,
+				C47C68881C8C5EEF003FADF7 /* ikamodoki.ttf in Resources */,
 				C4A9AFF21C8ADBDB00F8AA45 /* Assets.xcassets in Resources */,
 				C4A9AFF01C8ADBDB00F8AA45 /* Main.storyboard in Resources */,
 			);
@@ -356,8 +419,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4FC6A861C8B01D50023A85A /* ViewController.swift in Sources */,
+				C4FC6A881C8B11C70023A85A /* Router.swift in Sources */,
+				C4FC6A8C1C8B19BD0023A85A /* StatInk.swift in Sources */,
+				466595DE1C8B357500258E42 /* SessionViewController.swift in Sources */,
 				C4A9AFEB1C8ADBDB00F8AA45 /* AppDelegate.swift in Sources */,
+				C40248F21C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */,
+				C40248F71C8C2007007A3EF9 /* PreparationViewController.swift in Sources */,
+				C4AC83B61C8C5908006DF92C /* RoundedCornersButton.swift in Sources */,
+				C40248EF1C8B3B55007A3EF9 /* Battle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +434,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4FC6A8F1C8B1F370023A85A /* StatInkTests.swift in Sources */,
+				C40248ED1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */,
+				C4FC6A8A1C8B18D40023A85A /* Router.swift in Sources */,
+				C4FC6A901C8B1F510023A85A /* StatInk.swift in Sources */,
+				466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */,
 				C4A9B0001C8ADBDB00F8AA45 /* ikatenTests.swift in Sources */,
+				C40248F31C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */,
+				C40248F01C8B3B55007A3EF9 /* Battle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
