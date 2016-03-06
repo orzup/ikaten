@@ -10,7 +10,7 @@ class CreateButtleViewController: UIViewController {
 
     private func createButtle() {
         SVProgressHUD.show()
-        setParams()
+        addParams()
 
         StatInk().createButtle(Battle(data: params),
             onSuccess: { (response) -> Void in
@@ -20,7 +20,7 @@ class CreateButtleViewController: UIViewController {
         })
     }
 
-    private func setParams() {
+    private func addParams() {
         params["rankAfter"]    = ""
         params["rankExpAfter"] = 0
         params["result"]       = ""
