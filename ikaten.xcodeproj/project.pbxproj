@@ -22,7 +22,6 @@
 		C4A9AFF51C8ADBDB00F8AA45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A9AFF31C8ADBDB00F8AA45 /* LaunchScreen.storyboard */; };
 		C4A9B0001C8ADBDB00F8AA45 /* ikatenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9AFFF1C8ADBDB00F8AA45 /* ikatenTests.swift */; };
 		C4A9B00B1C8ADBDB00F8AA45 /* ikatenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9B00A1C8ADBDB00F8AA45 /* ikatenUITests.swift */; };
-		C4FC6A861C8B01D50023A85A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A851C8B01D50023A85A /* ViewController.swift */; };
 		C4FC6A881C8B11C70023A85A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A871C8B11C70023A85A /* Router.swift */; };
 		C4FC6A8A1C8B18D40023A85A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A871C8B11C70023A85A /* Router.swift */; };
 		C4FC6A8C1C8B19BD0023A85A /* StatInk.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A8B1C8B19BD0023A85A /* StatInk.swift */; };
@@ -65,7 +64,6 @@
 		C4A9B0061C8ADBDB00F8AA45 /* ikatenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ikatenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A9B00A1C8ADBDB00F8AA45 /* ikatenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ikatenUITests.swift; sourceTree = "<group>"; };
 		C4A9B00C1C8ADBDB00F8AA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4FC6A851C8B01D50023A85A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Classes/Controllers/ViewController.swift; sourceTree = "<group>"; };
 		C4FC6A871C8B11C70023A85A /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Classes/Libraries/Router.swift; sourceTree = "<group>"; };
 		C4FC6A8B1C8B19BD0023A85A /* StatInk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatInk.swift; path = Classes/Libraries/StatInk.swift; sourceTree = "<group>"; };
 		C4FC6A8E1C8B1F370023A85A /* StatInkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatInkTests.swift; path = Libraries/StatInkTests.swift; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 		C4FC6A841C8B01C30023A85A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C4FC6A851C8B01D50023A85A /* ViewController.swift */,
 				466595DD1C8B357500258E42 /* SessionViewController.swift */,
 				C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */,
 				C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */,
@@ -399,8 +396,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4FC6A861C8B01D50023A85A /* ViewController.swift in Sources */,
-				C40248EC1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */,
 				C4FC6A881C8B11C70023A85A /* Router.swift in Sources */,
 				C4FC6A8C1C8B19BD0023A85A /* StatInk.swift in Sources */,
 				466595DE1C8B357500258E42 /* SessionViewController.swift in Sources */,
