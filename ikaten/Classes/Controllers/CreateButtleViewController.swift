@@ -8,13 +8,8 @@ class CreateButtleViewController: UIViewController {
         createButtle()
     }
 
-    func createButtle() {
-        battle.rankAfter    = ""
-        battle.rankExpAfter = 0
-        battle.result       = ""
-        battle.kill         = 0
-        battle.death        = 0
-        battle.knockOut     = false
+    private func createButtle() {
+        setButtle()
 
         StatInk().createButtle(battle,
             onSuccess: { (response) -> Void in
@@ -22,5 +17,14 @@ class CreateButtleViewController: UIViewController {
             }, onFailure: { (errorResponse) -> Void in
                 SVProgressHUD.showErrorWithStatus("失敗")
         })
+    }
+
+    private func setButtle() {
+        battle.rankAfter    = ""
+        battle.rankExpAfter = 0
+        battle.result       = ""
+        battle.kill         = 0
+        battle.death        = 0
+        battle.knockOut     = false
     }
 }
