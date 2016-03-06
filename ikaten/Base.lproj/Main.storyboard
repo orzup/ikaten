@@ -127,7 +127,7 @@
         <!--ガチマッチ-->
         <scene sceneID="72s-qA-Qqz">
             <objects>
-                <tableViewController id="7ff-0B-pfI" sceneMemberID="viewController">
+                <tableViewController id="7ff-0B-pfI" customClass="PreparationViewController" customModule="ikaten" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dFk-Xg-y5K">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +137,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="はじめる！"/>
                             <connections>
-                                <segue destination="tr6-Or-tvG" kind="presentation" id="AYy-WM-owV"/>
+                                <segue destination="tr6-Or-tvG" kind="presentation" identifier="toCreateBattleView" id="AYy-WM-owV"/>
                             </connections>
                         </button>
                         <sections>
@@ -337,10 +337,10 @@
             </objects>
             <point key="canvasLocation" x="2370" y="339"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Buttle View Controller-->
         <scene sceneID="psr-PU-eAT">
             <objects>
-                <viewController id="tr6-Or-tvG" sceneMemberID="viewController">
+                <viewController id="tr6-Or-tvG" customClass="CreateButtleViewController" customModule="ikaten" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VKB-up-roN"/>
                         <viewControllerLayoutGuide type="bottom" id="h5s-M9-RXN"/>
@@ -365,6 +365,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="211" y="464" width="45" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="touchUpInsideNextBattleButton:" destination="tr6-Or-tvG" eventType="touchUpInside" id="6dt-6q-1pX"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wn7-zf-wbh">
                                 <rect key="frame" x="-60" y="-14" width="121" height="29"/>
@@ -517,6 +520,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="QNV-fZ-XWc"/>
+        <segue reference="eLZ-Hm-i5W"/>
         <segue reference="VZ4-qk-37W"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,12 +7,13 @@
 //
 
 import Alamofire
+import KeychainAccess
 
 enum Router: URLRequestConvertible {
     static let baseURLString = "https://stat.ink/api/v1"
     static var OAuthToken: String?
 
-    case CreateBattle([String: AnyObject])
+    case CreateBattle(Battle)
     case CheckAPIKey(String)
 
     var method: Alamofire.Method {
@@ -39,7 +40,10 @@ enum Router: URLRequestConvertible {
         mutableURLRequest.HTTPMethod = method.rawValue
 
         switch self {
-        case .CreateBattle(let params):
+        case .CreateBattle(let battle):
+            var params = battle.decode()
+            params["apikey"] = Keychain()[string: "APIKey"]
+            params["test"]   = "dry_run"
             return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: params).0
         case .CheckAPIKey(let APIKey):
             let params = ["apikey": APIKey, "test": "dry_run"]

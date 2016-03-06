@@ -12,16 +12,21 @@ import SVProgressHUD
 
 class StatInk {
     func createButtle(
-        params: Dictionary<String, String>,
-        onSuccess: (response: NSHTTPURLResponse) -> Void,
-        onFailure: (errorResponse: NSHTTPURLResponse) -> Void
+        battle: Battle,
+        onSuccess: () -> Void,
+        onFailure: () -> Void
         ) -> Void  {
-            Alamofire.request(Router.CreateBattle(params)).responseJSON { (response) -> Void in
+            Alamofire.request(Router.CreateBattle(battle)).responseJSON { (response) -> Void in
                 switch response.result {
-                    case .Success(let data):
-                        print(data)
-                    case .Failure(let error):
-                        print(error)
+                    case .Success(let result):
+                        let error: AnyObject? = result["error"]
+                        if error != nil {
+                            onFailure()
+                        } else {
+                            onSuccess()
+                        }
+                    case .Failure(_):
+                        onFailure()
                 }
             }
     }
