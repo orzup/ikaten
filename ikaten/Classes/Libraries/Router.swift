@@ -13,6 +13,7 @@ enum Router: URLRequestConvertible {
     static var OAuthToken: String?
 
     case CreateBattle(Battle)
+    case CheckAPIKey(String)
 
     var method: Alamofire.Method {
         switch self {

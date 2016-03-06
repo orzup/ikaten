@@ -192,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				C4FC6A851C8B01D50023A85A /* ViewController.swift */,
+				466595DD1C8B357500258E42 /* SessionViewController.swift */,
 				C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */,
 				C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */,
 			);
