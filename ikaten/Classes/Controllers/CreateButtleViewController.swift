@@ -9,6 +9,7 @@ class CreateButtleViewController: UIViewController {
     }
 
     private func createButtle() {
+        SVProgressHUD.show()
         setButtle()
 
         StatInk().createButtle(battle,
