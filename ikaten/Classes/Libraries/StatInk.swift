@@ -8,7 +8,6 @@
 
 import Alamofire
 import KeychainAccess
-import SVProgressHUD
 
 class StatInk {
     func createButtle(
