@@ -1,4 +1,5 @@
 import UIKit
+import SVProgressHUD
 
 class CreateButtleViewController: UIViewController {
     var battle: Battle!
@@ -17,9 +18,9 @@ class CreateButtleViewController: UIViewController {
 
         StatInk().createButtle(battle,
             onSuccess: { (response) -> Void in
-                print("OK!")
+                SVProgressHUD.showSuccessWithStatus("キロク OK!")
             }, onFailure: { (errorResponse) -> Void in
-                print("NG!")
+                SVProgressHUD.showErrorWithStatus("失敗")
         })
     }
 }
