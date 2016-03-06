@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		466595DE1C8B357500258E42 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466595DD1C8B357500258E42 /* SessionViewController.swift */; };
+		466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466595DD1C8B357500258E42 /* SessionViewController.swift */; };
 		B15A909AA67ED85BA717F7E6 /* Pods_ikaten.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C867FD8CEF3CED506E69059A /* Pods_ikaten.framework */; };
 		C40248EC1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */; };
 		C40248ED1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */; };
@@ -46,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		466595DD1C8B357500258E42 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionViewController.swift; path = Classes/Controllers/SessionViewController.swift; sourceTree = "<group>"; };
 		B14EA4370DA8B3D025055265 /* Pods-ikaten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ikaten.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ikaten/Pods-ikaten.debug.xcconfig"; sourceTree = "<group>"; };
 		C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreparationViewController.swift; path = Classes/Controllers/PreparationViewController.swift; sourceTree = "<group>"; };
 		C40248EE1C8B3B55007A3EF9 /* Battle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Battle.swift; path = Classes/Models/Battle.swift; sourceTree = "<group>"; };
@@ -399,6 +402,7 @@
 				C40248EC1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */,
 				C4FC6A881C8B11C70023A85A /* Router.swift in Sources */,
 				C4FC6A8C1C8B19BD0023A85A /* StatInk.swift in Sources */,
+				466595DE1C8B357500258E42 /* SessionViewController.swift in Sources */,
 				C4A9AFEB1C8ADBDB00F8AA45 /* AppDelegate.swift in Sources */,
 				C40248F21C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */,
 				C40248EF1C8B3B55007A3EF9 /* Battle.swift in Sources */,
@@ -413,6 +417,7 @@
 				C40248ED1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */,
 				C4FC6A8A1C8B18D40023A85A /* Router.swift in Sources */,
 				C4FC6A901C8B1F510023A85A /* StatInk.swift in Sources */,
+				466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */,
 				C4A9B0001C8ADBDB00F8AA45 /* ikatenTests.swift in Sources */,
 				C40248F31C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */,
 				C40248F01C8B3B55007A3EF9 /* Battle.swift in Sources */,

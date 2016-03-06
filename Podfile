@@ -5,6 +5,8 @@ use_frameworks!
 
 target 'ikaten' do
 pod 'Alamofire'
+pod 'KeychainAccess'
+pod 'SVProgressHUD'
 end
 
 target 'ikatenTests' do
