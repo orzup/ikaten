@@ -19,7 +19,7 @@ class CreateButtleViewController: UIViewController {
         // TODO: マップの取得
         battle.setResult([
             "map"          : "",
-            "result"       : result(),
+            "result"       : resultSelector.selectedSegmentIndex,
             "kill"         : Int(killsTextField.text!)!,
             "death"        : Int(deathTextField.text!)!,
             "rankExpChange": Int(rankExpChangeTextField.text!)!,
@@ -32,19 +32,6 @@ class CreateButtleViewController: UIViewController {
             }, onFailure: { (errorResponse) -> Void in
                 SVProgressHUD.showErrorWithStatus("失敗")
         })
-    }
-
-    private func result() -> String {
-        var result = ""
-        switch resultSelector.selectedSegmentIndex {
-        case 0:
-            result = "win"
-        case 1:
-            result = "lose"
-        default:
-            break
-        }
-        return result
     }
 }
 

@@ -7,7 +7,7 @@ class Battle {
     var map: String!
     var rankAfter: String!
     var rankExpAfter: Int!
-    var result: String!
+    var result: Bool!
     var kill: Int!
     var death: Int!
     var knockOut: Bool!
@@ -22,7 +22,7 @@ class Battle {
 
     func setResult(data: Dictionary<String, AnyObject>) {
         map          = data["map"] as! String
-        result       = data["result"] as! String
+        result       = data["result"] as! Bool
         kill         = data["kill"] as! Int
         death        = data["death"] as! Int
         knockOut     = data["knockOut"] as! Bool
@@ -33,20 +33,20 @@ class Battle {
     func setRunk(rankExpChange: Int!) {
         let ranks = ["c-", "c", "c+", "b-", "b", "b+", "a-", "a", "a+", "s", "s+"];
         
-        if  result == "win" {
-            rankExpAfter = rankExp + rankExpChange
-            if rank != ranks.last && rankExpAfter >= 100 {
-                rankExpAfter = 30
-                rankAfter = ranks[ranks.indexOf(rank)! + 1];
+        if result as Bool {
+            rankExpAfter = rankExp - rankExpChange
+            if rank != ranks.first && rankExpAfter < 0 {
+                rankExpAfter = 70
+                rankAfter = ranks[ranks.indexOf(rank)! - 1];
             } else {
                 rankAfter = rank;
             }
         }
         else {
-            rankExpAfter = rankExp - rankExpChange
-            if rank != ranks.first && rankExpAfter < 0 {
-                rankExpAfter = 70
-                rankAfter = ranks[ranks.indexOf(rank)! - 1];
+            rankExpAfter = rankExp + rankExpChange
+            if rank != ranks.last && rankExpAfter >= 100 {
+                rankExpAfter = 30
+                rankAfter = ranks[ranks.indexOf(rank)! + 1];
             } else {
                 rankAfter = rank;
             }
