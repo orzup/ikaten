@@ -10,6 +10,10 @@ class SessionViewController: UIViewController {
             goToLobbyViewController()
         }
     }
+
+    @IBAction func editingDidEndOnExitTextField(sender: UITextField) {
+        view.endEditing(true)
+    }
     
     @IBAction func touchUpInsideSubmitButton(sender: AnyObject) {
         SVProgressHUD.show()
