@@ -24,6 +24,7 @@
 		C4A9B0001C8ADBDB00F8AA45 /* ikatenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9AFFF1C8ADBDB00F8AA45 /* ikatenTests.swift */; };
 		C4A9B00B1C8ADBDB00F8AA45 /* ikatenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9B00A1C8ADBDB00F8AA45 /* ikatenUITests.swift */; };
 		C4AC83B61C8C5908006DF92C /* RoundedCornersButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC83B51C8C5908006DF92C /* RoundedCornersButton.swift */; };
+		C4AE74861C96EC95005CFB48 /* Splapi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AE74851C96EC95005CFB48 /* Splapi.swift */; };
 		C4FC6A881C8B11C70023A85A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A871C8B11C70023A85A /* Router.swift */; };
 		C4FC6A8A1C8B18D40023A85A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A871C8B11C70023A85A /* Router.swift */; };
 		C4FC6A8C1C8B19BD0023A85A /* StatInk.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A8B1C8B19BD0023A85A /* StatInk.swift */; };
@@ -68,6 +69,7 @@
 		C4A9B00A1C8ADBDB00F8AA45 /* ikatenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ikatenUITests.swift; sourceTree = "<group>"; };
 		C4A9B00C1C8ADBDB00F8AA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4AC83B51C8C5908006DF92C /* RoundedCornersButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedCornersButton.swift; path = Classes/Views/RoundedCornersButton.swift; sourceTree = "<group>"; };
+		C4AE74851C96EC95005CFB48 /* Splapi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Splapi.swift; path = Classes/Libraries/Splapi.swift; sourceTree = "<group>"; };
 		C4FC6A871C8B11C70023A85A /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Classes/Libraries/Router.swift; sourceTree = "<group>"; };
 		C4FC6A8B1C8B19BD0023A85A /* StatInk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatInk.swift; path = Classes/Libraries/StatInk.swift; sourceTree = "<group>"; };
 		C4FC6A8E1C8B1F370023A85A /* StatInkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatInkTests.swift; path = Libraries/StatInkTests.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			children = (
 				C4FC6A871C8B11C70023A85A /* Router.swift */,
 				C4FC6A8B1C8B19BD0023A85A /* StatInk.swift */,
+				C4AE74851C96EC95005CFB48 /* Splapi.swift */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 			files = (
 				C4FC6A881C8B11C70023A85A /* Router.swift in Sources */,
 				C4FC6A8C1C8B19BD0023A85A /* StatInk.swift in Sources */,
+				C4AE74861C96EC95005CFB48 /* Splapi.swift in Sources */,
 				466595DE1C8B357500258E42 /* SessionViewController.swift in Sources */,
 				C4A9AFEB1C8ADBDB00F8AA45 /* AppDelegate.swift in Sources */,
 				C40248F21C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */,

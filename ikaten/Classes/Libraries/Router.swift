@@ -10,11 +10,13 @@ import Alamofire
 import KeychainAccess
 
 enum Router: URLRequestConvertible {
-    static let baseURLString = "https://stat.ink/api/v1"
+    static let statInkBaseURLString = "https://stat.ink/api/v1"
+    static let splapiBaseURLString = "http://splapi.retrorocket.biz"
     static var OAuthToken: String?
 
     case CreateBattle(Battle)
     case CheckAPIKey(String)
+    case CheckStage(String)
 
     var method: Alamofire.Method {
         switch self {
@@ -22,6 +24,8 @@ enum Router: URLRequestConvertible {
             return .POST
         case .CheckAPIKey:
             return .POST
+        case .CheckStage:
+            return .GET
         }
     }
 
@@ -31,11 +35,19 @@ enum Router: URLRequestConvertible {
             return "/battle"
         case .CheckAPIKey:
             return "/battle"
+        case .CheckStage(let stage):
+            return "/\(stage)/now"
         }
     }
 
     var URLRequest: NSMutableURLRequest {
-        let URL = NSURL(string: Router.baseURLString)!
+        var URL: NSURL
+        switch self {
+        case .CheckStage:
+            URL = NSURL(string: Router.splapiBaseURLString)!
+        default:
+            URL = NSURL(string: Router.statInkBaseURLString)!
+        }
         let mutableURLRequest = NSMutableURLRequest(URL: URL.URLByAppendingPathComponent(path))
         mutableURLRequest.HTTPMethod = method.rawValue
 
@@ -48,6 +60,8 @@ enum Router: URLRequestConvertible {
         case .CheckAPIKey(let APIKey):
             let params = ["apikey": APIKey, "test": "dry_run"]
             return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: params).0
+        default:
+            return mutableURLRequest
         }
     }
 }
