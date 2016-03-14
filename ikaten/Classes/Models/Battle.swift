@@ -21,9 +21,21 @@ class Battle {
     }
 
     func setResult(data: Dictionary<String, AnyObject>) {
-        var ranks = ["c-", "c", "c+", "b-", "b", "b+", "a-", "a", "a+", "s", "s+"];
-        let rankExpChange = data["rankExpChange"] as! Int
-        if  data["result"] as! String == "win" {
+        map          = data["map"] as? String
+        rankAfter    = data["map"] as? String
+        rankExpAfter = data["map"] as? Int
+        result       = data["result"] as? String
+        kill         = data["kill"] as? Int
+        death        = data["death"] as? Int
+        knockOut     = data["knockOut"] as? Bool
+        
+        setRunk(data["rankExpChange"] as? Int)
+    }
+    
+    func setRunk(rankExpChange: Int!) {
+        let ranks = ["c-", "c", "c+", "b-", "b", "b+", "a-", "a", "a+", "s", "s+"];
+        
+        if  result == "win" {
             rankExpAfter = rankExp + rankExpChange
             if rank != "s+" && rankExpAfter >= 100 {
                 rankExpAfter = 30
@@ -41,12 +53,6 @@ class Battle {
                 rankAfter = rank;
             }
         }
-
-        map          = data["map"] as? String
-        result       = data["result"] as? String
-        kill         = data["kill"] as? Int
-        death        = data["death"] as? Int
-        knockOut     = data["knockOut"] as? Bool
     }
 
     func decode() -> Dictionary<String, AnyObject> {
