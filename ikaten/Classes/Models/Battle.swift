@@ -4,13 +4,13 @@ class Battle {
     let weapon: String
     let rank: String
     let rankExp: Int
-    var map: String?
-    var rankAfter: String?
-    var rankExpAfter: Int?
-    var result: String?
-    var kill: Int?
-    var death: Int?
-    var knockOut: Bool?
+    var map: String!
+    var rankAfter: String!
+    var rankExpAfter: Int!
+    var result: String!
+    var kill: Int!
+    var death: Int!
+    var knockOut: Bool!
 
     init(let data: Dictionary<String, AnyObject>) {
         lobby        = data["lobby"] as! String
@@ -21,11 +21,11 @@ class Battle {
     }
 
     func setResult(data: Dictionary<String, AnyObject>) {
-        map          = data["map"] as? String
-        result       = data["result"] as? String
-        kill         = data["kill"] as? Int
-        death        = data["death"] as? Int
-        knockOut     = data["knockOut"] as? Bool
+        map          = data["map"] as! String
+        result       = data["result"] as! String
+        kill         = data["kill"] as! Int
+        death        = data["death"] as! Int
+        knockOut     = data["knockOut"] as! Bool
         
         setRunk(data["rankExpChange"] as? Int)
     }
