@@ -60,8 +60,7 @@ class Battle {
             } else {
                 rankAfter = rank;
             }
-        }
-        else {
+        } else {
             rankExpAfter = rankExp + rankExpChange
             if rank != ranks.last && rankExpAfter >= 100 {
                 rankExpAfter = 30
