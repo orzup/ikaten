@@ -22,8 +22,6 @@ class Battle {
 
     func setResult(data: Dictionary<String, AnyObject>) {
         map          = data["map"] as? String
-        rankAfter    = data["map"] as? String
-        rankExpAfter = data["map"] as? Int
         result       = data["result"] as? String
         kill         = data["kill"] as? Int
         death        = data["death"] as? Int
