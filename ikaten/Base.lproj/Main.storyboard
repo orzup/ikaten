@@ -123,6 +123,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.24313725529999999" green="0.270588249" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="deviceRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="vYJ-Oy-TMA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="XBk-tx-Zc5"/>
                             <constraint firstAttribute="trailing" secondItem="vYJ-Oy-TMA" secondAttribute="trailing" constant="30" id="b4R-DI-iIO"/>
@@ -142,6 +143,9 @@
                                 <include reference="oe1-uj-4RT"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="s2h-GT-r1a" appends="YES" id="wLA-pp-bHa"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="APIKeyTextField" destination="IQS-wy-oby" id="a9n-Ht-9hz"/>
@@ -149,6 +153,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="s2h-GT-r1a">
+                    <connections>
+                        <action selector="singleTapView:" destination="BYZ-38-t0r" id="Wla-LR-lRf"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="231" y="339"/>
         </scene>

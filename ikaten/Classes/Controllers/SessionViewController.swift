@@ -16,7 +16,12 @@ class SessionViewController: UIViewController {
         checkAPIKey()
     }
     
+    @IBAction func singleTapView(sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+
     private func goToLobbyViewController() {
+        view.endEditing(true)
         performSegueWithIdentifier("toLobbyViewController", sender: nil)
     }
     
