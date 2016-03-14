@@ -181,23 +181,23 @@
                                 <exclude reference="KRa-3w-ffT"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="69D-e7-gJY"/>
-                                <exclude reference="Ct1-jj-g33"/>
-                                <exclude reference="LLR-JM-ejO"/>
-                                <exclude reference="RNc-OL-okd"/>
-                                <exclude reference="4I0-jQ-7Fb"/>
-                                <exclude reference="Szx-6F-Wkx"/>
-                                <exclude reference="VDh-cO-mtr"/>
-                                <exclude reference="fHt-W8-Taw"/>
                                 <exclude reference="4kG-Gb-Nlr"/>
                                 <exclude reference="8M6-Kh-jRr"/>
                                 <exclude reference="JZd-hK-hmT"/>
                                 <exclude reference="lXG-UX-bgH"/>
                                 <exclude reference="nNc-Us-Wws"/>
+                                <exclude reference="4I0-jQ-7Fb"/>
+                                <exclude reference="Szx-6F-Wkx"/>
+                                <exclude reference="VDh-cO-mtr"/>
+                                <exclude reference="fHt-W8-Taw"/>
                                 <exclude reference="Ev8-Dk-HUO"/>
                                 <exclude reference="eJE-5u-h2i"/>
                                 <exclude reference="hco-MH-jk7"/>
                                 <exclude reference="yIX-RY-O5a"/>
+                                <exclude reference="69D-e7-gJY"/>
+                                <exclude reference="Ct1-jj-g33"/>
+                                <exclude reference="LLR-JM-ejO"/>
+                                <exclude reference="RNc-OL-okd"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -208,23 +208,23 @@
                                 <include reference="KRa-3w-ffT"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="69D-e7-gJY"/>
-                                <include reference="Ct1-jj-g33"/>
-                                <include reference="LLR-JM-ejO"/>
-                                <include reference="RNc-OL-okd"/>
-                                <include reference="4I0-jQ-7Fb"/>
-                                <include reference="Szx-6F-Wkx"/>
-                                <include reference="VDh-cO-mtr"/>
-                                <include reference="fHt-W8-Taw"/>
                                 <include reference="4kG-Gb-Nlr"/>
                                 <include reference="8M6-Kh-jRr"/>
                                 <include reference="JZd-hK-hmT"/>
                                 <include reference="lXG-UX-bgH"/>
                                 <include reference="nNc-Us-Wws"/>
+                                <include reference="4I0-jQ-7Fb"/>
+                                <include reference="Szx-6F-Wkx"/>
+                                <include reference="VDh-cO-mtr"/>
+                                <include reference="fHt-W8-Taw"/>
                                 <include reference="Ev8-Dk-HUO"/>
                                 <include reference="eJE-5u-h2i"/>
                                 <include reference="hco-MH-jk7"/>
                                 <include reference="yIX-RY-O5a"/>
+                                <include reference="69D-e7-gJY"/>
+                                <include reference="Ct1-jj-g33"/>
+                                <include reference="LLR-JM-ejO"/>
+                                <include reference="RNc-OL-okd"/>
                             </mask>
                         </variation>
                     </view>
@@ -479,7 +479,7 @@
                                     <action selector="touchUpInsideNextBattleButton:" destination="tr6-Or-tvG" eventType="touchUpInside" id="6dt-6q-1pX"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wn7-zf-wbh">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Wn7-zf-wbh">
                                 <rect key="frame" x="-60" y="-14" width="121" height="29"/>
                                 <segments>
                                     <segment title="Stage"/>
@@ -487,16 +487,6 @@
                                 </segments>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="72" y="114" width="257" height="29"/>
-                                </variation>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sas-RO-el9">
-                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
-                                <segments>
-                                    <segment title="WIN"/>
-                                    <segment title="LOSE"/>
-                                </segments>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="72" y="199" width="257" height="29"/>
                                 </variation>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ldW-Lr-inF">
@@ -541,25 +531,6 @@
                                     <rect key="frame" x="211" y="410" width="97" height="30"/>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S+ 99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeh-HW-nu3">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="81" y="413" width="47" height="21"/>
-                                </variation>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UKJ-l7-Cf7">
-                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
-                                <segments>
-                                    <segment title="+"/>
-                                    <segment title="-"/>
-                                </segments>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="144" y="410" width="47" height="29"/>
-                                </variation>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ブキ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gx-te-ywy">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -569,6 +540,25 @@
                                     <rect key="frame" x="187" y="49" width="34" height="21"/>
                                 </variation>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="sas-RO-el9">
+                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                <segments>
+                                    <segment title="WIN"/>
+                                    <segment title="LOSE"/>
+                                </segments>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="72" y="199" width="257" height="29"/>
+                                </variation>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S+ 99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeh-HW-nu3">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="81" y="413" width="47" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -576,15 +566,14 @@
                                 <exclude reference="eEH-od-Za1"/>
                                 <exclude reference="y7p-dW-1nr"/>
                                 <exclude reference="Wn7-zf-wbh"/>
-                                <exclude reference="sas-RO-el9"/>
                                 <exclude reference="ldW-Lr-inF"/>
                                 <exclude reference="Hqm-rC-KYx"/>
                                 <exclude reference="oJs-m6-wqp"/>
                                 <exclude reference="Fru-E7-az5"/>
                                 <exclude reference="Gm8-Qh-AFz"/>
-                                <exclude reference="qeh-HW-nu3"/>
-                                <exclude reference="UKJ-l7-Cf7"/>
                                 <exclude reference="7gx-te-ywy"/>
+                                <exclude reference="sas-RO-el9"/>
+                                <exclude reference="qeh-HW-nu3"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -592,19 +581,25 @@
                                 <include reference="eEH-od-Za1"/>
                                 <include reference="y7p-dW-1nr"/>
                                 <include reference="Wn7-zf-wbh"/>
-                                <include reference="sas-RO-el9"/>
                                 <include reference="ldW-Lr-inF"/>
                                 <include reference="Hqm-rC-KYx"/>
                                 <include reference="oJs-m6-wqp"/>
                                 <include reference="Fru-E7-az5"/>
                                 <include reference="Gm8-Qh-AFz"/>
-                                <include reference="qeh-HW-nu3"/>
-                                <include reference="UKJ-l7-Cf7"/>
                                 <include reference="7gx-te-ywy"/>
+                                <include reference="sas-RO-el9"/>
+                                <include reference="qeh-HW-nu3"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="btR-mw-1Wp"/>
+                    <connections>
+                        <outlet property="deathTextField" destination="Hqm-rC-KYx" id="qDQ-3o-p7d"/>
+                        <outlet property="killsTextField" destination="ldW-Lr-inF" id="IxP-dg-J3j"/>
+                        <outlet property="mapSelector" destination="Wn7-zf-wbh" id="mRh-c6-c4x"/>
+                        <outlet property="rankExpChangeTextField" destination="Gm8-Qh-AFz" id="lFa-gZ-upC"/>
+                        <outlet property="resultSelector" destination="sas-RO-el9" id="whX-Q0-gIq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pBH-Ys-Fo7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
