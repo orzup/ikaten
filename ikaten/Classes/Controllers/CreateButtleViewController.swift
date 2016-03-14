@@ -18,12 +18,12 @@ class CreateButtleViewController: UIViewController {
         SVProgressHUD.show()
         // TODO: マップの取得
         battle.setResult([
-            "map":           "",
-            "result":        resultSelector.selectedSegmentIndex,
+            "map":           "arowana",
+            "is_win":        resultSelector.selectedSegmentIndex,
             "kill":          Int(killsTextField.text!)!,
             "death":         Int(deathTextField.text!)!,
             "rankExpChange": Int(rankExpChangeTextField.text!)!,
-            "knockOut":      false
+            "knock_out":     false
             ])
 
         StatInk().createButtle(battle,
