@@ -35,7 +35,7 @@ class Battle {
         
         if  result == "win" {
             rankExpAfter = rankExp + rankExpChange
-            if rank != "s+" && rankExpAfter >= 100 {
+            if rank != ranks.last && rankExpAfter >= 100 {
                 rankExpAfter = 30
                 rankAfter = ranks[ranks.indexOf(rank)! + 1];
             } else {
@@ -44,7 +44,7 @@ class Battle {
         }
         else {
             rankExpAfter = rankExp - rankExpChange
-            if rank != "c-" && rankExpAfter < 0 {
+            if rank != ranks.first && rankExpAfter < 0 {
                 rankExpAfter = 70
                 rankAfter = ranks[ranks.indexOf(rank)! - 1];
             } else {
