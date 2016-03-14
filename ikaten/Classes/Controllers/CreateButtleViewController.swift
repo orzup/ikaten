@@ -2,7 +2,7 @@ import UIKit
 import SVProgressHUD
 
 class CreateButtleViewController: UIViewController {
-    var battle: Battle?
+    var battle: Battle!
 
     @IBOutlet weak var mapSelector: UISegmentedControl!
     @IBOutlet weak var resultSelector: UISegmentedControl!
@@ -17,7 +17,7 @@ class CreateButtleViewController: UIViewController {
     private func createButtle() {
         SVProgressHUD.show()
         // TODO: マップの取得
-        battle!.setResult([
+        battle.setResult([
             "map"          : "",
             "result"       : result(),
             "kill"         : Int(killsTextField.text!)!,
@@ -26,7 +26,7 @@ class CreateButtleViewController: UIViewController {
             "knockOut"     : false
             ])
 
-        StatInk().createButtle(battle!,
+        StatInk().createButtle(battle,
             onSuccess: { (response) -> Void in
                 SVProgressHUD.showSuccessWithStatus("キロク OK!")
             }, onFailure: { (errorResponse) -> Void in
