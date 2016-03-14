@@ -21,7 +21,7 @@ class Battle {
     }
 
     func setResult(data: Dictionary<String, AnyObject>) {
-        // NOTE: ViewのsegmentControlから取れるindexが左が0右が1となっているので、isWinには反転して代入する
+        // NOTE: View の Segmented Control から取れるindexが"Win"が0、"Lose"が1となっているので、isWinに反転して代入する
         map          = data["map"] as! String
         isWin        = !(data["is_win"] as! Bool)
         kill         = data["kill"] as! Int
