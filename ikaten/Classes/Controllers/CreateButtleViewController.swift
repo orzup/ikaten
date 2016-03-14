@@ -2,7 +2,13 @@ import UIKit
 import SVProgressHUD
 
 class CreateButtleViewController: UIViewController {
-    var params: Dictionary<String, AnyObject>!
+    var battle: Battle!
+
+    @IBOutlet weak var mapSelector: UISegmentedControl!
+    @IBOutlet weak var resultSelector: UISegmentedControl!
+    @IBOutlet weak var killsTextField: UITextField!
+    @IBOutlet weak var deathTextField: UITextField!
+    @IBOutlet weak var rankExpChangeTextField: UITextField!
 
     @IBAction func touchUpInsideNextBattleButton(sender: AnyObject) {
         createButtle()
@@ -10,22 +16,22 @@ class CreateButtleViewController: UIViewController {
 
     private func createButtle() {
         SVProgressHUD.show()
-        addParams()
+        // TODO: マップの取得
+        battle.setResult([
+            "map":           "",
+            "result":        resultSelector.selectedSegmentIndex,
+            "kill":          Int(killsTextField.text!)!,
+            "death":         Int(deathTextField.text!)!,
+            "rankExpChange": Int(rankExpChangeTextField.text!)!,
+            "knockOut":      false
+            ])
 
-        StatInk().createButtle(Battle(data: params),
+        StatInk().createButtle(battle,
             onSuccess: { (response) -> Void in
                 SVProgressHUD.showSuccessWithStatus("キロク OK!")
             }, onFailure: { (errorResponse) -> Void in
                 SVProgressHUD.showErrorWithStatus("失敗")
         })
     }
-
-    private func addParams() {
-        params["rankAfter"]    = ""
-        params["rankExpAfter"] = 0
-        params["result"]       = ""
-        params["kill"]         = 0
-        params["death"]        = 0
-        params["knockOut"]     = false
-    }
 }
+
