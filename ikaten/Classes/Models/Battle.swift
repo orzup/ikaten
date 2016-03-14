@@ -7,7 +7,7 @@ class Battle {
     var map: String!
     var rankAfter: String!
     var rankExpAfter: Int!
-    var result: Bool!
+    var isWin: Bool!
     var kill: Int!
     var death: Int!
     var knockOut: Bool!
@@ -22,7 +22,7 @@ class Battle {
 
     func setResult(data: Dictionary<String, AnyObject>) {
         map          = data["map"] as! String
-        result       = data["result"] as! Bool
+        isWin        = data["result"] as! Bool
         kill         = data["kill"] as! Int
         death        = data["death"] as! Int
         knockOut     = data["knockOut"] as! Bool
@@ -30,10 +30,29 @@ class Battle {
         setRunk(data["rankExpChange"] as? Int)
     }
     
-    func setRunk(rankExpChange: Int!) {
+
+    func decode() -> Dictionary<String, AnyObject> {
+        let knockOutString = knockOut! ? "yes" : "no"
+        return [
+            "lobby":          lobby,
+            "rule":           rule,
+            "map":            map!,
+            "weapon":         weapon,
+            "rank":           rank,
+            "rank_exp":       rankExp,
+            "rank_after":     rankAfter!,
+            "rank_exp_after": rankExpAfter!,
+            "result":         isWin!,
+            "kill":           kill!,
+            "death":          death!,
+            "knock_out":      knockOutString
+       ]
+    }
+
+    private func setRunk(rankExpChange: Int!) {
         let ranks = ["c-", "c", "c+", "b-", "b", "b+", "a-", "a", "a+", "s", "s+"];
-        
-        if result as Bool {
+
+        if isWin as Bool {
             rankExpAfter = rankExp - rankExpChange
             if rank != ranks.first && rankExpAfter < 0 {
                 rankExpAfter = 70
@@ -51,23 +70,5 @@ class Battle {
                 rankAfter = rank;
             }
         }
-    }
-
-    func decode() -> Dictionary<String, AnyObject> {
-        let knockOutString = knockOut! ? "yes" : "no"
-        return [
-            "lobby":          lobby,
-            "rule":           rule,
-            "map":            map!,
-            "weapon":         weapon,
-            "rank":           rank,
-            "rank_exp":       rankExp,
-            "rank_after":     rankAfter!,
-            "rank_exp_after": rankExpAfter!,
-            "result":         result!,
-            "kill":           kill!,
-            "death":          death!,
-            "knock_out":      knockOutString
-       ]
     }
 }
