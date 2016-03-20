@@ -1,7 +1,17 @@
 class Rule {
-    let title: String
+    let name: String
+    let statInkKeys = [
+        "ナワバリバトル" : "nawabari",
+        "ガチエリア" : "area",
+        "ガチヤグラ" : "yagura",
+        "ガチホコ" : "hoko"
+    ]
 
-    init(let _ title: String) {
-        self.title = title
+    init(let _ name: String) {
+        self.name = name
+    }
+
+    func toStatInkKey() -> String {
+        return statInkKeys[name]!
     }
 }

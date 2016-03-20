@@ -34,7 +34,7 @@ class Battle {
     func decode() -> Dictionary<String, AnyObject> {
         return [
             "lobby":          lobby,
-            "rule":           rule.title,
+            "rule":           rule.toStatInkKey(),
             "map":            map!.toStatInkKey(),
             "weapon":         weapon,
             "rank":           rank,
