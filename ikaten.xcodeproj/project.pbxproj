@@ -20,6 +20,7 @@
 		C4511EF91C9F131C00052EDA /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4511EF81C9F131C00052EDA /* LobbyViewController.swift */; };
 		C4511EFB1C9F18A100052EDA /* Lobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4511EFA1C9F18A100052EDA /* Lobby.swift */; };
 		C4511EFC1C9F18A100052EDA /* Lobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4511EFA1C9F18A100052EDA /* Lobby.swift */; };
+		C4511EFE1C9F2C6F00052EDA /* LobbySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4511EFD1C9F2C6F00052EDA /* LobbySpec.swift */; };
 		C45F42AF1C9E8081005213B5 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AC1C9E8081005213B5 /* Rule.swift */; };
 		C45F42B01C9E8081005213B5 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AD1C9E8081005213B5 /* Stage.swift */; };
 		C45F42B11C9E8081005213B5 /* Stages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AE1C9E8081005213B5 /* Stages.swift */; };
@@ -78,6 +79,7 @@
 		C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateButtleViewController.swift; path = Classes/Controllers/CreateButtleViewController.swift; sourceTree = "<group>"; };
 		C4511EF81C9F131C00052EDA /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LobbyViewController.swift; path = Classes/Controllers/LobbyViewController.swift; sourceTree = "<group>"; };
 		C4511EFA1C9F18A100052EDA /* Lobby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lobby.swift; path = Classes/Models/Lobby.swift; sourceTree = "<group>"; };
+		C4511EFD1C9F2C6F00052EDA /* LobbySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LobbySpec.swift; path = Models/LobbySpec.swift; sourceTree = "<group>"; };
 		C45F42AC1C9E8081005213B5 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rule.swift; path = Classes/Models/Rule.swift; sourceTree = "<group>"; };
 		C45F42AD1C9E8081005213B5 /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stage.swift; path = Classes/Models/Stage.swift; sourceTree = "<group>"; };
 		C45F42AE1C9E8081005213B5 /* Stages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stages.swift; path = Classes/Models/Stages.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				4640F1931C9702EF0036C1CD /* BattleSpec.swift */,
+				C4511EFD1C9F2C6F00052EDA /* LobbySpec.swift */,
 				C4B56D651C9EC274003FC21A /* RuleSpec.swift */,
 				C4B56D671C9EC2C2003FC21A /* StageSpec.swift */,
 				C4B56D691C9EC2DC003FC21A /* StagesSpec.swift */,
@@ -257,10 +260,10 @@
 			isa = PBXGroup;
 			children = (
 				C40248EE1C8B3B55007A3EF9 /* Battle.swift */,
+				C4511EFA1C9F18A100052EDA /* Lobby.swift */,
 				C45F42AC1C9E8081005213B5 /* Rule.swift */,
 				C45F42AD1C9E8081005213B5 /* Stage.swift */,
 				C45F42AE1C9E8081005213B5 /* Stages.swift */,
-				C4511EFA1C9F18A100052EDA /* Lobby.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				C4B56D661C9EC274003FC21A /* RuleSpec.swift in Sources */,
 				C4511EFC1C9F18A100052EDA /* Lobby.swift in Sources */,
 				466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */,
+				C4511EFE1C9F2C6F00052EDA /* LobbySpec.swift in Sources */,
 				C4B56D681C9EC2C2003FC21A /* StageSpec.swift in Sources */,
 				4640F1941C9702EF0036C1CD /* BattleSpec.swift in Sources */,
 				C4A9B0001C8ADBDB00F8AA45 /* ikatenTests.swift in Sources */,

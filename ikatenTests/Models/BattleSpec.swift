@@ -5,8 +5,8 @@ class BattleSpec: QuickSpec {
     override func spec() {
         describe("バトルの成績をセット") {
             let battle = Battle(data:[
-                    "lobby":    "standard",
-                    "rule":     Rule("area"),
+                    "lobby":    Lobby("レギュラーマッチ"),
+                    "rule":     Rule("ガチエリア"),
                     "weapon":   "wakaba",
                     "rank":     "s",
                     "rank_exp": 50

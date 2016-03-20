@@ -8,7 +8,7 @@ class PreparationViewController: UITableViewController {
     override func viewDidLoad() {
         navigationItem.title = lobby.name
 
-        Splapi.checkStage("gachi", onSuccess: { (stages, rule) -> Void in
+        Splapi.checkStage(lobby, onSuccess: { (stages, rule) -> Void in
             self.stages = stages
             self.rule = rule
         }) { () -> Void in
@@ -25,7 +25,7 @@ class PreparationViewController: UITableViewController {
 
     private func params() -> Dictionary<String, AnyObject> {
         return [
-            "lobby":    "squad_2",
+            "lobby":    lobby,
             "rule":     rule,
             "weapon":   "52gal",
             "rank":     "s",
