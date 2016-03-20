@@ -173,7 +173,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bvp-1P-Keu">
                                 <rect key="frame" x="30" y="94" width="270" height="278"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzz-wl-NBk" customClass="RoundedCornersButton" customModule="ikaten" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzz-wl-NBk" customClass="RoundedCornersButton" customModule="ikaten" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="270" height="47"/>
                                         <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -203,7 +203,7 @@
                                             <segue destination="7ff-0B-pfI" kind="show" identifier="toCreateBattleView" id="kdb-Zx-75I"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1u-Lg-kVE" customClass="RoundedCornersButton" customModule="ikaten" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1u-Lg-kVE" customClass="RoundedCornersButton" customModule="ikaten" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="77" width="270" height="47"/>
                                         <color key="backgroundColor" red="0.91372549020000005" green="0.20784313730000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="ikamodoki" family="イカモドキ" pointSize="30"/>
@@ -217,7 +217,7 @@
                                             <segue destination="7ff-0B-pfI" kind="show" identifier="toCreateBattleView" id="bDC-DG-wa7"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rk-r3-Fq0" customClass="RoundedCornersButton" customModule="ikaten" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rk-r3-Fq0" customClass="RoundedCornersButton" customModule="ikaten" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="154" width="270" height="47"/>
                                         <color key="backgroundColor" red="0.81176470590000005" green="0.85098039219999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="ikamodoki" family="イカモドキ" pointSize="30"/>
@@ -231,7 +231,7 @@
                                             <segue destination="7ff-0B-pfI" kind="show" identifier="toCreateBattleView" id="MLW-L4-Fa4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRa-3w-ffT" customClass="RoundedCornersButton" customModule="ikaten" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRa-3w-ffT" customClass="RoundedCornersButton" customModule="ikaten" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="231" width="270" height="47"/>
                                         <color key="backgroundColor" red="0.70588235290000001" green="0.0" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="ikamodoki" family="イカモドキ" pointSize="30"/>
