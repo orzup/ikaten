@@ -10,11 +10,15 @@ class StageSpec: QuickSpec {
         }
 
         describe("init") {
-            it("") { expect(stage!.name).to(equal("アロワナモール")) }
+            it("初期化できること") {
+                expect(stage!.name).to(equal("アロワナモール"))
+            }
         }
 
         describe("toStatInkKey") {
-            it("") { expect(stage!.toStatInkKey()).to(equal("arowana")) }
+            it("stat.ink用のキーに変換できること") {
+                expect(stage!.toStatInkKey()).to(equal("arowana"))
+            }
         }
     }
 }

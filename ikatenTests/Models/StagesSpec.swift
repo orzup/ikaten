@@ -15,20 +15,20 @@ class StagesSpec: QuickSpec {
         }
 
         describe("selectStage") {
-            it("") {
+            it("ステージを選択できること") {
                 expect(stages!.stageAtIndex(0).name).to(equal("アロワナモール"))
                 expect(stages!.stageAtIndex(1).name).to(equal("Bバスパーク"))
             }
         }
 
         describe("firstStage") {
-            it("") {
+            it("1つ目のステージがあること") {
                 expect(stages!.firstStage().name).to(equal("アロワナモール"))
             }
         }
 
         describe("secondStage") {
-            it("") {
+            it("2つ目のステージがあること") {
                 expect(stages!.secondStage().name).to(equal("Bバスパーク"))
             }
         }
