@@ -1,10 +1,10 @@
 class Battle {
     let lobby: String
-    let rule: String
+    let rule: Rule
     let weapon: String
     let rank: String
     let rankExp: Int
-    var map: String!
+    var map: Stage!
     var rankAfter: String!
     var rankExpAfter: Int!
     var isWin: Bool!
@@ -14,14 +14,14 @@ class Battle {
 
     init(let data: Dictionary<String, AnyObject>) {
         lobby        = data["lobby"] as! String
-        rule         = data["rule"] as! String
+        rule         = data["rule"] as! Rule
         weapon       = data["weapon"] as! String
         rank         = data["rank"] as! String
         rankExp      = data["rank_exp"] as! Int
     }
 
     func setResult(data: Dictionary<String, AnyObject>) {
-        map          = data["map"] as! String
+        map          = data["map"] as! Stage
         isWin        = data["result"] as! Bool
         kill         = data["kill"] as! Int
         death        = data["death"] as! Int
@@ -35,8 +35,8 @@ class Battle {
         let knockOutString = knockOut! ? "yes" : "no"
         return [
             "lobby":          lobby,
-            "rule":           rule,
-            "map":            map!,
+            "rule":           rule.title,
+            "map":            map!.toStatInkKey(),
             "weapon":         weapon,
             "rank":           rank,
             "rank_exp":       rankExp,

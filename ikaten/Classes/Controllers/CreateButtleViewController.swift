@@ -22,9 +22,8 @@ class CreateButtleViewController: UIViewController {
 
     private func createButtle() {
         SVProgressHUD.show()
-        // TODO: マップの取得
         battle.setResult([
-            "map":           mapSelector.selectedSegmentIndex,
+            "map":           selectStage(),
             "result":        resultSelector.selectedSegmentIndex,
             "kill":          Int(killsTextField.text!)!,
             "death":         Int(deathTextField.text!)!,
@@ -38,6 +37,10 @@ class CreateButtleViewController: UIViewController {
             }, onFailure: { (errorResponse) -> Void in
                 SVProgressHUD.showErrorWithStatus("失敗")
         })
+    }
+
+    private func selectStage() -> Stage {
+        return stages.selectStage(mapSelector.selectedSegmentIndex)
     }
 }
 

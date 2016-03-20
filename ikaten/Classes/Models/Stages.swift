@@ -19,6 +19,10 @@ class Stages {
         return names[2]
     }
 
+    func selectStage(let index : Int) -> Stage {
+        return names[index]
+    }
+
     class func gachi() -> Void {
         Splapi.checkStage("gachi", onSuccess: { (result) -> Void in
             print(result)
