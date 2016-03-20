@@ -1,9 +1,9 @@
 import Alamofire
 
 class Splapi {
-    func checkStage(
+    class func checkStage(
         stage: String,
-        onSuccess: () -> Void,
+        onSuccess: (Stages, Rule) -> Void,
         onFailure: () -> Void
         ) -> Void {
             Alamofire.request(Router.CheckStage(stage)).responseJSON { (response) -> Void in
@@ -13,7 +13,10 @@ class Splapi {
                     if error != nil {
                         onFailure()
                     } else {
-                        onSuccess()
+                        let data = (result["result"] as! NSArray).firstObject as! Dictionary<String, AnyObject>
+                        let stages = Stages(data: data)
+                        let rule = Rule(data["rule"] as! String)
+                        onSuccess(stages, rule)
                     }
                 case .Failure(_):
                     onFailure()
