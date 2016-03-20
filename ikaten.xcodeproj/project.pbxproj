@@ -17,6 +17,9 @@
 		C40248F21C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */; };
 		C40248F31C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */; };
 		C40248F71C8C2007007A3EF9 /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */; };
+		C45F42AF1C9E8081005213B5 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AC1C9E8081005213B5 /* Rule.swift */; };
+		C45F42B01C9E8081005213B5 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AD1C9E8081005213B5 /* Stage.swift */; };
+		C45F42B11C9E8081005213B5 /* Stages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AE1C9E8081005213B5 /* Stages.swift */; };
 		C47C68881C8C5EEF003FADF7 /* ikamodoki.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C47C68871C8C5EEF003FADF7 /* ikamodoki.ttf */; };
 		C4A9AFEB1C8ADBDB00F8AA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9AFEA1C8ADBDB00F8AA45 /* AppDelegate.swift */; };
 		C4A9AFF01C8ADBDB00F8AA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A9AFEE1C8ADBDB00F8AA45 /* Main.storyboard */; };
@@ -25,6 +28,14 @@
 		C4A9B0001C8ADBDB00F8AA45 /* ikatenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9AFFF1C8ADBDB00F8AA45 /* ikatenTests.swift */; };
 		C4A9B00B1C8ADBDB00F8AA45 /* ikatenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9B00A1C8ADBDB00F8AA45 /* ikatenUITests.swift */; };
 		C4AC83B61C8C5908006DF92C /* RoundedCornersButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC83B51C8C5908006DF92C /* RoundedCornersButton.swift */; };
+		C4AE74861C96EC95005CFB48 /* Splapi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AE74851C96EC95005CFB48 /* Splapi.swift */; };
+		C4B56D611C9EACC1003FC21A /* Stages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AE1C9E8081005213B5 /* Stages.swift */; };
+		C4B56D621C9EAE6F003FC21A /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AD1C9E8081005213B5 /* Stage.swift */; };
+		C4B56D631C9EB491003FC21A /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AC1C9E8081005213B5 /* Rule.swift */; };
+		C4B56D641C9EB4D2003FC21A /* Splapi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AE74851C96EC95005CFB48 /* Splapi.swift */; };
+		C4B56D661C9EC274003FC21A /* RuleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B56D651C9EC274003FC21A /* RuleSpec.swift */; };
+		C4B56D681C9EC2C2003FC21A /* StageSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B56D671C9EC2C2003FC21A /* StageSpec.swift */; };
+		C4B56D6A1C9EC2DC003FC21A /* StagesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B56D691C9EC2DC003FC21A /* StagesSpec.swift */; };
 		C4FC6A881C8B11C70023A85A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A871C8B11C70023A85A /* Router.swift */; };
 		C4FC6A8A1C8B18D40023A85A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A871C8B11C70023A85A /* Router.swift */; };
 		C4FC6A8C1C8B19BD0023A85A /* StatInk.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A8B1C8B19BD0023A85A /* StatInk.swift */; };
@@ -62,6 +73,9 @@
 		C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreparationViewController.swift; path = Classes/Controllers/PreparationViewController.swift; sourceTree = "<group>"; };
 		C40248EE1C8B3B55007A3EF9 /* Battle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Battle.swift; path = Classes/Models/Battle.swift; sourceTree = "<group>"; };
 		C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateButtleViewController.swift; path = Classes/Controllers/CreateButtleViewController.swift; sourceTree = "<group>"; };
+		C45F42AC1C9E8081005213B5 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rule.swift; path = Classes/Models/Rule.swift; sourceTree = "<group>"; };
+		C45F42AD1C9E8081005213B5 /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stage.swift; path = Classes/Models/Stage.swift; sourceTree = "<group>"; };
+		C45F42AE1C9E8081005213B5 /* Stages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stages.swift; path = Classes/Models/Stages.swift; sourceTree = "<group>"; };
 		C47C68871C8C5EEF003FADF7 /* ikamodoki.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ikamodoki.ttf; path = OtherFiles/ikamodoki.ttf; sourceTree = "<group>"; };
 		C4A9AFE71C8ADBDB00F8AA45 /* ikaten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ikaten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A9AFEA1C8ADBDB00F8AA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +90,10 @@
 		C4A9B00A1C8ADBDB00F8AA45 /* ikatenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ikatenUITests.swift; sourceTree = "<group>"; };
 		C4A9B00C1C8ADBDB00F8AA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4AC83B51C8C5908006DF92C /* RoundedCornersButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedCornersButton.swift; path = Classes/Views/RoundedCornersButton.swift; sourceTree = "<group>"; };
+		C4AE74851C96EC95005CFB48 /* Splapi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Splapi.swift; path = Classes/Libraries/Splapi.swift; sourceTree = "<group>"; };
+		C4B56D651C9EC274003FC21A /* RuleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuleSpec.swift; path = Models/RuleSpec.swift; sourceTree = "<group>"; };
+		C4B56D671C9EC2C2003FC21A /* StageSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StageSpec.swift; path = Models/StageSpec.swift; sourceTree = "<group>"; };
+		C4B56D691C9EC2DC003FC21A /* StagesSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StagesSpec.swift; path = Models/StagesSpec.swift; sourceTree = "<group>"; };
 		C4FC6A871C8B11C70023A85A /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Classes/Libraries/Router.swift; sourceTree = "<group>"; };
 		C4FC6A8B1C8B19BD0023A85A /* StatInk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatInk.swift; path = Classes/Libraries/StatInk.swift; sourceTree = "<group>"; };
 		C4FC6A8E1C8B1F370023A85A /* StatInkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatInkTests.swift; path = Libraries/StatInkTests.swift; sourceTree = "<group>"; };
@@ -117,6 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				4640F1931C9702EF0036C1CD /* BattleSpec.swift */,
+				C4B56D651C9EC274003FC21A /* RuleSpec.swift */,
+				C4B56D671C9EC2C2003FC21A /* StageSpec.swift */,
+				C4B56D691C9EC2DC003FC21A /* StagesSpec.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -231,6 +252,9 @@
 			isa = PBXGroup;
 			children = (
 				C40248EE1C8B3B55007A3EF9 /* Battle.swift */,
+				C45F42AC1C9E8081005213B5 /* Rule.swift */,
+				C45F42AD1C9E8081005213B5 /* Stage.swift */,
+				C45F42AE1C9E8081005213B5 /* Stages.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -250,6 +274,7 @@
 			children = (
 				C4FC6A871C8B11C70023A85A /* Router.swift */,
 				C4FC6A8B1C8B19BD0023A85A /* StatInk.swift */,
+				C4AE74851C96EC95005CFB48 /* Splapi.swift */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -527,12 +552,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4FC6A881C8B11C70023A85A /* Router.swift in Sources */,
+				C45F42AF1C9E8081005213B5 /* Rule.swift in Sources */,
 				C4FC6A8C1C8B19BD0023A85A /* StatInk.swift in Sources */,
+				C4AE74861C96EC95005CFB48 /* Splapi.swift in Sources */,
 				466595DE1C8B357500258E42 /* SessionViewController.swift in Sources */,
 				C4A9AFEB1C8ADBDB00F8AA45 /* AppDelegate.swift in Sources */,
 				C40248F21C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */,
+				C45F42B01C9E8081005213B5 /* Stage.swift in Sources */,
 				C40248F71C8C2007007A3EF9 /* PreparationViewController.swift in Sources */,
 				C4AC83B61C8C5908006DF92C /* RoundedCornersButton.swift in Sources */,
+				C45F42B11C9E8081005213B5 /* Stages.swift in Sources */,
 				C40248EF1C8B3B55007A3EF9 /* Battle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,11 +573,18 @@
 				C4FC6A8F1C8B1F370023A85A /* StatInkTests.swift in Sources */,
 				C40248ED1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */,
 				C4FC6A8A1C8B18D40023A85A /* Router.swift in Sources */,
+				C4B56D631C9EB491003FC21A /* Rule.swift in Sources */,
 				C4FC6A901C8B1F510023A85A /* StatInk.swift in Sources */,
+				C4B56D621C9EAE6F003FC21A /* Stage.swift in Sources */,
+				C4B56D661C9EC274003FC21A /* RuleSpec.swift in Sources */,
 				466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */,
+				C4B56D681C9EC2C2003FC21A /* StageSpec.swift in Sources */,
 				4640F1941C9702EF0036C1CD /* BattleSpec.swift in Sources */,
 				C4A9B0001C8ADBDB00F8AA45 /* ikatenTests.swift in Sources */,
+				C4B56D641C9EB4D2003FC21A /* Splapi.swift in Sources */,
 				C40248F31C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */,
+				C4B56D6A1C9EC2DC003FC21A /* StagesSpec.swift in Sources */,
+				C4B56D611C9EACC1003FC21A /* Stages.swift in Sources */,
 				C40248F01C8B3B55007A3EF9 /* Battle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

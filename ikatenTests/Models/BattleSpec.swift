@@ -6,14 +6,14 @@ class BattleSpec: QuickSpec {
         describe("バトルの成績をセット") {
             let battle = Battle(data:[
                     "lobby":    "standard",
-                    "rule":     "area",
+                    "rule":     Rule("area"),
                     "weapon":   "wakaba",
                     "rank":     "s",
                     "rank_exp": 50
                 ])
 
-            var params = [
-                "map":           "arowana",
+            var params : Dictionary<String, AnyObject> = [
+                "map":           Stage("arowana"),
                 "is_win":        true,
                 "kill":          12,
                 "death":         5,
