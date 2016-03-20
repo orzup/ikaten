@@ -2,9 +2,9 @@ class Rule {
     let name: String
     let statInkKeys = [
         "ナワバリバトル" : "nawabari",
-        "ガチエリア" : "area",
-        "ガチヤグラ" : "yagura",
-        "ガチホコ" : "hoko"
+        "ガチエリア" :     "area",
+        "ガチヤグラ" :     "yagura",
+        "ガチホコ" :       "hoko"
     ]
 
     init(let _ name: String) {
