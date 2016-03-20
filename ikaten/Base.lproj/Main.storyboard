@@ -161,7 +161,7 @@
         <!--ロビー-->
         <scene sceneID="pFW-rJ-h3a">
             <objects>
-                <viewController id="1eU-Ti-5u0" sceneMemberID="viewController">
+                <viewController id="1eU-Ti-5u0" customClass="LobbyViewController" customModule="ikaten" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yR5-5D-QUu"/>
                         <viewControllerLayoutGuide type="bottom" id="wdu-zz-Jwq"/>
@@ -170,152 +170,125 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzz-wl-NBk" customClass="RoundedCornersButton" customModule="ikaten" customModuleProvider="target">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bvp-1P-Keu">
+                                <rect key="frame" x="30" y="94" width="270" height="278"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzz-wl-NBk" customClass="RoundedCornersButton" customModule="ikaten" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="47"/>
+                                        <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" priority="750" constant="300" id="oCj-fj-oUv"/>
+                                            <constraint firstAttribute="height" constant="80" id="oD4-qQ-Dub"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ikamodoki" family="イカモドキ" pointSize="30"/>
+                                        <state key="normal" title="タッグマッチ"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="oCj-fj-oUv"/>
+                                                <exclude reference="oD4-qQ-Dub"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="oCj-fj-oUv"/>
+                                                <include reference="oD4-qQ-Dub"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="7ff-0B-pfI" kind="show" identifier="toCreateBattleView" id="kdb-Zx-75I"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1u-Lg-kVE" customClass="RoundedCornersButton" customModule="ikaten" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="77" width="270" height="47"/>
+                                        <color key="backgroundColor" red="0.91372549020000005" green="0.20784313730000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="ikamodoki" family="イカモドキ" pointSize="30"/>
+                                        <state key="normal" title="ガチマッチ"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="7ff-0B-pfI" kind="show" identifier="toCreateBattleView" id="bDC-DG-wa7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rk-r3-Fq0" customClass="RoundedCornersButton" customModule="ikaten" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="154" width="270" height="47"/>
+                                        <color key="backgroundColor" red="0.81176470590000005" green="0.85098039219999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="ikamodoki" family="イカモドキ" pointSize="30"/>
+                                        <state key="normal" title="レギュラーマッチ"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="7ff-0B-pfI" kind="show" identifier="toCreateBattleView" id="MLW-L4-Fa4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRa-3w-ffT" customClass="RoundedCornersButton" customModule="ikaten" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="231" width="270" height="47"/>
+                                        <color key="backgroundColor" red="0.70588235290000001" green="0.0" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="ikamodoki" family="イカモドキ" pointSize="30"/>
+                                        <state key="normal" title="プライベートマッチ"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="7ff-0B-pfI" kind="show" identifier="toCreateBattleView" id="mmM-Zv-6ig"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" priority="750" constant="300" id="oCj-fj-oUv"/>
-                                    <constraint firstAttribute="height" constant="60" id="oD4-qQ-Dub"/>
+                                    <constraint firstItem="KRa-3w-ffT" firstAttribute="height" secondItem="Kzz-wl-NBk" secondAttribute="height" id="9Zj-b2-5Kg"/>
+                                    <constraint firstItem="A1u-Lg-kVE" firstAttribute="height" secondItem="Kzz-wl-NBk" secondAttribute="height" id="VfK-hi-LXH"/>
+                                    <constraint firstItem="3rk-r3-Fq0" firstAttribute="height" secondItem="Kzz-wl-NBk" secondAttribute="height" id="saz-N5-wpj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ikamodoki" family="イカモドキ" pointSize="30"/>
-                                <state key="normal" title="タッグマッチ"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="oCj-fj-oUv"/>
-                                        <exclude reference="oD4-qQ-Dub"/>
+                                        <exclude reference="VfK-hi-LXH"/>
+                                        <exclude reference="saz-N5-wpj"/>
+                                        <exclude reference="9Zj-b2-5Kg"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="oCj-fj-oUv"/>
-                                        <include reference="oD4-qQ-Dub"/>
+                                        <include reference="VfK-hi-LXH"/>
+                                        <include reference="saz-N5-wpj"/>
+                                        <include reference="9Zj-b2-5Kg"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <segue destination="7ff-0B-pfI" kind="show" id="kdb-Zx-75I"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1u-Lg-kVE" customClass="RoundedCornersButton" customModule="ikaten" customModuleProvider="target">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.91372549020000005" green="0.20784313730000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="ikamodoki" family="イカモドキ" pointSize="30"/>
-                                <state key="normal" title="ガチマッチ"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="7ff-0B-pfI" kind="show" id="bDC-DG-wa7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rk-r3-Fq0" customClass="RoundedCornersButton" customModule="ikaten" customModuleProvider="target">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.81176470590000005" green="0.85098039219999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="ikamodoki" family="イカモドキ" pointSize="30"/>
-                                <state key="normal" title="レギュラーマッチ"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="7ff-0B-pfI" kind="show" id="MLW-L4-Fa4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRa-3w-ffT" customClass="RoundedCornersButton" customModule="ikaten" customModuleProvider="target">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.70588235290000001" green="0.0" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="ikamodoki" family="イカモドキ" pointSize="30"/>
-                                <state key="normal" title="プライベートマッチ"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="7ff-0B-pfI" kind="show" id="mmM-Zv-6ig"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.24313725529999999" green="0.270588249" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="deviceRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="A1u-Lg-kVE" firstAttribute="width" secondItem="Kzz-wl-NBk" secondAttribute="width" id="4I0-jQ-7Fb"/>
-                            <constraint firstItem="3rk-r3-Fq0" firstAttribute="centerX" secondItem="Kzz-wl-NBk" secondAttribute="centerX" id="4kG-Gb-Nlr"/>
-                            <constraint firstItem="Kzz-wl-NBk" firstAttribute="leading" secondItem="2SJ-a5-adq" secondAttribute="leading" constant="50" id="69D-e7-gJY"/>
-                            <constraint firstItem="3rk-r3-Fq0" firstAttribute="top" secondItem="A1u-Lg-kVE" secondAttribute="bottom" constant="30" id="8M6-Kh-jRr"/>
-                            <constraint firstItem="Kzz-wl-NBk" firstAttribute="top" secondItem="yR5-5D-QUu" secondAttribute="bottom" constant="50" id="Ct1-jj-g33"/>
-                            <constraint firstItem="KRa-3w-ffT" firstAttribute="width" secondItem="Kzz-wl-NBk" secondAttribute="width" id="Ev8-Dk-HUO"/>
-                            <constraint firstItem="3rk-r3-Fq0" firstAttribute="top" secondItem="A1u-Lg-kVE" secondAttribute="bottom" constant="30" id="JZd-hK-hmT"/>
-                            <constraint firstItem="Kzz-wl-NBk" firstAttribute="centerX" secondItem="2SJ-a5-adq" secondAttribute="centerX" id="LLR-JM-ejO"/>
-                            <constraint firstAttribute="trailing" secondItem="Kzz-wl-NBk" secondAttribute="trailing" constant="50" id="RNc-OL-okd"/>
-                            <constraint firstItem="A1u-Lg-kVE" firstAttribute="centerX" secondItem="Kzz-wl-NBk" secondAttribute="centerX" id="Szx-6F-Wkx"/>
-                            <constraint firstItem="A1u-Lg-kVE" firstAttribute="top" secondItem="Kzz-wl-NBk" secondAttribute="bottom" constant="30" id="VDh-cO-mtr"/>
-                            <constraint firstItem="KRa-3w-ffT" firstAttribute="height" secondItem="Kzz-wl-NBk" secondAttribute="height" id="eJE-5u-h2i"/>
-                            <constraint firstItem="A1u-Lg-kVE" firstAttribute="height" secondItem="Kzz-wl-NBk" secondAttribute="height" id="fHt-W8-Taw"/>
-                            <constraint firstItem="KRa-3w-ffT" firstAttribute="centerX" secondItem="Kzz-wl-NBk" secondAttribute="centerX" id="hco-MH-jk7"/>
-                            <constraint firstItem="3rk-r3-Fq0" firstAttribute="width" secondItem="Kzz-wl-NBk" secondAttribute="width" id="lXG-UX-bgH"/>
-                            <constraint firstItem="3rk-r3-Fq0" firstAttribute="height" secondItem="Kzz-wl-NBk" secondAttribute="height" id="nNc-Us-Wws"/>
-                            <constraint firstItem="KRa-3w-ffT" firstAttribute="top" secondItem="3rk-r3-Fq0" secondAttribute="bottom" constant="30" id="yIX-RY-O5a"/>
+                            <constraint firstItem="bvp-1P-Keu" firstAttribute="centerY" secondItem="2SJ-a5-adq" secondAttribute="centerY" id="63e-AU-gxc"/>
+                            <constraint firstAttribute="trailing" secondItem="bvp-1P-Keu" secondAttribute="trailing" constant="30" id="Bgc-Uz-ZRc"/>
+                            <constraint firstItem="bvp-1P-Keu" firstAttribute="centerX" secondItem="2SJ-a5-adq" secondAttribute="centerX" id="PdA-cG-t43"/>
+                            <constraint firstItem="bvp-1P-Keu" firstAttribute="leading" secondItem="2SJ-a5-adq" secondAttribute="leading" constant="30" id="csF-Ui-1TZ"/>
                         </constraints>
                         <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Kzz-wl-NBk"/>
-                                <exclude reference="A1u-Lg-kVE"/>
-                                <exclude reference="3rk-r3-Fq0"/>
-                                <exclude reference="KRa-3w-ffT"/>
-                            </mask>
                             <mask key="constraints">
-                                <exclude reference="4kG-Gb-Nlr"/>
-                                <exclude reference="8M6-Kh-jRr"/>
-                                <exclude reference="JZd-hK-hmT"/>
-                                <exclude reference="lXG-UX-bgH"/>
-                                <exclude reference="nNc-Us-Wws"/>
-                                <exclude reference="4I0-jQ-7Fb"/>
-                                <exclude reference="Szx-6F-Wkx"/>
-                                <exclude reference="VDh-cO-mtr"/>
-                                <exclude reference="fHt-W8-Taw"/>
-                                <exclude reference="Ev8-Dk-HUO"/>
-                                <exclude reference="eJE-5u-h2i"/>
-                                <exclude reference="hco-MH-jk7"/>
-                                <exclude reference="yIX-RY-O5a"/>
-                                <exclude reference="69D-e7-gJY"/>
-                                <exclude reference="Ct1-jj-g33"/>
-                                <exclude reference="LLR-JM-ejO"/>
-                                <exclude reference="RNc-OL-okd"/>
+                                <exclude reference="63e-AU-gxc"/>
+                                <exclude reference="Bgc-Uz-ZRc"/>
+                                <exclude reference="PdA-cG-t43"/>
+                                <exclude reference="csF-Ui-1TZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="Kzz-wl-NBk"/>
-                                <include reference="A1u-Lg-kVE"/>
-                                <include reference="3rk-r3-Fq0"/>
-                                <include reference="KRa-3w-ffT"/>
-                            </mask>
                             <mask key="constraints">
-                                <include reference="4kG-Gb-Nlr"/>
-                                <include reference="8M6-Kh-jRr"/>
-                                <include reference="JZd-hK-hmT"/>
-                                <include reference="lXG-UX-bgH"/>
-                                <include reference="nNc-Us-Wws"/>
-                                <include reference="4I0-jQ-7Fb"/>
-                                <include reference="Szx-6F-Wkx"/>
-                                <include reference="VDh-cO-mtr"/>
-                                <include reference="fHt-W8-Taw"/>
-                                <include reference="Ev8-Dk-HUO"/>
-                                <include reference="eJE-5u-h2i"/>
-                                <include reference="hco-MH-jk7"/>
-                                <include reference="yIX-RY-O5a"/>
-                                <include reference="69D-e7-gJY"/>
-                                <include reference="Ct1-jj-g33"/>
-                                <include reference="LLR-JM-ejO"/>
-                                <include reference="RNc-OL-okd"/>
+                                <include reference="63e-AU-gxc"/>
+                                <include reference="Bgc-Uz-ZRc"/>
+                                <include reference="PdA-cG-t43"/>
+                                <include reference="csF-Ui-1TZ"/>
                             </mask>
                         </variation>
                     </view>
@@ -716,6 +689,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="VZ4-qk-37W"/>
-        <segue reference="mmM-Zv-6ig"/>
+        <segue reference="MLW-L4-Fa4"/>
     </inferredMetricsTieBreakers>
 </document>
