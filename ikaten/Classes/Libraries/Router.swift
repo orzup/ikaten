@@ -35,8 +35,8 @@ enum Router: URLRequestConvertible {
             return "/battle"
         case .CheckAPIKey:
             return "/battle"
-        case .CheckStage(let stage):
-            return "/\(stage)/now"
+        case .CheckStage(let rule):
+            return "/\(rule)/now"
         }
     }
 
