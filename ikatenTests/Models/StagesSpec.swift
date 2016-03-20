@@ -16,8 +16,8 @@ class StagesSpec: QuickSpec {
 
         describe("selectStage") {
             it("") {
-                expect(stages!.selectStage(0).name).to(equal("アロワナモール"))
-                expect(stages!.selectStage(1).name).to(equal("Bバスパーク"))
+                expect(stages!.stageAtIndex(0).name).to(equal("アロワナモール"))
+                expect(stages!.stageAtIndex(1).name).to(equal("Bバスパーク"))
             }
         }
     }

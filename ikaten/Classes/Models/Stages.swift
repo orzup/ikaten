@@ -19,7 +19,7 @@ class Stages {
         return names[2]
     }
 
-    func selectStage(let index : Int) -> Stage {
+    func stageAtIndex(let index : Int) -> Stage {
         return names[index]
     }
 
