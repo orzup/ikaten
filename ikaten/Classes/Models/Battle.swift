@@ -22,7 +22,7 @@ class Battle {
 
     func setResult(data: Dictionary<String, AnyObject>) {
         map          = data["map"] as! Stage
-        isWin        = data["result"] as! Bool
+        isWin        = data["is_win"] as! Bool
         kill         = data["kill"] as! Int
         death        = data["death"] as! Int
         knockOut     = data["knock_out"] as! Bool

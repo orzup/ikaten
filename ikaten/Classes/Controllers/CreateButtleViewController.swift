@@ -24,7 +24,7 @@ class CreateButtleViewController: UIViewController {
         SVProgressHUD.show()
         battle.setResult([
             "map":           selectStage(),
-            "result":        resultSelector.selectedSegmentIndex,
+            "is_win":        resultSelector.selectedSegmentIndex == 0,
             "kill":          Int(killsTextField.text!)!,
             "death":         Int(deathTextField.text!)!,
             "rankExpChange": Int(rankExpChangeTextField.text!)!,
