@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4640F1941C9702EF0036C1CD /* BattleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4640F1931C9702EF0036C1CD /* BattleSpec.swift */; };
 		466595DE1C8B357500258E42 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466595DD1C8B357500258E42 /* SessionViewController.swift */; };
 		466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466595DD1C8B357500258E42 /* SessionViewController.swift */; };
 		B15A909AA67ED85BA717F7E6 /* Pods_ikaten.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C867FD8CEF3CED506E69059A /* Pods_ikaten.framework */; };
@@ -37,6 +38,8 @@
 		C4FC6A8C1C8B19BD0023A85A /* StatInk.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A8B1C8B19BD0023A85A /* StatInk.swift */; };
 		C4FC6A8F1C8B1F370023A85A /* StatInkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A8E1C8B1F370023A85A /* StatInkTests.swift */; };
 		C4FC6A901C8B1F510023A85A /* StatInk.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A8B1C8B19BD0023A85A /* StatInk.swift */; };
+		EFF3606D6C6B3C296C07AF5B /* Pods_ikatenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69539928D2C5B033EFFA4335 /* Pods_ikatenUITests.framework */; };
+		F7A19B70C2A3E660A85542D9 /* Pods_ikatenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51CB08DE701A2ED86C36576B /* Pods_ikatenTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +60,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32FBF78638341B225D5FF50A /* Pods-ikatenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ikatenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ikatenUITests/Pods-ikatenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4640F1931C9702EF0036C1CD /* BattleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattleSpec.swift; path = Models/BattleSpec.swift; sourceTree = "<group>"; };
 		466595DD1C8B357500258E42 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionViewController.swift; path = Classes/Controllers/SessionViewController.swift; sourceTree = "<group>"; };
+		51CB08DE701A2ED86C36576B /* Pods_ikatenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ikatenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D2A481430E0C756A703ECE8 /* Pods-ikatenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ikatenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ikatenUITests/Pods-ikatenUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		69539928D2C5B033EFFA4335 /* Pods_ikatenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ikatenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14EA4370DA8B3D025055265 /* Pods-ikaten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ikaten.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ikaten/Pods-ikaten.debug.xcconfig"; sourceTree = "<group>"; };
 		C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreparationViewController.swift; path = Classes/Controllers/PreparationViewController.swift; sourceTree = "<group>"; };
 		C40248EE1C8B3B55007A3EF9 /* Battle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Battle.swift; path = Classes/Models/Battle.swift; sourceTree = "<group>"; };
@@ -84,6 +92,8 @@
 		C4FC6A8B1C8B19BD0023A85A /* StatInk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatInk.swift; path = Classes/Libraries/StatInk.swift; sourceTree = "<group>"; };
 		C4FC6A8E1C8B1F370023A85A /* StatInkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatInkTests.swift; path = Libraries/StatInkTests.swift; sourceTree = "<group>"; };
 		C867FD8CEF3CED506E69059A /* Pods_ikaten.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ikaten.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3CBE2F4E429975B62A23BCA /* Pods-ikatenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ikatenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ikatenTests/Pods-ikatenTests.release.xcconfig"; sourceTree = "<group>"; };
+		E25C443C6AD435B6C2DA3DFA /* Pods-ikatenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ikatenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ikatenTests/Pods-ikatenTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FD469AA50F2B35819609DF3B /* Pods-ikaten.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ikaten.release.xcconfig"; path = "Pods/Target Support Files/Pods-ikaten/Pods-ikaten.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7A19B70C2A3E660A85542D9 /* Pods_ikatenTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,17 +118,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF3606D6C6B3C296C07AF5B /* Pods_ikatenUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4640F1921C9702960036C1CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4640F1931C9702EF0036C1CD /* BattleSpec.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		6EF3A7C6ACBAA264E44B062B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				B14EA4370DA8B3D025055265 /* Pods-ikaten.debug.xcconfig */,
 				FD469AA50F2B35819609DF3B /* Pods-ikaten.release.xcconfig */,
+				E25C443C6AD435B6C2DA3DFA /* Pods-ikatenTests.debug.xcconfig */,
+				D3CBE2F4E429975B62A23BCA /* Pods-ikatenTests.release.xcconfig */,
+				5D2A481430E0C756A703ECE8 /* Pods-ikatenUITests.debug.xcconfig */,
+				32FBF78638341B225D5FF50A /* Pods-ikatenUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -126,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				C867FD8CEF3CED506E69059A /* Pods_ikaten.framework */,
+				51CB08DE701A2ED86C36576B /* Pods_ikatenTests.framework */,
+				69539928D2C5B033EFFA4335 /* Pods_ikatenUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				C4A9AFFF1C8ADBDB00F8AA45 /* ikatenTests.swift */,
+				4640F1921C9702960036C1CD /* Models */,
 				C4FC6A8D1C8B1F090023A85A /* Libraries */,
 				C4A9B0011C8ADBDB00F8AA45 /* Info.plist */,
 			);
@@ -278,9 +305,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4A9B0121C8ADBDB00F8AA45 /* Build configuration list for PBXNativeTarget "ikatenTests" */;
 			buildPhases = (
+				A602FD77F40F60C35528FCB8 /* Check Pods Manifest.lock */,
 				C4A9AFF71C8ADBDB00F8AA45 /* Sources */,
 				C4A9AFF81C8ADBDB00F8AA45 /* Frameworks */,
 				C4A9AFF91C8ADBDB00F8AA45 /* Resources */,
+				376C149545D3A1BCDC42EDD9 /* Embed Pods Frameworks */,
+				662B1FA5E428D47C9897AF9B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -296,9 +326,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4A9B0151C8ADBDB00F8AA45 /* Build configuration list for PBXNativeTarget "ikatenUITests" */;
 			buildPhases = (
+				CC801DD63494C528F42CB76C /* Check Pods Manifest.lock */,
 				C4A9B0021C8ADBDB00F8AA45 /* Sources */,
 				C4A9B0031C8ADBDB00F8AA45 /* Frameworks */,
 				C4A9B0041C8ADBDB00F8AA45 /* Resources */,
+				191F00FB284051CBA1B05E59 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -383,6 +415,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		191F00FB284051CBA1B05E59 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ikatenUITests/Pods-ikatenUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		376C149545D3A1BCDC42EDD9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ikatenTests/Pods-ikatenTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5545BDDE73503A60499A6CB0 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,6 +473,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ikaten/Pods-ikaten-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		662B1FA5E428D47C9897AF9B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ikatenTests/Pods-ikatenTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A602FD77F40F60C35528FCB8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CC801DD63494C528F42CB76C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FBF528AEE5E4093C1B122256 /* Embed Pods Frameworks */ = {
@@ -461,6 +568,7 @@
 				C4FC6A901C8B1F510023A85A /* StatInk.swift in Sources */,
 				C4B56D621C9EAE6F003FC21A /* Stage.swift in Sources */,
 				466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */,
+				4640F1941C9702EF0036C1CD /* BattleSpec.swift in Sources */,
 				C4A9B0001C8ADBDB00F8AA45 /* ikatenTests.swift in Sources */,
 				C4B56D641C9EB4D2003FC21A /* Splapi.swift in Sources */,
 				C40248F31C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */,
@@ -621,6 +729,7 @@
 		};
 		C4A9B0131C8ADBDB00F8AA45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E25C443C6AD435B6C2DA3DFA /* Pods-ikatenTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ikatenTests/Info.plist;
@@ -633,6 +742,7 @@
 		};
 		C4A9B0141C8ADBDB00F8AA45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3CBE2F4E429975B62A23BCA /* Pods-ikatenTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ikatenTests/Info.plist;
@@ -645,6 +755,7 @@
 		};
 		C4A9B0161C8ADBDB00F8AA45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D2A481430E0C756A703ECE8 /* Pods-ikatenUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ikatenUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -657,6 +768,7 @@
 		};
 		C4A9B0171C8ADBDB00F8AA45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32FBF78638341B225D5FF50A /* Pods-ikatenUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ikatenUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

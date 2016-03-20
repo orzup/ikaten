@@ -25,14 +25,13 @@ class Battle {
         isWin        = data["result"] as! Bool
         kill         = data["kill"] as! Int
         death        = data["death"] as! Int
-        knockOut     = data["knockOut"] as! Bool
+        knockOut     = data["knock_out"] as! Bool
         
         setRunk(data["rankExpChange"] as? Int)
     }
     
 
     func decode() -> Dictionary<String, AnyObject> {
-        let knockOutString = knockOut! ? "yes" : "no"
         return [
             "lobby":          lobby,
             "rule":           rule.title,
@@ -42,10 +41,10 @@ class Battle {
             "rank_exp":       rankExp,
             "rank_after":     rankAfter!,
             "rank_exp_after": rankExpAfter!,
-            "result":         isWin!,
+            "result":         isWin! ? "win" : "lose",
             "kill":           kill!,
             "death":          death!,
-            "knock_out":      knockOutString
+            "knock_out":      knockOut! ? "yes" : "no"
        ]
     }
 
@@ -53,18 +52,18 @@ class Battle {
         let ranks = ["c-", "c", "c+", "b-", "b", "b+", "a-", "a", "a+", "s", "s+"];
 
         if isWin as Bool {
-            rankExpAfter = rankExp - rankExpChange
-            if rank != ranks.first && rankExpAfter < 0 {
-                rankExpAfter = 70
-                rankAfter = ranks[ranks.indexOf(rank)! - 1];
-            } else {
-                rankAfter = rank;
-            }
-        } else {
             rankExpAfter = rankExp + rankExpChange
             if rank != ranks.last && rankExpAfter >= 100 {
                 rankExpAfter = 30
                 rankAfter = ranks[ranks.indexOf(rank)! + 1];
+            } else {
+                rankAfter = rank;
+            }
+        } else {
+            rankExpAfter = rankExp - rankExpChange
+            if rank != ranks.first && rankExpAfter < 0 {
+                rankExpAfter = 70
+                rankAfter = ranks[ranks.indexOf(rank)! - 1];
             } else {
                 rankAfter = rank;
             }

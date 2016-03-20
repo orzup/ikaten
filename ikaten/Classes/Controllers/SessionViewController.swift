@@ -10,13 +10,22 @@ class SessionViewController: UIViewController {
             goToLobbyViewController()
         }
     }
+
+    @IBAction func editingDidEndOnExitTextField(sender: UITextField) {
+        view.endEditing(true)
+    }
     
     @IBAction func touchUpInsideSubmitButton(sender: AnyObject) {
         SVProgressHUD.show()
         checkAPIKey()
     }
     
+    @IBAction func singleTapView(sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+
     private func goToLobbyViewController() {
+        view.endEditing(true)
         performSegueWithIdentifier("toLobbyViewController", sender: nil)
     }
     
