@@ -19,7 +19,7 @@ class CreateButtleViewController: UIViewController {
         // TODO: マップの取得
         battle.setResult([
             "map":           "arowana",
-            "is_win":        resultSelector.selectedSegmentIndex,
+            "is_win":        resultSelector.selectedSegmentIndex == 0,
             "kill":          Int(killsTextField.text!)!,
             "death":         Int(deathTextField.text!)!,
             "rankExpChange": Int(rankExpChangeTextField.text!)!,
