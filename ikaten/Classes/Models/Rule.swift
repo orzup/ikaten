@@ -1,6 +1,6 @@
 class Rule {
     let name: String
-    let statInkKeys = [
+    private static let statInkKeys = [
         "ナワバリバトル" : "nawabari",
         "ガチエリア" :     "area",
         "ガチヤグラ" :     "yagura",
@@ -12,6 +12,6 @@ class Rule {
     }
 
     func toStatInkKey() -> String {
-        return statInkKeys[name]!
+        return Rule.statInkKeys[name]!
     }
 }

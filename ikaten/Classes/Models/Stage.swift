@@ -1,7 +1,7 @@
 class Stage {
     let name: String
     // TODO: 本当は stat.ink からステージ一覧を取得してこのリストを作りたい気持ち
-    let statInkKeys = [
+    private static let statInkKeys = [
         "アンチョビットゲームズ" : "anchovy",
         "アロワナモール" :         "arowana",
         "Bバスパーク" :            "bbass",
@@ -25,6 +25,6 @@ class Stage {
     }
 
     func toStatInkKey() -> String {
-        return statInkKeys[name]!
+        return Stage.statInkKeys[name]!
     }
 }
