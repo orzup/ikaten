@@ -2,4 +2,4 @@ language: objective-c
 osx_image: xcode7.2
 xcode_sdk: iphonesimulator
 xcode_project: ikaten.xcodeproj
-xcode_scheme: ikaten
+xcode_scheme: ikatenTests

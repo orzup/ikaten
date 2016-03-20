@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C4A9AFE61C8ADBDB00F8AA45"
-               BuildableName = "ikaten.app"
-               BlueprintName = "ikaten"
-               ReferencedContainer = "container:ikaten.xcodeproj">
+               BlueprintIdentifier = "79C040AFDDCE1BCBF6D8B5EB0B85887F"
+               BuildableName = "Alamofire.framework"
+               BlueprintName = "Alamofire"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,20 +31,6 @@
                BlueprintIdentifier = "50EF3B4108836D5ED5C05F601D4AB4D6"
                BuildableName = "Pods_ikaten.framework"
                BlueprintName = "Pods-ikaten"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "79C040AFDDCE1BCBF6D8B5EB0B85887F"
-               BuildableName = "Alamofire.framework"
-               BlueprintName = "Alamofire"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -66,24 +52,14 @@
                ReferencedContainer = "container:ikaten.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C4A9B0051C8ADBDB00F8AA45"
-               BuildableName = "ikatenUITests.xctest"
-               BlueprintName = "ikatenUITests"
-               ReferencedContainer = "container:ikaten.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C4A9AFE61C8ADBDB00F8AA45"
-            BuildableName = "ikaten.app"
-            BlueprintName = "ikaten"
-            ReferencedContainer = "container:ikaten.xcodeproj">
+            BlueprintIdentifier = "79C040AFDDCE1BCBF6D8B5EB0B85887F"
+            BuildableName = "Alamofire.framework"
+            BlueprintName = "Alamofire"
+            ReferencedContainer = "container:Pods/Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -99,16 +75,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C4A9AFE61C8ADBDB00F8AA45"
-            BuildableName = "ikaten.app"
-            BlueprintName = "ikaten"
-            ReferencedContainer = "container:ikaten.xcodeproj">
+            BlueprintIdentifier = "79C040AFDDCE1BCBF6D8B5EB0B85887F"
+            BuildableName = "Alamofire.framework"
+            BlueprintName = "Alamofire"
+            ReferencedContainer = "container:Pods/Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -118,16 +93,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C4A9AFE61C8ADBDB00F8AA45"
-            BuildableName = "ikaten.app"
-            BlueprintName = "ikaten"
-            ReferencedContainer = "container:ikaten.xcodeproj">
+            BlueprintIdentifier = "79C040AFDDCE1BCBF6D8B5EB0B85887F"
+            BuildableName = "Alamofire.framework"
+            BlueprintName = "Alamofire"
+            ReferencedContainer = "container:Pods/Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
