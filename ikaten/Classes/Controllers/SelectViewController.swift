@@ -15,7 +15,7 @@ class SelectViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("selectTableCell", forIndexPath: indexPath)
 
-        cell.textLabel!.text = collection.jaTextAtIndex(indexPath.row)
+        cell.textLabel!.text = collection.nameAtIndex(indexPath.row)
 
         return cell
     }
@@ -25,7 +25,7 @@ class SelectViewController: UITableViewController {
         let viewController = viewControllers![viewControllers!.count - 2] as! PreparationViewController
         let cell = viewController.tableView.cellForRowAtIndexPath(selectedIndexPath)
 
-        cell!.detailTextLabel?.text = collection.jaTextAtIndex(indexPath.row)
+        cell!.detailTextLabel?.text = collection.nameAtIndex(indexPath.row)
         self.navigationController?.popViewControllerAnimated(true)
     }
 }

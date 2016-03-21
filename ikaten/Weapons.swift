@@ -1,13 +1,8 @@
 class Weapons : DataCollection {
-    init(let weapons: Array<Dictionary<String, AnyObject>>) {
+    init(let _ params: Array<Dictionary<String, AnyObject>>) {
         super.init()
-        for weapon in weapons  {
-            list.append(Weapon(data: weapon))
+        for param in params  {
+            append(Weapon(param))
         }
-    }
-
-    func jaNameAtIndex(index: Int) -> String {
-        let weapon = list[index] as! Weapon
-        return weapon.name
     }
 }
