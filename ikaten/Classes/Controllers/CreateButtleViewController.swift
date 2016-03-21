@@ -23,6 +23,10 @@ class CreateButtleViewController: UIViewController {
         isKnockoutSelector = IkatenSegmentedControl(items: ["ノックアウト", "タイムアップ"], container: isKnockoutSelectorContainer)
     }
 
+    @IBAction func singleTapView(sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+
     @IBAction func touchUpInsideNextBattleButton(sender: AnyObject) {
         createButtle()
     }
