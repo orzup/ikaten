@@ -25,9 +25,9 @@ class DataCollectionSpec: QuickSpec {
             }
         }
 
-        describe("nameAtIndex") {
-            it("indexでnameが取れること") {
-                expect(dataCollection!.nameAtIndex(1)).to(equal(""))
+        describe("dataAtIndex") {
+            it("indexでdataが取れること") {
+                expect(dataCollection!.dataAtIndex(1)).to(beTruthy())
             }
         }
     }

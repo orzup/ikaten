@@ -9,6 +9,7 @@ class PreparationViewController: UITableViewController {
     }
 
     var lobby: Lobby!
+    var weapon: Weapon!
     var stages: Stages!
     var rule: Rule!
 
@@ -53,7 +54,7 @@ class PreparationViewController: UITableViewController {
         return [
             "lobby":    lobby,
             "rule":     rule,
-            "weapon":   "52gal",
+            "weapon":   weapon,
             "rank":     "s",
             "rank_exp": 0,
         ]

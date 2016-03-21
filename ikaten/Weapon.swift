@@ -3,5 +3,6 @@ class Weapon : Data {
         super.init()
         let nameData = data["name"] as! Dictionary<String, String>
         name = nameData["ja_JP"]!
+        key = data["key"] as! String
     }
 }

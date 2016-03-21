@@ -13,6 +13,11 @@ class DataCollection {
         return list.count
     }
 
+    func dataAtIndex(index: Int) -> Data {
+        let data = list[index] as! Data
+        return data
+    }
+
     func nameAtIndex(index: Int) -> String {
         let data = list[index] as! Data
         return data.name

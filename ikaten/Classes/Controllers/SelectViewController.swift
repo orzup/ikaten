@@ -25,7 +25,12 @@ class SelectViewController: UITableViewController {
         let previousViewController = viewControllers![viewControllers!.count - 2] as! PreparationViewController
         let cell = previousViewController.tableView.cellForRowAtIndexPath(selectedIndexPath)
 
-        cell!.detailTextLabel?.text = collection.nameAtIndex(indexPath.row)
+        if let _ = collection as? Weapons {
+            previousViewController.weapon = collection.dataAtIndex(indexPath.row) as! Weapon
+        }
+
+        cell!.detailTextLabel?.text = collection.dataAtIndex(indexPath.row).name
+
         self.navigationController?.popViewControllerAnimated(true)
     }
 }
