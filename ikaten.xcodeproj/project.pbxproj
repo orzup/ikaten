@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46100B321C9FD6DD006B1051 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46100B311C9FD6DD006B1051 /* Data.swift */; };
+		46100B331C9FD6DD006B1051 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46100B311C9FD6DD006B1051 /* Data.swift */; };
+		461A06741C9EC7C000C15FF2 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A06731C9EC7C000C15FF2 /* SelectViewController.swift */; };
+		461A06751C9EC7C000C15FF2 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A06731C9EC7C000C15FF2 /* SelectViewController.swift */; };
+		461A06771C9EE97500C15FF2 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A06761C9EE97500C15FF2 /* Weapon.swift */; };
+		461A06781C9EE97500C15FF2 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A06761C9EE97500C15FF2 /* Weapon.swift */; };
+		461A067A1C9F28A800C15FF2 /* Weapons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A06791C9F28A800C15FF2 /* Weapons.swift */; };
+		461A067B1C9F28A800C15FF2 /* Weapons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A06791C9F28A800C15FF2 /* Weapons.swift */; };
+		461A067D1C9F357A00C15FF2 /* DataCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A067C1C9F357A00C15FF2 /* DataCollection.swift */; };
+		461A067E1C9F357A00C15FF2 /* DataCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A067C1C9F357A00C15FF2 /* DataCollection.swift */; };
 		4640F1941C9702EF0036C1CD /* BattleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4640F1931C9702EF0036C1CD /* BattleSpec.swift */; };
 		466595DE1C8B357500258E42 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466595DD1C8B357500258E42 /* SessionViewController.swift */; };
 		466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466595DD1C8B357500258E42 /* SessionViewController.swift */; };
@@ -64,6 +74,11 @@
 
 /* Begin PBXFileReference section */
 		32FBF78638341B225D5FF50A /* Pods-ikatenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ikatenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ikatenUITests/Pods-ikatenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		46100B311C9FD6DD006B1051 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		461A06731C9EC7C000C15FF2 /* SelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectViewController.swift; path = Classes/Controllers/SelectViewController.swift; sourceTree = "<group>"; };
+		461A06761C9EE97500C15FF2 /* Weapon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		461A06791C9F28A800C15FF2 /* Weapons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weapons.swift; sourceTree = "<group>"; };
+		461A067C1C9F357A00C15FF2 /* DataCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCollection.swift; sourceTree = "<group>"; };
 		4640F1931C9702EF0036C1CD /* BattleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattleSpec.swift; path = Models/BattleSpec.swift; sourceTree = "<group>"; };
 		466595DD1C8B357500258E42 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionViewController.swift; path = Classes/Controllers/SessionViewController.swift; sourceTree = "<group>"; };
 		51CB08DE701A2ED86C36576B /* Pods_ikatenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ikatenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +266,10 @@
 		C4FC6A831C8B01BB0023A85A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				461A067C1C9F357A00C15FF2 /* DataCollection.swift */,
+				46100B311C9FD6DD006B1051 /* Data.swift */,
+				461A06761C9EE97500C15FF2 /* Weapon.swift */,
+				461A06791C9F28A800C15FF2 /* Weapons.swift */,
 				C40248EE1C8B3B55007A3EF9 /* Battle.swift */,
 				C45F42AC1C9E8081005213B5 /* Rule.swift */,
 				C45F42AD1C9E8081005213B5 /* Stage.swift */,
@@ -265,6 +284,7 @@
 				466595DD1C8B357500258E42 /* SessionViewController.swift */,
 				C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */,
 				C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */,
+				461A06731C9EC7C000C15FF2 /* SelectViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -553,15 +573,20 @@
 			files = (
 				C4FC6A881C8B11C70023A85A /* Router.swift in Sources */,
 				C45F42AF1C9E8081005213B5 /* Rule.swift in Sources */,
+				461A06771C9EE97500C15FF2 /* Weapon.swift in Sources */,
 				C4FC6A8C1C8B19BD0023A85A /* StatInk.swift in Sources */,
 				C4AE74861C96EC95005CFB48 /* Splapi.swift in Sources */,
 				466595DE1C8B357500258E42 /* SessionViewController.swift in Sources */,
 				C4A9AFEB1C8ADBDB00F8AA45 /* AppDelegate.swift in Sources */,
 				C40248F21C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */,
 				C45F42B01C9E8081005213B5 /* Stage.swift in Sources */,
+				461A067A1C9F28A800C15FF2 /* Weapons.swift in Sources */,
 				C40248F71C8C2007007A3EF9 /* PreparationViewController.swift in Sources */,
+				461A067D1C9F357A00C15FF2 /* DataCollection.swift in Sources */,
 				C4AC83B61C8C5908006DF92C /* RoundedCornersButton.swift in Sources */,
+				46100B321C9FD6DD006B1051 /* Data.swift in Sources */,
 				C45F42B11C9E8081005213B5 /* Stages.swift in Sources */,
+				461A06741C9EC7C000C15FF2 /* SelectViewController.swift in Sources */,
 				C40248EF1C8B3B55007A3EF9 /* Battle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,22 +595,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461A06751C9EC7C000C15FF2 /* SelectViewController.swift in Sources */,
 				C4FC6A8F1C8B1F370023A85A /* StatInkTests.swift in Sources */,
 				C40248ED1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */,
 				C4FC6A8A1C8B18D40023A85A /* Router.swift in Sources */,
 				C4B56D631C9EB491003FC21A /* Rule.swift in Sources */,
 				C4FC6A901C8B1F510023A85A /* StatInk.swift in Sources */,
 				C4B56D621C9EAE6F003FC21A /* Stage.swift in Sources */,
+				46100B331C9FD6DD006B1051 /* Data.swift in Sources */,
 				C4B56D661C9EC274003FC21A /* RuleSpec.swift in Sources */,
+				461A06781C9EE97500C15FF2 /* Weapon.swift in Sources */,
 				466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */,
 				C4B56D681C9EC2C2003FC21A /* StageSpec.swift in Sources */,
 				4640F1941C9702EF0036C1CD /* BattleSpec.swift in Sources */,
 				C4A9B0001C8ADBDB00F8AA45 /* ikatenTests.swift in Sources */,
+				461A067B1C9F28A800C15FF2 /* Weapons.swift in Sources */,
 				C4B56D641C9EB4D2003FC21A /* Splapi.swift in Sources */,
 				C40248F31C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */,
 				C4B56D6A1C9EC2DC003FC21A /* StagesSpec.swift in Sources */,
 				C4B56D611C9EACC1003FC21A /* Stages.swift in Sources */,
 				C40248F01C8B3B55007A3EF9 /* Battle.swift in Sources */,
+				461A067E1C9F357A00C15FF2 /* DataCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

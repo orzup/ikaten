@@ -18,6 +18,25 @@ class PreparationViewController: UITableViewController {
             nextViewController.battle = Battle(data: params())
             nextViewController.stages = self.stages
         }
+        if segue.identifier == "toSelectViewController" {
+            let nextViewController = segue.destinationViewController as! SelectViewController
+            nextViewController.selectedIndexPath = sender!["indexPath"] as! NSIndexPath
+            nextViewController.collection = sender!["collection"] as! DataCollection 
+        }
+    }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch indexPath.row {
+        case 1:
+            StatInk().getWeapon({ (data) -> Void in
+                self.performSegueWithIdentifier("toSelectViewController",
+                    sender: ["indexPath": indexPath, "collection": Weapons(weapons: data as! Array<Dictionary<String, AnyObject>>)]
+                )
+                }) { () -> Void in
+            }
+        default:
+            break
+        }
     }
 
     private func params() -> Dictionary<String, AnyObject> {

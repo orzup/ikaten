@@ -17,6 +17,7 @@ enum Router: URLRequestConvertible {
     case CreateBattle(Battle)
     case CheckAPIKey(String)
     case CheckStage(String)
+    case GetWeapon(Void)
 
     var method: Alamofire.Method {
         switch self {
@@ -26,7 +27,10 @@ enum Router: URLRequestConvertible {
             return .POST
         case .CheckStage:
             return .GET
+        case .GetWeapon:
+            return .GET
         }
+        
     }
 
     var path: String {
@@ -37,6 +41,8 @@ enum Router: URLRequestConvertible {
             return "/battle"
         case .CheckStage(let rule):
             return "/\(rule)/now"
+        case .GetWeapon:
+            return "/weapon"
         }
     }
 
@@ -60,6 +66,8 @@ enum Router: URLRequestConvertible {
         case .CheckAPIKey(let APIKey):
             let params = ["apikey": APIKey, "test": "dry_run"]
             return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: params).0
+        case .GetWeapon():
+            return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: nil).0
         default:
             return mutableURLRequest
         }
