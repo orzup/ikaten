@@ -38,7 +38,7 @@ class PreparationViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
         case Data.Weapon.rawValue:
-            StatInk().getWeapon({ (weapons) -> Void in
+            StatInk().indexWeapon({ (weapons) -> Void in
                 self.performSegueWithIdentifier("toSelectViewController",
                     sender: ["indexPath": indexPath, "collection": weapons]
                 )

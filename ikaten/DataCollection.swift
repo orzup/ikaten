@@ -7,6 +7,6 @@ class DataCollection {
 
     func jaTextAtIndex(index: Int) -> String {
         let data = list[index] as! Data
-        return data.jaText
+        return data.name
     }
 }

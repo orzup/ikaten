@@ -1,4 +1,3 @@
 class Data {
-    var jaText = ""
-    var enText = ""
+    var name = ""
 }

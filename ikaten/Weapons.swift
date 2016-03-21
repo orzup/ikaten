@@ -8,6 +8,6 @@ class Weapons : DataCollection {
 
     func jaNameAtIndex(index: Int) -> String {
         let weapon = list[index] as! Weapon
-        return weapon.jaText
+        return weapon.name
     }
 }
