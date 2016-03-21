@@ -21,6 +21,7 @@
 		C4511EFB1C9F18A100052EDA /* Lobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4511EFA1C9F18A100052EDA /* Lobby.swift */; };
 		C4511EFC1C9F18A100052EDA /* Lobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4511EFA1C9F18A100052EDA /* Lobby.swift */; };
 		C4511EFE1C9F2C6F00052EDA /* LobbySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4511EFD1C9F2C6F00052EDA /* LobbySpec.swift */; };
+		C4511F001C9FC38700052EDA /* project_paintball.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4511EFF1C9FC38200052EDA /* project_paintball.otf */; };
 		C45F42AF1C9E8081005213B5 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AC1C9E8081005213B5 /* Rule.swift */; };
 		C45F42B01C9E8081005213B5 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AD1C9E8081005213B5 /* Stage.swift */; };
 		C45F42B11C9E8081005213B5 /* Stages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AE1C9E8081005213B5 /* Stages.swift */; };
@@ -80,6 +81,7 @@
 		C4511EF81C9F131C00052EDA /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LobbyViewController.swift; path = Classes/Controllers/LobbyViewController.swift; sourceTree = "<group>"; };
 		C4511EFA1C9F18A100052EDA /* Lobby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lobby.swift; path = Classes/Models/Lobby.swift; sourceTree = "<group>"; };
 		C4511EFD1C9F2C6F00052EDA /* LobbySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LobbySpec.swift; path = Models/LobbySpec.swift; sourceTree = "<group>"; };
+		C4511EFF1C9FC38200052EDA /* project_paintball.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = project_paintball.otf; sourceTree = "<group>"; };
 		C45F42AC1C9E8081005213B5 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rule.swift; path = Classes/Models/Rule.swift; sourceTree = "<group>"; };
 		C45F42AD1C9E8081005213B5 /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stage.swift; path = Classes/Models/Stage.swift; sourceTree = "<group>"; };
 		C45F42AE1C9E8081005213B5 /* Stages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stages.swift; path = Classes/Models/Stages.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		C47C68861C8C5EB9003FADF7 /* OtherFiles */ = {
 			isa = PBXGroup;
 			children = (
+				C4511EFF1C9FC38200052EDA /* project_paintball.otf */,
 				C47C68871C8C5EEF003FADF7 /* ikamodoki.ttf */,
 			);
 			name = OtherFiles;
@@ -411,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4A9AFF51C8ADBDB00F8AA45 /* LaunchScreen.storyboard in Resources */,
+				C4511F001C9FC38700052EDA /* project_paintball.otf in Resources */,
 				C47C68881C8C5EEF003FADF7 /* ikamodoki.ttf in Resources */,
 				C4A9AFF21C8ADBDB00F8AA45 /* Assets.xcassets in Resources */,
 				C4A9AFF01C8ADBDB00F8AA45 /* Main.storyboard in Resources */,
