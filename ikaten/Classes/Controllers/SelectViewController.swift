@@ -22,8 +22,8 @@ class SelectViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let viewControllers = self.navigationController?.viewControllers
-        let viewController = viewControllers![viewControllers!.count - 2] as! PreparationViewController
-        let cell = viewController.tableView.cellForRowAtIndexPath(selectedIndexPath)
+        let previousViewController = viewControllers![viewControllers!.count - 2] as! PreparationViewController
+        let cell = previousViewController.tableView.cellForRowAtIndexPath(selectedIndexPath)
 
         cell!.detailTextLabel?.text = collection.nameAtIndex(indexPath.row)
         self.navigationController?.popViewControllerAnimated(true)
