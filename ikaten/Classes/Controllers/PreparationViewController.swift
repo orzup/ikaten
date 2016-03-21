@@ -1,6 +1,13 @@
 import UIKit
 
 class PreparationViewController: UITableViewController {
+    enum Data : Int {
+        case Mode = 0
+        case Weapon
+        case Stage
+        case Rule
+    }
+
     var lobby: Lobby!
     var stages: Stages!
     var rule: Rule!
@@ -30,10 +37,10 @@ class PreparationViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
-        case 1:
-            StatInk().getWeapon({ (data) -> Void in
+        case Data.Weapon.rawValue:
+            StatInk().getWeapon({ (weapons) -> Void in
                 self.performSegueWithIdentifier("toSelectViewController",
-                    sender: ["indexPath": indexPath, "collection": Weapons(weapons: data as! Array<Dictionary<String, AnyObject>>)]
+                    sender: ["indexPath": indexPath, "collection": weapons]
                 )
                 }) { () -> Void in
             }

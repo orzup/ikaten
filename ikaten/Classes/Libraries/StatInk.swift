@@ -53,13 +53,13 @@ class StatInk {
     }
 
     func getWeapon(
-        onSuccess: (AnyObject) -> Void,
+        onSuccess: (Weapons) -> Void,
         onFailure: () -> Void
         ) -> Void {
         Alamofire.request(Router.GetWeapon()).responseJSON { (response) -> Void in
             switch response.result {
             case .Success(let data):
-                onSuccess(data)
+                onSuccess(Weapons(weapons: data as! Array<Dictionary<String, AnyObject>>))
             case .Failure:
                 break;
             }

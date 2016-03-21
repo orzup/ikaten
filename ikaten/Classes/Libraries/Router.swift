@@ -19,19 +19,17 @@ enum Router: URLRequestConvertible {
     case CheckStage(Lobby)
     case GetWeapon(Void)
 
-
     var method: Alamofire.Method {
         switch self {
         case .CreateBattle:
             return .POST
         case .CheckAPIKey:
             return .POST
-        case .CheckStage:
-            return .GET
         case .GetWeapon:
             return .GET
+        case .CheckStage:
+            return .GET
         }
-        
     }
 
     var path: String {
@@ -40,10 +38,10 @@ enum Router: URLRequestConvertible {
             return "/battle"
         case .CheckAPIKey:
             return "/battle"
-        case .CheckStage(let lobby):
-            return "/\(lobby.toSplapiKey())/now"
         case .GetWeapon:
             return "/weapon"
+        case .CheckStage(let lobby):
+            return "/\(lobby.toSplapiKey())/now"
         }
     }
 

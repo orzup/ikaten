@@ -4,10 +4,6 @@ class SelectViewController: UITableViewController {
     var selectedIndexPath: NSIndexPath!
     var collection: DataCollection!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -25,7 +21,8 @@ class SelectViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let viewController = self.navigationController?.viewControllers[1] as! PreparationViewController
+        let viewControllers = self.navigationController?.viewControllers
+        let viewController = viewControllers![viewControllers!.count - 2] as! PreparationViewController
         let cell = viewController.tableView.cellForRowAtIndexPath(selectedIndexPath)
 
         cell!.detailTextLabel?.text = collection.jaTextAtIndex(indexPath.row)
