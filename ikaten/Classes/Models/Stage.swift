@@ -4,7 +4,7 @@ class Stage {
     private static let statInkKeys = [
         "アンチョビットゲームズ" : "anchovy",
         "アロワナモール" :         "arowana",
-        "Bバスパーク" :            "bbass",
+        "Ｂバスパーク" :           "bbass",
         "デカライン高架下" :       "dekaline",
         "ハコフグ倉庫" :           "hakofugu",
         "ヒラメが丘団地" :         "hirame",

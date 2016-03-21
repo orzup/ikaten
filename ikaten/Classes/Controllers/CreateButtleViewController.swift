@@ -5,15 +5,22 @@ class CreateButtleViewController: UIViewController {
     var battle: Battle!
     var stages: Stages!
 
-    @IBOutlet weak var mapSelector: UISegmentedControl!
-    @IBOutlet weak var resultSelector: UISegmentedControl!
+    var stageSelector : IkatenSegmentedControl?
+    var isWinSelector : IkatenSegmentedControl?
+    var isKnockoutSelector : IkatenSegmentedControl?
+
+    @IBOutlet weak var formStackView: UIStackView!
+    @IBOutlet weak var stageSelectorContainer: UIView!
+    @IBOutlet weak var isWinSelectorContainer: UIView!
+    @IBOutlet weak var isKnockoutSelectorContainer: UIView!
     @IBOutlet weak var killsTextField: UITextField!
     @IBOutlet weak var deathTextField: UITextField!
     @IBOutlet weak var rankExpChangeTextField: UITextField!
 
-    override func viewDidLoad() {
-        mapSelector.setTitle(stages.firstStage().name,  forSegmentAtIndex: 0)
-        mapSelector.setTitle(stages.secondStage().name, forSegmentAtIndex: 1)
+    override func viewDidLayoutSubviews() {
+        stageSelector = IkatenSegmentedControl(items: [stages.firstStage().name, stages.secondStage().name], container: stageSelectorContainer)
+        isWinSelector = IkatenSegmentedControl(items: ["かち", "まけ"], container: isWinSelectorContainer)
+        isKnockoutSelector = IkatenSegmentedControl(items: ["ノックアウト", "タイムアップ"], container: isKnockoutSelectorContainer)
     }
 
     @IBAction func touchUpInsideNextBattleButton(sender: AnyObject) {
@@ -23,8 +30,8 @@ class CreateButtleViewController: UIViewController {
     private func createButtle() {
         SVProgressHUD.show()
         battle.setResult([
-            "map":           stages.stageAtIndex(mapSelector.selectedSegmentIndex),
-            "is_win":        resultSelector.selectedSegmentIndex == 0,
+            "map":           stages.stageAtIndex(Int(stageSelector!.selectedSegmentIndex)),
+            "is_win":        Int(isWinSelector!.selectedSegmentIndex) == 0,
             "kill":          Int(killsTextField.text!)!,
             "death":         Int(deathTextField.text!)!,
             "rankExpChange": Int(rankExpChangeTextField.text!)!,
