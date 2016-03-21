@@ -616,6 +616,7 @@
 				C4B56D621C9EAE6F003FC21A /* Stage.swift in Sources */,
 				46100B331C9FD6DD006B1051 /* Data.swift in Sources */,
 				C4B56D661C9EC274003FC21A /* RuleSpec.swift in Sources */,
+				C4511EFC1C9F18A100052EDA /* Lobby.swift in Sources */,
 				461A06781C9EE97500C15FF2 /* Weapon.swift in Sources */,
 				466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */,
 				C4511EFE1C9F2C6F00052EDA /* LobbySpec.swift in Sources */,
