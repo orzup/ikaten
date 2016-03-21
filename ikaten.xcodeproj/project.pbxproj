@@ -614,6 +614,7 @@
 				C40248F71C8C2007007A3EF9 /* PreparationViewController.swift in Sources */,
 				461A067D1C9F357A00C15FF2 /* DataCollection.swift in Sources */,
 				C4AC83B61C8C5908006DF92C /* RoundedCornersButton.swift in Sources */,
+				46100B321C9FD6DD006B1051 /* Data.swift in Sources */,
 				C464736F1C9FD64000C84A7F /* IkatenSegmentedControl.swift in Sources */,
 				C45F42B11C9E8081005213B5 /* Stages.swift in Sources */,
 				461A06741C9EC7C000C15FF2 /* SelectViewController.swift in Sources */,
