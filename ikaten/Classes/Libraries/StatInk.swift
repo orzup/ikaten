@@ -61,7 +61,7 @@ class StatInk {
             case .Success(let data):
                 onSuccess(Weapons(data as! Array<Dictionary<String, AnyObject>>))
             case .Failure:
-                break
+                onFailure()
             }
         }
     }
