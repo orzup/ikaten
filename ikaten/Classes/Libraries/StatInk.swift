@@ -51,4 +51,18 @@ class StatInk {
             }
         }
     }
+
+    func indexWeapon(
+        onSuccess: (Weapons) -> Void,
+        onFailure: () -> Void
+        ) -> Void {
+        Alamofire.request(Router.IndexWeapon()).responseJSON { (response) -> Void in
+            switch response.result {
+            case .Success(let data):
+                onSuccess(Weapons(data as! Array<Dictionary<String, AnyObject>>))
+            case .Failure:
+                onFailure()
+            }
+        }
+    }
 }
