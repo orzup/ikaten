@@ -1,5 +1,5 @@
 class Battle {
-    let lobby: String
+    let lobby: Lobby
     let rule: Rule
     let weapon: String
     let rank: String
@@ -13,7 +13,7 @@ class Battle {
     var knockOut: Bool!
 
     init(let data: Dictionary<String, AnyObject>) {
-        lobby        = data["lobby"] as! String
+        lobby        = data["lobby"] as! Lobby
         rule         = data["rule"] as! Rule
         weapon       = data["weapon"] as! String
         rank         = data["rank"] as! String
@@ -33,7 +33,7 @@ class Battle {
 
     func decode() -> Dictionary<String, AnyObject> {
         return [
-            "lobby":          lobby,
+            "lobby":          lobby.toStatInkKey(),
             "rule":           rule.toStatInkKey(),
             "map":            map!.toStatInkKey(),
             "weapon":         weapon,

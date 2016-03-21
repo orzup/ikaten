@@ -27,6 +27,10 @@
 		C40248F21C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */; };
 		C40248F31C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */; };
 		C40248F71C8C2007007A3EF9 /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */; };
+		C4511EF91C9F131C00052EDA /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4511EF81C9F131C00052EDA /* LobbyViewController.swift */; };
+		C4511EFB1C9F18A100052EDA /* Lobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4511EFA1C9F18A100052EDA /* Lobby.swift */; };
+		C4511EFC1C9F18A100052EDA /* Lobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4511EFA1C9F18A100052EDA /* Lobby.swift */; };
+		C4511EFE1C9F2C6F00052EDA /* LobbySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4511EFD1C9F2C6F00052EDA /* LobbySpec.swift */; };
 		C45F42AF1C9E8081005213B5 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AC1C9E8081005213B5 /* Rule.swift */; };
 		C45F42B01C9E8081005213B5 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AD1C9E8081005213B5 /* Stage.swift */; };
 		C45F42B11C9E8081005213B5 /* Stages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AE1C9E8081005213B5 /* Stages.swift */; };
@@ -88,6 +92,9 @@
 		C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreparationViewController.swift; path = Classes/Controllers/PreparationViewController.swift; sourceTree = "<group>"; };
 		C40248EE1C8B3B55007A3EF9 /* Battle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Battle.swift; path = Classes/Models/Battle.swift; sourceTree = "<group>"; };
 		C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateButtleViewController.swift; path = Classes/Controllers/CreateButtleViewController.swift; sourceTree = "<group>"; };
+		C4511EF81C9F131C00052EDA /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LobbyViewController.swift; path = Classes/Controllers/LobbyViewController.swift; sourceTree = "<group>"; };
+		C4511EFA1C9F18A100052EDA /* Lobby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lobby.swift; path = Classes/Models/Lobby.swift; sourceTree = "<group>"; };
+		C4511EFD1C9F2C6F00052EDA /* LobbySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LobbySpec.swift; path = Models/LobbySpec.swift; sourceTree = "<group>"; };
 		C45F42AC1C9E8081005213B5 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rule.swift; path = Classes/Models/Rule.swift; sourceTree = "<group>"; };
 		C45F42AD1C9E8081005213B5 /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stage.swift; path = Classes/Models/Stage.swift; sourceTree = "<group>"; };
 		C45F42AE1C9E8081005213B5 /* Stages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stages.swift; path = Classes/Models/Stages.swift; sourceTree = "<group>"; };
@@ -150,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				4640F1931C9702EF0036C1CD /* BattleSpec.swift */,
+				C4511EFD1C9F2C6F00052EDA /* LobbySpec.swift */,
 				C4B56D651C9EC274003FC21A /* RuleSpec.swift */,
 				C4B56D671C9EC2C2003FC21A /* StageSpec.swift */,
 				C4B56D691C9EC2DC003FC21A /* StagesSpec.swift */,
@@ -271,6 +279,7 @@
 				461A06761C9EE97500C15FF2 /* Weapon.swift */,
 				461A06791C9F28A800C15FF2 /* Weapons.swift */,
 				C40248EE1C8B3B55007A3EF9 /* Battle.swift */,
+				C4511EFA1C9F18A100052EDA /* Lobby.swift */,
 				C45F42AC1C9E8081005213B5 /* Rule.swift */,
 				C45F42AD1C9E8081005213B5 /* Stage.swift */,
 				C45F42AE1C9E8081005213B5 /* Stages.swift */,
@@ -282,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				466595DD1C8B357500258E42 /* SessionViewController.swift */,
+				C4511EF81C9F131C00052EDA /* LobbyViewController.swift */,
 				C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */,
 				C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */,
 				461A06731C9EC7C000C15FF2 /* SelectViewController.swift */,
@@ -571,6 +581,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4511EFB1C9F18A100052EDA /* Lobby.swift in Sources */,
 				C4FC6A881C8B11C70023A85A /* Router.swift in Sources */,
 				C45F42AF1C9E8081005213B5 /* Rule.swift in Sources */,
 				461A06771C9EE97500C15FF2 /* Weapon.swift in Sources */,
@@ -588,6 +599,7 @@
 				C45F42B11C9E8081005213B5 /* Stages.swift in Sources */,
 				461A06741C9EC7C000C15FF2 /* SelectViewController.swift in Sources */,
 				C40248EF1C8B3B55007A3EF9 /* Battle.swift in Sources */,
+				C4511EF91C9F131C00052EDA /* LobbyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +618,7 @@
 				C4B56D661C9EC274003FC21A /* RuleSpec.swift in Sources */,
 				461A06781C9EE97500C15FF2 /* Weapon.swift in Sources */,
 				466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */,
+				C4511EFE1C9F2C6F00052EDA /* LobbySpec.swift in Sources */,
 				C4B56D681C9EC2C2003FC21A /* StageSpec.swift in Sources */,
 				4640F1941C9702EF0036C1CD /* BattleSpec.swift in Sources */,
 				C4A9B0001C8ADBDB00F8AA45 /* ikatenTests.swift in Sources */,
