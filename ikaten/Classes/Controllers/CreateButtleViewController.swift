@@ -5,23 +5,13 @@ class CreateButtleViewController: UIViewController {
     var battle: Battle!
     var stages: Stages!
 
-    var stageSelector : IkatenSegmentedControl?
-    var isWinSelector : IkatenSegmentedControl?
-    var isKnockoutSelector : IkatenSegmentedControl?
-
     @IBOutlet weak var formStackView: UIStackView!
-    @IBOutlet weak var stageSelectorContainer: UIView!
-    @IBOutlet weak var isWinSelectorContainer: UIView!
-    @IBOutlet weak var isKnockoutSelectorContainer: UIView!
+    @IBOutlet weak var stageSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var isWinSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var isTimeUpSegmentedControl: UISegmentedControl!
     @IBOutlet weak var killsTextField: UITextField!
     @IBOutlet weak var deathTextField: UITextField!
     @IBOutlet weak var rankExpChangeTextField: UITextField!
-
-    override func viewDidLayoutSubviews() {
-        stageSelector = IkatenSegmentedControl(items: [stages.firstStage().name, stages.secondStage().name], container: stageSelectorContainer)
-        isWinSelector = IkatenSegmentedControl(items: ["かち", "まけ"], container: isWinSelectorContainer)
-        isKnockoutSelector = IkatenSegmentedControl(items: ["ノックアウト", "タイムアップ"], container: isKnockoutSelectorContainer)
-    }
 
     @IBAction func singleTapView(sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -31,11 +21,16 @@ class CreateButtleViewController: UIViewController {
         createButtle()
     }
 
+    override func viewDidLoad() {
+        stageSegmentedControl.setTitle(stages.firstStage().name, forSegmentAtIndex: 0)
+        stageSegmentedControl.setTitle(stages.secondStage().name, forSegmentAtIndex: 1)
+    }
+
     private func createButtle() {
         SVProgressHUD.show()
         battle.setResult([
-            "map":           stages.stageAtIndex(Int(stageSelector!.selectedSegmentIndex)),
-            "is_win":        Int(isWinSelector!.selectedSegmentIndex) == 0,
+            "map":           stages.stageAtIndex(stageSegmentedControl.selectedSegmentIndex),
+            "is_win":        isWinSegmentedControl.selectedSegmentIndex == 0,
             "kill":          Int(killsTextField.text!)!,
             "death":         Int(deathTextField.text!)!,
             "rankExpChange": Int(rankExpChangeTextField.text!)!,

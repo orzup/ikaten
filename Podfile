@@ -8,7 +8,6 @@ target 'ikaten' do
   pod 'KeychainAccess'
   # UI系
   pod 'SVProgressHUD'
-  pod 'NYSegmentedControl'
 end
 
 def testing_pods
