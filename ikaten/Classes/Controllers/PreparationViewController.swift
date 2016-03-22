@@ -4,22 +4,36 @@ class PreparationViewController: UITableViewController {
     enum Data : Int {
         case Mode = 0
         case Weapon
-        case Stage
+        case StageFirst
+        case StageSecond
         case Rule
     }
 
     var lobby: Lobby!
     var weapon: Weapon!
     var stages: Stages!
+    var currentStages: Array<String>!
     var rule: Rule!
 
     override func viewDidLoad() {
         navigationItem.title = lobby.name
 
-        Splapi.checkStage(lobby, onSuccess: { (stages, rule) -> Void in
+        StatInk().indexStage({ (stages) -> Void in
             self.stages = stages
+            }) { () -> Void in
+        }
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        Splapi.checkStage(lobby, onSuccess: { (stages, rule) -> Void in
+            self.currentStages = stages
             self.rule = rule
-        }) { () -> Void in
+
+            for (index, currentStage) in self.currentStages.enumerate() {
+                let cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: Data.StageFirst.rawValue + index, inSection: 0))
+                cell!.detailTextLabel?.text = currentStage
+            }
+            }) { () -> Void in
         }
     }
 
@@ -27,7 +41,7 @@ class PreparationViewController: UITableViewController {
         if segue.identifier == "toCreateBattleView" {
             let nextViewController = segue.destinationViewController as! CreateButtleViewController
             nextViewController.battle = Battle(data: params())
-            nextViewController.stages = self.stages
+            nextViewController.currentStages = self.currentStages
         }
         if segue.identifier == "toSelectViewController" {
             let nextViewController = segue.destinationViewController as! SelectViewController
@@ -45,6 +59,8 @@ class PreparationViewController: UITableViewController {
                 )
                 }) { () -> Void in
             }
+        case Data.StageFirst.rawValue, Data.StageSecond.rawValue:
+            self.performSegueWithIdentifier("toSelectViewController",sender: ["indexPath": indexPath, "collection": self.stages])
         default:
             break
         }

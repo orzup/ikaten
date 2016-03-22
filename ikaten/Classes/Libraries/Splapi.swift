@@ -3,7 +3,7 @@ import Alamofire
 class Splapi {
     class func checkStage(
         lobby: Lobby,
-        onSuccess: (Stages, Rule) -> Void,
+        onSuccess: (Array<String>, Rule) -> Void,
         onFailure: () -> Void
         ) -> Void {
             Alamofire.request(Router.CheckStage(lobby)).responseJSON { (response) -> Void in
@@ -14,7 +14,7 @@ class Splapi {
                         onFailure()
                     } else {
                         let data = (result["result"] as! NSArray).firstObject as! Dictionary<String, AnyObject>
-                        let stages = Stages(data: data)
+                        let stages = data["maps"] as! Array<String>
                         let rule = data["rule"] == nil ? Rule("ナワバリバトル") : Rule(data["rule"] as! String)
                         onSuccess(stages, rule)
                     }

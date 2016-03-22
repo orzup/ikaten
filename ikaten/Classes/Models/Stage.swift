@@ -1,5 +1,4 @@
-class Stage {
-    let name: String
+class Stage : Data {
     // TODO: 本当は stat.ink からステージ一覧を取得してこのリストを作りたい気持ち
     private static let statInkKeys = [
         "アンチョビットゲームズ" : "anchovy",
@@ -20,8 +19,11 @@ class Stage {
         "タチウオパーキング" :     "tachiuo"
     ]
 
-    init(let _ name: String) {
-        self.name = name
+    init(let _ data: Dictionary<String, AnyObject>) {
+        super.init()
+        let nameData = data["name"] as! Dictionary<String, String>
+        name = nameData["ja_JP"]!
+        key = data["key"] as! String
     }
 
     func toStatInkKey() -> String {
