@@ -35,7 +35,7 @@ class Battle {
         return [
             "lobby":          lobby.toStatInkKey(),
             "rule":           rule.toStatInkKey(),
-            "map":            map!.toStatInkKey(),
+            "map":            map.key,
             "weapon":         weapon.key,
             "rank":           rank,
             "rank_exp":       rankExp,

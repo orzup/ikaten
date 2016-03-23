@@ -1,6 +1,11 @@
 import UIKit
 
 class PreparationViewController: UITableViewController {
+    @IBOutlet weak var squadDetailLabel: UILabel!
+    @IBOutlet weak var weaponDetailLabel: UILabel!
+    @IBOutlet weak var ruleDetailLabel: UILabel!
+    @IBOutlet var stageDetailLabel: [UILabel]!
+    
     enum Data : Int {
         case Mode = 0
         case Weapon
@@ -12,26 +17,27 @@ class PreparationViewController: UITableViewController {
     var lobby: Lobby!
     var weapon: Weapon!
     var stages: Stages!
-    var currentStages: Array<String>!
+    var currentStages: Stages!
     var rule: Rule!
 
     override func viewDidLoad() {
         navigationItem.title = lobby.name
-
-        StatInk().indexStage({ (stages) -> Void in
-            self.stages = stages
-            }) { () -> Void in
-        }
     }
 
     override func viewDidAppear(animated: Bool) {
-        Splapi.checkStage(lobby, onSuccess: { (stages, rule) -> Void in
-            self.currentStages = stages
-            self.rule = rule
+        squadDetailLabel.text = self.lobby.name
 
-            for (index, currentStage) in self.currentStages.enumerate() {
-                let cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: Data.StageFirst.rawValue + index, inSection: 0))
-                cell!.detailTextLabel?.text = currentStage
+        StatInk().indexStage({ (stages) -> Void in
+            Splapi.checkStage(self.lobby, onSuccess: { (currentStagesName, rule) -> Void in
+                self.rule = rule
+                self.ruleDetailLabel.text = self.rule.name
+                self.currentStages = Stages()
+
+                for (index, stageName) in currentStagesName.enumerate() {
+                    self.currentStages.append(stages.indexOf(stageName)!)
+                    self.stageDetailLabel[index].text = self.currentStages.nameAtIndex(index)
+                }
+                }) { () -> Void in
             }
             }) { () -> Void in
         }

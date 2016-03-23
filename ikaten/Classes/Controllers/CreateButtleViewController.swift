@@ -3,7 +3,7 @@ import SVProgressHUD
 
 class CreateButtleViewController: UIViewController {
     var battle: Battle!
-    var currentStages: Array<String>!
+    var currentStages: Stages!
 
     @IBOutlet weak var mapSelector: UISegmentedControl!
     @IBOutlet weak var resultSelector: UISegmentedControl!
@@ -12,8 +12,8 @@ class CreateButtleViewController: UIViewController {
     @IBOutlet weak var rankExpChangeTextField: UITextField!
 
     override func viewDidLoad() {
-        mapSelector.setTitle(currentStages.first,  forSegmentAtIndex: 0)
-        mapSelector.setTitle(currentStages.last, forSegmentAtIndex: 1)
+        mapSelector.setTitle(currentStages.first().name,  forSegmentAtIndex: 0)
+        mapSelector.setTitle(currentStages.second().name, forSegmentAtIndex: 1)
     }
 
     @IBAction func touchUpInsideNextBattleButton(sender: AnyObject) {
@@ -23,7 +23,7 @@ class CreateButtleViewController: UIViewController {
     private func createButtle() {
         SVProgressHUD.show()
         battle.setResult([
-            "map":           currentStages[mapSelector.selectedSegmentIndex],
+            "map":           currentStages.dataAtIndex(mapSelector.selectedSegmentIndex),
             "is_win":        resultSelector.selectedSegmentIndex == 0,
             "kill":          Int(killsTextField.text!)!,
             "death":         Int(deathTextField.text!)!,
