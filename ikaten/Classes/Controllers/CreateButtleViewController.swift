@@ -5,7 +5,6 @@ class CreateButtleViewController: UIViewController {
     var battle: Battle!
     var stages: Stages!
 
-    @IBOutlet weak var formStackView: UIStackView!
     @IBOutlet weak var stageSegmentedControl: UISegmentedControl!
     @IBOutlet weak var isWinSegmentedControl: UISegmentedControl!
     @IBOutlet weak var isTimeUpSegmentedControl: UISegmentedControl!
