@@ -25,10 +25,11 @@ class PreparationViewController: UITableViewController {
     }
 
     override func viewDidAppear(animated: Bool) {
-        squadDetailLabel.text = self.lobby.name
+        squadDetailLabel.text = lobby.name
 
         StatInk().indexStage({ (stages) -> Void in
             Splapi.checkStage(self.lobby, onSuccess: { (currentStagesName, rule) -> Void in
+                self.stages = stages
                 self.rule = rule
                 self.ruleDetailLabel.text = self.rule.name
                 self.currentStages = Stages()
@@ -47,7 +48,7 @@ class PreparationViewController: UITableViewController {
         if segue.identifier == "toCreateBattleView" {
             let nextViewController = segue.destinationViewController as! CreateButtleViewController
             nextViewController.battle = Battle(data: params())
-            nextViewController.currentStages = self.currentStages
+            nextViewController.currentStages = currentStages
         }
         if segue.identifier == "toSelectViewController" {
             let nextViewController = segue.destinationViewController as! SelectViewController
@@ -66,7 +67,7 @@ class PreparationViewController: UITableViewController {
                 }) { () -> Void in
             }
         case Data.StageFirst.rawValue, Data.StageSecond.rawValue:
-            self.performSegueWithIdentifier("toSelectViewController",sender: ["indexPath": indexPath, "collection": self.stages])
+            self.performSegueWithIdentifier("toSelectViewController",sender: ["indexPath": indexPath, "collection": stages])
         default:
             break
         }

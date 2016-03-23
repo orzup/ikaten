@@ -1,6 +1,15 @@
 class DataCollection {
     private var list: Array<Data> = []
 
+    init() {
+    }
+
+    init(let _ params: Array<Dictionary<String, AnyObject>>) {
+        for param in params {
+            list.append(Data(param))
+        }
+    }
+
     func all() -> Array<Data> {
         return list
     }

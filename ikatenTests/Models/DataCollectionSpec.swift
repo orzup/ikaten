@@ -6,7 +6,7 @@ class DataCollectionSpec: QuickSpec {
         var dataCollection: DataCollection?
 
         beforeEach() {
-            let data = Data()
+            let data = Data(["key": "key", "name": ["ja_JP": "キー"]])
 
             dataCollection = DataCollection()
             dataCollection!.append(data)
