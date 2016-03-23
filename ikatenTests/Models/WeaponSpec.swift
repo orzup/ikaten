@@ -6,12 +6,12 @@ class WeaponSpec: QuickSpec {
         var weapon: Weapon?
 
         beforeEach() {
-            weapon = Weapon(["name": ["ja_JP": "buki"]])
+            weapon = Weapon(["key": "52gal", "name": ["ja_JP": ".52ガロン"]])
         }
 
         describe("init") {
             it("初期化できること") {
-                expect(weapon!.name).to(equal("buki"))
+                expect(weapon!.name).to(equal(".52ガロン"))
             }
         }
     }
