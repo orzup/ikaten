@@ -22,9 +22,6 @@ class PreparationViewController: UITableViewController {
 
     override func viewDidLoad() {
         navigationItem.title = lobby.name
-    }
-
-    override func viewDidAppear(animated: Bool) {
         squadDetailLabel.text = lobby.name
 
         StatInk().indexStage({ (stages) -> Void in
