@@ -645,29 +645,47 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="piK-gT-co1">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="piK-gT-co1" customClass="SegmentedControl" customModule="ikaten" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="54" width="540" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="Az5-HH-Rt8"/>
                                         </constraints>
                                         <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
+                                            <segment title="ステージ"/>
+                                            <segment title="ステージ"/>
                                         </segments>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamily" value="ikamodoki"/>
+                                        </userDefinedRuntimeAttributes>
                                     </segmentedControl>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="frn-eC-PD8">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="frn-eC-PD8" customClass="SegmentedControl" customModule="ikaten" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="134" width="540" height="61"/>
                                         <segments>
-                                            <segment title="かち"/>
-                                            <segment title="まけ"/>
+                                            <segment title="WIN"/>
+                                            <segment title="LOSE"/>
                                         </segments>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamily" value="ProjectPaintball"/>
+                                        </userDefinedRuntimeAttributes>
                                     </segmentedControl>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="YA5-vy-zIi">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="YA5-vy-zIi" customClass="SegmentedControl" customModule="ikaten" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="214" width="540" height="61"/>
                                         <segments>
                                             <segment title="ノックアウト"/>
                                             <segment title="タイムアップ"/>
                                         </segments>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamily" value="ikamodoki"/>
+                                        </userDefinedRuntimeAttributes>
                                     </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="g51-9z-aF6">
                                         <rect key="frame" x="0.0" y="294" width="540" height="65"/>
