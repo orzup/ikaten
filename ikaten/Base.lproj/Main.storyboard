@@ -540,8 +540,8 @@
                         <outlet property="ruleDetailLabel" destination="dxB-74-xFP" id="5im-5u-HIT"/>
                         <outlet property="squadDetailLabel" destination="6pB-cF-eeA" id="qJW-Nf-jsa"/>
                         <outlet property="weaponDetailLabel" destination="QLF-w6-Uaa" id="MAf-rw-qDo"/>
-                        <outletCollection property="stageDetailLabel" destination="7YC-SA-rs4" collectionClass="NSMutableArray" id="pDM-Gl-J8s"/>
-                        <outletCollection property="stageDetailLabel" destination="CSm-cm-j00" collectionClass="NSMutableArray" id="28t-5J-IAR"/>
+                        <outletCollection property="stageDetailLabels" destination="7YC-SA-rs4" id="0ir-T5-leG"/>
+                        <outletCollection property="stageDetailLabels" destination="CSm-cm-j00" id="Y4a-gw-zfO"/>
                         <segue destination="8xU-9o-9Mi" kind="show" identifier="toSelectViewController" id="tTd-W8-Q6h"/>
                     </connections>
                 </tableViewController>

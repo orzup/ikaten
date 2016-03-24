@@ -4,7 +4,7 @@ class PreparationViewController: UITableViewController {
     @IBOutlet weak var squadDetailLabel: UILabel!
     @IBOutlet weak var weaponDetailLabel: UILabel!
     @IBOutlet weak var ruleDetailLabel: UILabel!
-    @IBOutlet var stageDetailLabel: [UILabel]!
+    @IBOutlet var stageDetailLabels: [UILabel]!
     
     enum Data : Int {
         case Mode = 0
@@ -15,25 +15,27 @@ class PreparationViewController: UITableViewController {
     }
 
     var lobby: Lobby!
-    var weapon: Weapon!
+    var weapons: Weapons!
     var stages: Stages!
-    var currentStages: Stages!
     var rule: Rule!
 
     override func viewDidLoad() {
         navigationItem.title = lobby.name
         squadDetailLabel.text = lobby.name
 
+        StatInk().indexWeapon({ (weapons) -> Void in
+            self.weapons = weapons
+            }) { () -> Void in
+        }
+
         StatInk().indexStage({ (stages) -> Void in
-            Splapi.checkStage(self.lobby, onSuccess: { (currentStagesName, rule) -> Void in
+            Splapi.checkStage(self.lobby, onSuccess: { (stageNames, rule) -> Void in
                 self.stages = stages
                 self.rule = rule
                 self.ruleDetailLabel.text = self.rule.name
-                self.currentStages = Stages()
 
-                for (index, stageName) in currentStagesName.enumerate() {
-                    self.currentStages.append(stages.indexOf(stageName)!)
-                    self.stageDetailLabel[index].text = self.currentStages.nameAtIndex(index)
+                for (index, stageName) in stageNames.enumerate() {
+                    self.stageDetailLabels[index].text = stages.indexOf(stageName)?.name
                 }
                 }) { () -> Void in
             }
@@ -45,8 +47,11 @@ class PreparationViewController: UITableViewController {
         if segue.identifier == "toCreateBattleView" {
             let nextViewController = segue.destinationViewController as! CreateButtleViewController
             nextViewController.battle = Battle(data: params())
-            nextViewController.currentStages = currentStages
+
+            nextViewController.stages = Stages(stageDetailLabels.map{ stages.indexOf($0.text!)! })
+
         }
+
         if segue.identifier == "toSelectViewController" {
             let nextViewController = segue.destinationViewController as! SelectViewController
             nextViewController.selectedIndexPath = sender!["indexPath"] as! NSIndexPath
@@ -57,12 +62,7 @@ class PreparationViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
         case Data.Weapon.rawValue:
-            StatInk().indexWeapon({ (weapons) -> Void in
-                self.performSegueWithIdentifier("toSelectViewController",
-                    sender: ["indexPath": indexPath, "collection": weapons]
-                )
-                }) { () -> Void in
-            }
+            self.performSegueWithIdentifier("toSelectViewController",sender: ["indexPath": indexPath, "collection": weapons])
         case Data.StageFirst.rawValue, Data.StageSecond.rawValue:
             self.performSegueWithIdentifier("toSelectViewController",sender: ["indexPath": indexPath, "collection": stages])
         default:
@@ -74,7 +74,7 @@ class PreparationViewController: UITableViewController {
         return [
             "lobby":    lobby,
             "rule":     rule,
-            "weapon":   weapon,
+            "weapon":   weapons.indexOf(weaponDetailLabel.text!)!,
             "rank":     "s",
             "rank_exp": 0,
         ]

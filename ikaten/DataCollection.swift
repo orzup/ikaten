@@ -10,6 +10,12 @@ class DataCollection {
         }
     }
 
+    init(let _ data: Array<Data>){
+        for datum in data {
+            list.append(datum)
+        }
+    }
+
     func all() -> Array<Data> {
         return list
     }
