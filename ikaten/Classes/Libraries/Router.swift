@@ -1,11 +1,3 @@
-//
-//  Router.swift
-//  ikaten
-//
-//  Created by Nakano Asami on 2016/03/05.
-//  Copyright © 2016年 orzup. All rights reserved.
-//
-
 import Alamofire
 import KeychainAccess
 
