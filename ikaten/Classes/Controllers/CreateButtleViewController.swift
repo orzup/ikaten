@@ -5,9 +5,13 @@ class CreateButtleViewController: UIViewController {
     var battle: Battle!
     var stages: Stages!
 
-    @IBOutlet weak var stageSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var isWinSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var isTimeUpSegmentedControl: UISegmentedControl!
+    var stageSelector:    IkatenSegmentedControl!
+    var isLoseSelector:   IkatenSegmentedControl!
+    var isTimeUpSelector: IkatenSegmentedControl!
+
+    @IBOutlet weak var stageSegmentedControlContainer: UIView!
+    @IBOutlet weak var isLoseSegmentedControlContainer: UIView!
+    @IBOutlet weak var isTimeUpSegmentedControlContainer: UIView!
     @IBOutlet weak var killsTextField: UITextField!
     @IBOutlet weak var deathTextField: UITextField!
     @IBOutlet weak var rankExpChangeTextField: UITextField!
@@ -20,16 +24,17 @@ class CreateButtleViewController: UIViewController {
         createButtle()
     }
 
-    override func viewDidLoad() {
-        stageSegmentedControl.setTitle(stages.firstStage().name, forSegmentAtIndex: 0)
-        stageSegmentedControl.setTitle(stages.secondStage().name, forSegmentAtIndex: 1)
-    }
+    override func viewDidLayoutSubviews() {
+        stageSelector = IkatenSegmentedControl(items: [stages.firstStage().name, stages.secondStage().name], container: stageSegmentedControlContainer)
+        isLoseSelector = IkatenSegmentedControl(items: ["WIN", "LOSE"], container: isLoseSegmentedControlContainer, font: UIFont(name: "ProjectPaintball", size: 30)!)
+        isTimeUpSelector = IkatenSegmentedControl(items: ["ノックアウト", "タイムアップ"], container: isTimeUpSegmentedControlContainer)
+        }
 
     private func createButtle() {
         SVProgressHUD.show()
         battle.setResult([
-            "map":           stages.stageAtIndex(stageSegmentedControl.selectedSegmentIndex),
-            "is_win":        isWinSegmentedControl.selectedSegmentIndex == 0,
+            "map":           stages.stageAtIndex(Int(stageSelector!.selectedSegmentIndex)),
+            "is_win":        Int(isLoseSelector.selectedSegmentIndex) == 0,
             "kill":          Int(killsTextField.text!)!,
             "death":         Int(deathTextField.text!)!,
             "rankExpChange": Int(rankExpChangeTextField.text!)!,
