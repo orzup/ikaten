@@ -26,7 +26,7 @@ class CreateButtleViewController: UIViewController {
     }
 
     override func viewDidLoad() {
-        udemaeLabel.text = "\(battle.rank)\(battle.rankExp)"
+        udemaeLabel.text = "\(battle.udemae.rank)\(battle.udemae.exp)"
     }
 
     override func viewDidLayoutSubviews() {
@@ -37,9 +37,10 @@ class CreateButtleViewController: UIViewController {
 
     private func createButtle() {
         SVProgressHUD.show()
+        let isWin = Int(isLoseSelector.selectedSegmentIndex) == 0
         battle.setResult([
             "map":           stages.dataAtIndex(Int(stageSelector!.selectedSegmentIndex)),
-            "is_win":        Int(isLoseSelector.selectedSegmentIndex) == 0,
+            "is_win":        isWin,
             "kill":          Int(killsTextField.text!)!,
             "death":         Int(deathTextField.text!)!,
             "rankExpChange": Int(rankExpChangeTextField.text!)!,

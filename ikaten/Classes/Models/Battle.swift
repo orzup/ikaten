@@ -2,11 +2,9 @@ class Battle {
     let lobby: Lobby
     let rule: Rule
     let weapon: Weapon
-    let rank: String
-    let rankExp: Int
+    let udemae: Udemae
     var map: Stage!
-    var rankAfter: String!
-    var rankExpAfter: Int!
+    var udemaeAfter: Udemae!
     var isWin: Bool!
     var kill: Int!
     var death: Int!
@@ -16,18 +14,18 @@ class Battle {
         lobby        = data["lobby"] as! Lobby
         rule         = data["rule"] as! Rule
         weapon       = data["weapon"] as! Weapon
-        rank         = data["rank"] as! String
-        rankExp      = data["rank_exp"] as! Int
+        udemae       = data["udemae"] as! Udemae
     }
 
     func setResult(data: Dictionary<String, AnyObject>) {
+        let isWin = data["is_win"] as! Bool
+
         map          = data["map"] as! Stage
-        isWin        = data["is_win"] as! Bool
+        self.isWin   = isWin
         kill         = data["kill"] as! Int
         death        = data["death"] as! Int
         knockOut     = data["knock_out"] as! Bool
-        
-        setRunk(data["rankExpChange"] as? Int)
+        udemaeAfter  = udemae.after(isWin, rankExpChange: data["rankExpChange"] as! Int)
     }
     
 
@@ -37,36 +35,14 @@ class Battle {
             "rule":           rule.toStatInkKey(),
             "map":            map.key,
             "weapon":         weapon.key,
-            "rank":           rank,
-            "rank_exp":       rankExp,
-            "rank_after":     rankAfter!,
-            "rank_exp_after": rankExpAfter!,
+            "rank":           udemae.rank.lowercaseString,
+            "rank_exp":       udemae.exp,
+            "rank_after":     udemaeAfter!.rank.lowercaseString,
+            "rank_exp_after": udemaeAfter!.exp,
             "result":         isWin! ? "win" : "lose",
             "kill":           kill!,
             "death":          death!,
             "knock_out":      knockOut! ? "yes" : "no"
        ]
-    }
-
-    private func setRunk(rankExpChange: Int!) {
-        let ranks = ["c-", "c", "c+", "b-", "b", "b+", "a-", "a", "a+", "s", "s+"];
-
-        if isWin as Bool {
-            rankExpAfter = rankExp + rankExpChange
-            if rank != ranks.last && rankExpAfter >= 100 {
-                rankExpAfter = 30
-                rankAfter = ranks[ranks.indexOf(rank)! + 1];
-            } else {
-                rankAfter = rank;
-            }
-        } else {
-            rankExpAfter = rankExp - rankExpChange
-            if rank != ranks.first && rankExpAfter < 0 {
-                rankExpAfter = 70
-                rankAfter = ranks[ranks.indexOf(rank)! - 1];
-            } else {
-                rankAfter = rank;
-            }
-        }
     }
 }

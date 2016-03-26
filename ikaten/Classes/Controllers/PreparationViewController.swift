@@ -112,8 +112,7 @@ class PreparationViewController: UITableViewController, UIPickerViewDataSource, 
             "lobby":    lobby,
             "rule":     rule,
             "weapon":   weapons.indexOf(weaponDetailLabel.text!)!,
-            "rank":     selectedRank,
-            "rank_exp": selectedExp,
+            "udemae":   Udemae(rank: selectedRank, exp: selectedExp)
         ]
     }
 }
