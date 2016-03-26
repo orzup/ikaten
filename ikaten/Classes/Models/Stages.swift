@@ -1,25 +1,19 @@
-class Stages {
-    var names: Array<Stage> = []
+class Stages : DataCollection {
+    override init() {
+        super.init()
+    }
 
-    init(let data: Dictionary<String, AnyObject>) {
-        for name in data["maps"] as! Array<String> {
-            names.append(Stage(name))
+    override init(let _ params: Array<Dictionary<String, AnyObject>>) {
+        super.init()
+        for param in params {
+            append(Stage(param))
         }
     }
 
-    func firstStage() -> Stage {
-        return names.first!
-    }
-
-    func secondStage() -> Stage {
-        return names[1]
-    }
-
-    func thirdStage() -> Stage {
-        return names[2]
-    }
-
-    func stageAtIndex(let index : Int) -> Stage {
-        return names[index]
+    override init(let _ data: Array<Data>){
+        super.init()
+        for datum in data {
+            append(datum)
+        }
     }
 }

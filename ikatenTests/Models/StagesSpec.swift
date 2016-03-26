@@ -6,30 +6,17 @@ class StagesSpec: QuickSpec {
         var stages: Stages?
 
         beforeEach() {
-            stages = Stages(data: [
-                "maps": [
-                    "アロワナモール",
-                    "Bバスパーク"
+            stages = Stages(
+                [
+                    ["key": "arowana", "name": ["ja_JP": "アロワナモール"]],
+                    ["key": "shotturu", "name": ["ja_JP": "ショッツル鉱山"]]
                 ]
-            ])
+            )
         }
 
-        describe("selectStage") {
-            it("ステージを選択できること") {
-                expect(stages!.stageAtIndex(0).name).to(equal("アロワナモール"))
-                expect(stages!.stageAtIndex(1).name).to(equal("Bバスパーク"))
-            }
-        }
-
-        describe("firstStage") {
-            it("1つ目のステージがあること") {
-                expect(stages!.firstStage().name).to(equal("アロワナモール"))
-            }
-        }
-
-        describe("secondStage") {
-            it("2つ目のステージがあること") {
-                expect(stages!.secondStage().name).to(equal("Bバスパーク"))
+        describe("init") {
+            it("初期化できること") {
+                expect(stages!.nameAtIndex(1)).to(equal("ショッツル鉱山"))
             }
         }
     }

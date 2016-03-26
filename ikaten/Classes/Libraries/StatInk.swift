@@ -1,11 +1,3 @@
-//
-//  StatInk.swift
-//  ikaten
-//
-//  Created by Nakano Asami on 2016/03/05.
-//  Copyright © 2016年 orzup. All rights reserved.
-//
-
 import Alamofire
 import KeychainAccess
 
@@ -64,5 +56,19 @@ class StatInk {
                 onFailure()
             }
         }
+    }
+
+    func indexStage(
+        onSuccess: (Stages) -> Void,
+        onFailure: () -> Void
+        ) -> Void {
+            Alamofire.request(Router.IndexStage()).responseJSON { (response) -> Void in
+                switch response.result {
+                case .Success(let data):
+                    onSuccess(Stages(data as! Array<Dictionary<String, AnyObject>>))
+                case .Failure:
+                    onFailure()
+                }
+            }
     }
 }
