@@ -27,7 +27,6 @@
 		4640F1941C9702EF0036C1CD /* BattleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4640F1931C9702EF0036C1CD /* BattleSpec.swift */; };
 		466595DE1C8B357500258E42 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466595DD1C8B357500258E42 /* SessionViewController.swift */; };
 		466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466595DD1C8B357500258E42 /* SessionViewController.swift */; };
-		46811E7B1CA695F5009FF6F3 /* IkatenSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48CA8CC1CA66DFD005177D7 /* IkatenSegmentedControl.swift */; };
 		B15A909AA67ED85BA717F7E6 /* Pods_ikaten.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C867FD8CEF3CED506E69059A /* Pods_ikaten.framework */; };
 		C40248ED1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */; };
 		C40248EF1C8B3B55007A3EF9 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EE1C8B3B55007A3EF9 /* Battle.swift */; };
@@ -425,7 +424,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = orzup;
 				TargetAttributes = {
 					C4A9AFE61C8ADBDB00F8AA45 = {
@@ -623,7 +622,6 @@
 				C4FC6A881C8B11C70023A85A /* Router.swift in Sources */,
 				C45F42AF1C9E8081005213B5 /* Rule.swift in Sources */,
 				C40C114F1CA6957C008575B9 /* Udemae.swift in Sources */,
-				461A06771C9EE97500C15FF2 /* Weapon.swift in Sources */,
 				C4FC6A8C1C8B19BD0023A85A /* StatInk.swift in Sources */,
 				C4AE74861C96EC95005CFB48 /* Splapi.swift in Sources */,
 				46280ABE1CA6937F002BB090 /* String+ConvertWidth.swift in Sources */,
@@ -664,7 +662,6 @@
 				C4B56D661C9EC274003FC21A /* RuleSpec.swift in Sources */,
 				C4511EFC1C9F18A100052EDA /* Lobby.swift in Sources */,
 				C4B552221CA6E683004F4B25 /* IkatenSegmentedControl.swift in Sources */,
-				461A06781C9EE97500C15FF2 /* Weapon.swift in Sources */,
 				466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */,
 				C4511EFE1C9F2C6F00052EDA /* LobbySpec.swift in Sources */,
 				46280ABC1CA6936E002BB090 /* DataCollection.swift in Sources */,
@@ -679,10 +676,10 @@
 				C4B56D6A1C9EC2DC003FC21A /* StagesSpec.swift in Sources */,
 				C4B56D611C9EACC1003FC21A /* Stages.swift in Sources */,
 				46100B351CA01E43006B1051 /* DataCollectionSpec.swift in Sources */,
-				46811E7B1CA695F5009FF6F3 /* IkatenSegmentedControl.swift in Sources */,
 				C40248F01C8B3B55007A3EF9 /* Battle.swift in Sources */,
+				46280ABA1CA6936E002BB090 /* Data.swift in Sources */,
+				46280AB61CA69362002BB090 /* Weapons.swift in Sources */,
 				C40C11501CA6957C008575B9 /* Udemae.swift in Sources */,
-				461A067E1C9F357A00C15FF2 /* DataCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
