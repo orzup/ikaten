@@ -35,6 +35,7 @@
 		C40248F21C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */; };
 		C40248F31C8B5B01007A3EF9 /* CreateButtleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */; };
 		C40248F71C8C2007007A3EF9 /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */; };
+		C435A8101CA701DE00CDEA28 /* IkatenSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48CA8CC1CA66DFD005177D7 /* IkatenSegmentedControl.swift */; };
 		C4511EF91C9F131C00052EDA /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4511EF81C9F131C00052EDA /* LobbyViewController.swift */; };
 		C4511EFB1C9F18A100052EDA /* Lobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4511EFA1C9F18A100052EDA /* Lobby.swift */; };
 		C4511EFC1C9F18A100052EDA /* Lobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4511EFA1C9F18A100052EDA /* Lobby.swift */; };
@@ -665,6 +666,7 @@
 				46280AB41CA69362002BB090 /* Weapon.swift in Sources */,
 				C4B56D6A1C9EC2DC003FC21A /* StagesSpec.swift in Sources */,
 				C4B56D611C9EACC1003FC21A /* Stages.swift in Sources */,
+				C435A8101CA701DE00CDEA28 /* IkatenSegmentedControl.swift in Sources */,
 				46100B351CA01E43006B1051 /* DataCollectionSpec.swift in Sources */,
 				46811E7B1CA695F5009FF6F3 /* IkatenSegmentedControl.swift in Sources */,
 				C40248F01C8B3B55007A3EF9 /* Battle.swift in Sources */,
