@@ -3,7 +3,7 @@ import Foundation
 extension String {
     private func convertFullWidthToHalf() -> String {
         var str = self
-        let pattern = "[Ａ-Ｚ＆]+"
+        let pattern = "[１-９ａ-ｚＡ-Ｚ＆]+"
         let regex = try! NSRegularExpression(pattern: pattern, options: [])
         let results = regex.matchesInString(str, options: [], range: NSMakeRange(0, str.characters.count))
 
