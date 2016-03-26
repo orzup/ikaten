@@ -47,9 +47,7 @@ class PreparationViewController: UITableViewController {
         if segue.identifier == "toCreateBattleView" {
             let nextViewController = segue.destinationViewController as! CreateButtleViewController
             nextViewController.battle = Battle(data: params())
-
             nextViewController.stages = Stages(stageDetailLabels.map{ stages.indexOf($0.text!)! })
-
         }
 
         if segue.identifier == "toSelectViewController" {
