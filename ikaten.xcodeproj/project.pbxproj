@@ -38,10 +38,13 @@
 		C4511EFB1C9F18A100052EDA /* Lobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4511EFA1C9F18A100052EDA /* Lobby.swift */; };
 		C4511EFC1C9F18A100052EDA /* Lobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4511EFA1C9F18A100052EDA /* Lobby.swift */; };
 		C4511EFE1C9F2C6F00052EDA /* LobbySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4511EFD1C9F2C6F00052EDA /* LobbySpec.swift */; };
+		C4511F001C9FC38700052EDA /* project_paintball.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4511EFF1C9FC38200052EDA /* project_paintball.otf */; };
 		C45F42AF1C9E8081005213B5 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AC1C9E8081005213B5 /* Rule.swift */; };
 		C45F42B01C9E8081005213B5 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AD1C9E8081005213B5 /* Stage.swift */; };
 		C45F42B11C9E8081005213B5 /* Stages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F42AE1C9E8081005213B5 /* Stages.swift */; };
 		C47C68881C8C5EEF003FADF7 /* ikamodoki.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C47C68871C8C5EEF003FADF7 /* ikamodoki.ttf */; };
+		C48CA8CD1CA66DFD005177D7 /* IkatenSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48CA8CC1CA66DFD005177D7 /* IkatenSegmentedControl.swift */; };
+		C49BD6131CA2F88800156513 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49BD6121CA2F88800156513 /* SegmentedControl.swift */; };
 		C4A9AFEB1C8ADBDB00F8AA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9AFEA1C8ADBDB00F8AA45 /* AppDelegate.swift */; };
 		C4A9AFF01C8ADBDB00F8AA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A9AFEE1C8ADBDB00F8AA45 /* Main.storyboard */; };
 		C4A9AFF21C8ADBDB00F8AA45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A9AFF11C8ADBDB00F8AA45 /* Assets.xcassets */; };
@@ -108,10 +111,13 @@
 		C4511EF81C9F131C00052EDA /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LobbyViewController.swift; path = Classes/Controllers/LobbyViewController.swift; sourceTree = "<group>"; };
 		C4511EFA1C9F18A100052EDA /* Lobby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lobby.swift; path = Classes/Models/Lobby.swift; sourceTree = "<group>"; };
 		C4511EFD1C9F2C6F00052EDA /* LobbySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LobbySpec.swift; path = Models/LobbySpec.swift; sourceTree = "<group>"; };
+		C4511EFF1C9FC38200052EDA /* project_paintball.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = project_paintball.otf; sourceTree = "<group>"; };
 		C45F42AC1C9E8081005213B5 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rule.swift; path = Classes/Models/Rule.swift; sourceTree = "<group>"; };
 		C45F42AD1C9E8081005213B5 /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stage.swift; path = Classes/Models/Stage.swift; sourceTree = "<group>"; };
 		C45F42AE1C9E8081005213B5 /* Stages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stages.swift; path = Classes/Models/Stages.swift; sourceTree = "<group>"; };
 		C47C68871C8C5EEF003FADF7 /* ikamodoki.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ikamodoki.ttf; path = OtherFiles/ikamodoki.ttf; sourceTree = "<group>"; };
+		C48CA8CC1CA66DFD005177D7 /* IkatenSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IkatenSegmentedControl.swift; path = Classes/Views/IkatenSegmentedControl.swift; sourceTree = "<group>"; };
+		C49BD6121CA2F88800156513 /* SegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegmentedControl.swift; path = Classes/Views/SegmentedControl.swift; sourceTree = "<group>"; };
 		C4A9AFE71C8ADBDB00F8AA45 /* ikaten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ikaten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A9AFEA1C8ADBDB00F8AA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
 		C4A9AFEF1C8ADBDB00F8AA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -208,6 +214,7 @@
 		C47C68861C8C5EB9003FADF7 /* OtherFiles */ = {
 			isa = PBXGroup;
 			children = (
+				C4511EFF1C9FC38200052EDA /* project_paintball.otf */,
 				C47C68871C8C5EEF003FADF7 /* ikamodoki.ttf */,
 			);
 			name = OtherFiles;
@@ -273,6 +280,8 @@
 			isa = PBXGroup;
 			children = (
 				C4AC83B51C8C5908006DF92C /* RoundedCornersButton.swift */,
+				C49BD6121CA2F88800156513 /* SegmentedControl.swift */,
+				C48CA8CC1CA66DFD005177D7 /* IkatenSegmentedControl.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -450,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4A9AFF51C8ADBDB00F8AA45 /* LaunchScreen.storyboard in Resources */,
+				C4511F001C9FC38700052EDA /* project_paintball.otf in Resources */,
 				C47C68881C8C5EEF003FADF7 /* ikamodoki.ttf in Resources */,
 				C4A9AFF21C8ADBDB00F8AA45 /* Assets.xcassets in Resources */,
 				C4A9AFF01C8ADBDB00F8AA45 /* Main.storyboard in Resources */,
@@ -615,10 +625,12 @@
 				C40248F71C8C2007007A3EF9 /* PreparationViewController.swift in Sources */,
 				461A067D1C9F357A00C15FF2 /* DataCollection.swift in Sources */,
 				C4AC83B61C8C5908006DF92C /* RoundedCornersButton.swift in Sources */,
+				C48CA8CD1CA66DFD005177D7 /* IkatenSegmentedControl.swift in Sources */,
 				46100B321C9FD6DD006B1051 /* Data.swift in Sources */,
 				C45F42B11C9E8081005213B5 /* Stages.swift in Sources */,
 				461A06741C9EC7C000C15FF2 /* SelectViewController.swift in Sources */,
 				C40248EF1C8B3B55007A3EF9 /* Battle.swift in Sources */,
+				C49BD6131CA2F88800156513 /* SegmentedControl.swift in Sources */,
 				C4511EF91C9F131C00052EDA /* LobbyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -793,6 +805,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.orzup.ikaten;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -806,6 +819,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.orzup.ikaten;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

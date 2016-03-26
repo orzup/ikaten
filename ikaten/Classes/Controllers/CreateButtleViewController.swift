@@ -5,26 +5,36 @@ class CreateButtleViewController: UIViewController {
     var battle: Battle!
     var stages: Stages!
 
-    @IBOutlet weak var mapSelector: UISegmentedControl!
-    @IBOutlet weak var resultSelector: UISegmentedControl!
+    var stageSelector:    IkatenSegmentedControl!
+    var isLoseSelector:   IkatenSegmentedControl!
+    var isTimeUpSelector: IkatenSegmentedControl!
+
+    @IBOutlet weak var stageSegmentedControlContainer: UIView!
+    @IBOutlet weak var isLoseSegmentedControlContainer: UIView!
+    @IBOutlet weak var isTimeUpSegmentedControlContainer: UIView!
     @IBOutlet weak var killsTextField: UITextField!
     @IBOutlet weak var deathTextField: UITextField!
     @IBOutlet weak var rankExpChangeTextField: UITextField!
 
-    override func viewDidLoad() {
-        mapSelector.setTitle(stages.first().name,  forSegmentAtIndex: 0)
-        mapSelector.setTitle(stages.second().name, forSegmentAtIndex: 1)
+    @IBAction func singleTapView(sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
 
     @IBAction func touchUpInsideNextBattleButton(sender: AnyObject) {
         createButtle()
     }
 
+    override func viewDidLayoutSubviews() {
+        stageSelector = IkatenSegmentedControl(items: [stages.first().name, stages.second().name], container: stageSegmentedControlContainer)
+        isLoseSelector = IkatenSegmentedControl(items: ["WIN", "LOSE"], container: isLoseSegmentedControlContainer, font: UIFont(name: "ProjectPaintball", size: 30)!)
+        isTimeUpSelector = IkatenSegmentedControl(items: ["ノックアウト", "タイムアップ"], container: isTimeUpSegmentedControlContainer)
+        }
+
     private func createButtle() {
         SVProgressHUD.show()
         battle.setResult([
-            "map":           stages.dataAtIndex(mapSelector.selectedSegmentIndex),
-            "is_win":        resultSelector.selectedSegmentIndex == 0,
+            "map":           stages.dataAtIndex(Int(stageSelector!.selectedSegmentIndex)),
+            "is_win":        Int(isLoseSelector.selectedSegmentIndex) == 0,
             "kill":          Int(killsTextField.text!)!,
             "death":         Int(deathTextField.text!)!,
             "rankExpChange": Int(rankExpChangeTextField.text!)!,

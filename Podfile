@@ -6,7 +6,9 @@ use_frameworks!
 target 'ikaten' do
   pod 'Alamofire'
   pod 'KeychainAccess'
+  # UI系
   pod 'SVProgressHUD'
+  pod 'NYSegmentedControl'
 end
 
 def testing_pods
