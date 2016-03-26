@@ -483,7 +483,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvh-Zo-FUv">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvh-Zo-FUv">
                                                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="GRF-gm-RRJ"/>
@@ -514,10 +514,10 @@
                                                     <exclude reference="tvh-Zo-FUv"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="4ya-zk-j8s"/>
-                                                    <exclude reference="dEF-I9-bCU"/>
                                                     <exclude reference="I6w-MX-L53"/>
                                                     <exclude reference="rLj-ax-Nov"/>
+                                                    <exclude reference="4ya-zk-j8s"/>
+                                                    <exclude reference="dEF-I9-bCU"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -526,10 +526,10 @@
                                                     <include reference="tvh-Zo-FUv"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="4ya-zk-j8s"/>
-                                                    <include reference="dEF-I9-bCU"/>
                                                     <include reference="I6w-MX-L53"/>
                                                     <include reference="rLj-ax-Nov"/>
+                                                    <include reference="4ya-zk-j8s"/>
+                                                    <include reference="dEF-I9-bCU"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
