@@ -20,6 +20,10 @@ class PreparationViewController: UITableViewController, UIPickerViewDataSource, 
     var stages: Stages!
     var rule: Rule!
 
+    private var selectedRank = Udemae.ranks.first!
+    private var selectedExp = Udemae.exps().first!
+    private var exps: Array<Int> = []
+
     override func viewDidLoad() {
         navigationItem.title = lobby.name
         squadDetailLabel.text = lobby.name
@@ -46,6 +50,7 @@ class PreparationViewController: UITableViewController, UIPickerViewDataSource, 
         let pickerView = UIPickerView()
         pickerView.delegate = self
         rankTextField.inputView = pickerView
+        exps = Udemae.exps()
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -74,19 +79,32 @@ class PreparationViewController: UITableViewController, UIPickerViewDataSource, 
     }
 
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
+        return 2
     }
 
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return Udemae.ranks.count
+        if component == 0 {
+            return Udemae.ranks.count
+        } else {
+            return Udemae.expsMax
+        }
     }
 
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return Udemae.ranks[row]
+        if component == 0 {
+            return Udemae.ranks[row]
+        } else {
+            return String(exps[row])
+        }
     }
 
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        rankTextField.text = Udemae.ranks[row]
+        if component == 0 {
+            selectedRank = Udemae.ranks[row]
+        } else {
+            selectedExp = exps[row]
+        }
+        rankTextField.text = "\(selectedRank) \(selectedExp)"
     }
 
     private func params() -> Dictionary<String, AnyObject> {
@@ -94,8 +112,8 @@ class PreparationViewController: UITableViewController, UIPickerViewDataSource, 
             "lobby":    lobby,
             "rule":     rule,
             "weapon":   weapons.indexOf(weaponDetailLabel.text!)!,
-            "rank":     "s",
-            "rank_exp": 0,
+            "rank":     selectedRank,
+            "rank_exp": selectedExp,
         ]
     }
 }
