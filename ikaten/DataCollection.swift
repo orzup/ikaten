@@ -51,8 +51,10 @@ class DataCollection {
     }
 
     func indexOf(name: String) -> Data? {
+        let halfWidthName = name.toHalfWidth
+
         for data in list {
-            if data.name == name {
+            if data.name == halfWidthName {
                 return data
             }
         }
