@@ -62,9 +62,9 @@ class PreparationViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
         case Data.Weapon.rawValue:
-            self.performSegueWithIdentifier("toSelectViewController",sender: ["indexPath": indexPath, "collection": weapons])
+            self.performSegueWithIdentifier("toSelectViewController", sender: ["indexPath": indexPath, "collection": weapons])
         case Data.StageFirst.rawValue, Data.StageSecond.rawValue:
-            self.performSegueWithIdentifier("toSelectViewController",sender: ["indexPath": indexPath, "collection": stages])
+            self.performSegueWithIdentifier("toSelectViewController", sender: ["indexPath": indexPath, "collection": stages])
         default:
             break
         }
