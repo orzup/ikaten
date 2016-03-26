@@ -675,6 +675,7 @@
 				46280AB41CA69362002BB090 /* Weapon.swift in Sources */,
 				C4B56D6A1C9EC2DC003FC21A /* StagesSpec.swift in Sources */,
 				C4B56D611C9EACC1003FC21A /* Stages.swift in Sources */,
+				C435A8101CA701DE00CDEA28 /* IkatenSegmentedControl.swift in Sources */,
 				46100B351CA01E43006B1051 /* DataCollectionSpec.swift in Sources */,
 				C40248F01C8B3B55007A3EF9 /* Battle.swift in Sources */,
 				46280ABA1CA6936E002BB090 /* Data.swift in Sources */,
