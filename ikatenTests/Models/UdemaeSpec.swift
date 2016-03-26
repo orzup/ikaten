@@ -27,7 +27,7 @@ class UdemaeSpec: QuickSpec {
 
             context("ウデマエが下がる場合") {
                 it("ウデマエがA+であること") {
-                    let udemaeAfter = udemae.after(false, rankExpChange: 50)
+                    let udemaeAfter = udemae.after(false, rankExpChange: 51)
                     expect(udemaeAfter.rank).to(equal("A+"))
                 }
             }
