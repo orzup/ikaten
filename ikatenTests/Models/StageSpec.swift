@@ -6,18 +6,15 @@ class StageSpec: QuickSpec {
         var stage: Stage?
 
         beforeEach() {
-            stage = Stage("アロワナモール")
+            stage = Stage([
+                "key": "arowana" ,
+                "name": ["ja_JP": "アロワナモール"]
+                ])
         }
 
         describe("init") {
             it("初期化できること") {
                 expect(stage!.name).to(equal("アロワナモール"))
-            }
-        }
-
-        describe("toStatInkKey") {
-            it("stat.ink用のキーに変換できること") {
-                expect(stage!.toStatInkKey()).to(equal("arowana"))
             }
         }
     }

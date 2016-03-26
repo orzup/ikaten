@@ -1,7 +1,7 @@
 class Battle {
     let lobby: Lobby
     let rule: Rule
-    let weapon: String
+    let weapon: Weapon
     let rank: String
     let rankExp: Int
     var map: Stage!
@@ -15,7 +15,7 @@ class Battle {
     init(let data: Dictionary<String, AnyObject>) {
         lobby        = data["lobby"] as! Lobby
         rule         = data["rule"] as! Rule
-        weapon       = data["weapon"] as! String
+        weapon       = data["weapon"] as! Weapon
         rank         = data["rank"] as! String
         rankExp      = data["rank_exp"] as! Int
     }
@@ -35,8 +35,8 @@ class Battle {
         return [
             "lobby":          lobby.toStatInkKey(),
             "rule":           rule.toStatInkKey(),
-            "map":            map!.toStatInkKey(),
-            "weapon":         weapon,
+            "map":            map.key,
+            "weapon":         weapon.key,
             "rank":           rank,
             "rank_exp":       rankExp,
             "rank_after":     rankAfter!,

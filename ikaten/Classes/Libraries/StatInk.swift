@@ -57,4 +57,18 @@ class StatInk {
             }
         }
     }
+
+    func indexStage(
+        onSuccess: (Stages) -> Void,
+        onFailure: () -> Void
+        ) -> Void {
+            Alamofire.request(Router.IndexStage()).responseJSON { (response) -> Void in
+                switch response.result {
+                case .Success(let data):
+                    onSuccess(Stages(data as! Array<Dictionary<String, AnyObject>>))
+                case .Failure:
+                    onFailure()
+                }
+            }
+    }
 }

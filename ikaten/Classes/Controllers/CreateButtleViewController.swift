@@ -12,8 +12,8 @@ class CreateButtleViewController: UIViewController {
     @IBOutlet weak var rankExpChangeTextField: UITextField!
 
     override func viewDidLoad() {
-        mapSelector.setTitle(stages.firstStage().name,  forSegmentAtIndex: 0)
-        mapSelector.setTitle(stages.secondStage().name, forSegmentAtIndex: 1)
+        mapSelector.setTitle(stages.first().name,  forSegmentAtIndex: 0)
+        mapSelector.setTitle(stages.second().name, forSegmentAtIndex: 1)
     }
 
     @IBAction func touchUpInsideNextBattleButton(sender: AnyObject) {
@@ -23,7 +23,7 @@ class CreateButtleViewController: UIViewController {
     private func createButtle() {
         SVProgressHUD.show()
         battle.setResult([
-            "map":           stages.stageAtIndex(mapSelector.selectedSegmentIndex),
+            "map":           stages.dataAtIndex(mapSelector.selectedSegmentIndex),
             "is_win":        resultSelector.selectedSegmentIndex == 0,
             "kill":          Int(killsTextField.text!)!,
             "death":         Int(deathTextField.text!)!,
@@ -39,4 +39,3 @@ class CreateButtleViewController: UIViewController {
         })
     }
 }
-

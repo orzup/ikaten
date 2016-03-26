@@ -1,8 +1,19 @@
 class Weapons : DataCollection {
-    init(let _ params: Array<Dictionary<String, AnyObject>>) {
+    override init() {
         super.init()
-        for param in params  {
+    }
+
+    override init(let _ params: Array<Dictionary<String, AnyObject>>) {
+        super.init()
+        for param in params {
             append(Weapon(param))
+        }
+    }
+
+    override init(let _ data: Array<Data>){
+        super.init()
+        for datum in data {
+            append(datum)
         }
     }
 }

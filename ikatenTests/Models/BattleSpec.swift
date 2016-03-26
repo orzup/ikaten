@@ -7,13 +7,13 @@ class BattleSpec: QuickSpec {
             let battle = Battle(data:[
                     "lobby":    Lobby("レギュラーマッチ"),
                     "rule":     Rule("ガチエリア"),
-                    "weapon":   "wakaba",
+                    "weapon":   Weapon(["key": "52gal" ,"name": ["ja_JP": "52ガロン"]]),
                     "rank":     "s",
                     "rank_exp": 50
                 ])
 
             var params : Dictionary<String, AnyObject> = [
-                "map":           Stage("arowana"),
+                "map":           Stage(["key": "arowana" ,"name": ["ja_JP": "アロワナモール"]]),
                 "is_win":        true,
                 "kill":          12,
                 "death":         5,
