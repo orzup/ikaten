@@ -1,11 +1,12 @@
 import UIKit
 
-class PreparationViewController: UITableViewController {
+class PreparationViewController: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var squadDetailLabel: UILabel!
     @IBOutlet weak var weaponDetailLabel: UILabel!
     @IBOutlet weak var ruleDetailLabel: UILabel!
     @IBOutlet var stageDetailLabels: [UILabel]!
-    
+    @IBOutlet weak var rankTextField: UITextField!
+
     enum Data : Int {
         case Mode = 0
         case Weapon
@@ -41,6 +42,10 @@ class PreparationViewController: UITableViewController {
             }
             }) { () -> Void in
         }
+
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        rankTextField.inputView = pickerView
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -66,6 +71,22 @@ class PreparationViewController: UITableViewController {
         default:
             break
         }
+    }
+
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return Udemae.ranks.count
+    }
+
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return Udemae.ranks[row]
+    }
+
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        rankTextField.text = Udemae.ranks[row]
     }
 
     private func params() -> Dictionary<String, AnyObject> {

@@ -1,8 +1,8 @@
 class Udemae {
-    let ranks = [
-        "c-", "c", "c+",
-        "b-", "b", "b+",
-        "a-", "a", "a+",
-        "s", "s+"
+    static let ranks = [
+        "C-", "C", "C+",
+        "B-", "B", "B+",
+        "A-", "A", "A+",
+        "S", "S+"
     ]
 }
