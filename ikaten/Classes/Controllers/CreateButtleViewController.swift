@@ -25,7 +25,7 @@ class CreateButtleViewController: UIViewController {
     }
 
     override func viewDidLayoutSubviews() {
-        stageSelector = IkatenSegmentedControl(items: [stages.firstStage().name, stages.secondStage().name], container: stageSegmentedControlContainer)
+        stageSelector = IkatenSegmentedControl(items: [stages.first().name, stages.second().name], container: stageSegmentedControlContainer)
         isLoseSelector = IkatenSegmentedControl(items: ["WIN", "LOSE"], container: isLoseSegmentedControlContainer, font: UIFont(name: "ProjectPaintball", size: 30)!)
         isTimeUpSelector = IkatenSegmentedControl(items: ["ノックアウト", "タイムアップ"], container: isTimeUpSegmentedControlContainer)
         }
@@ -33,7 +33,7 @@ class CreateButtleViewController: UIViewController {
     private func createButtle() {
         SVProgressHUD.show()
         battle.setResult([
-            "map":           stages.stageAtIndex(Int(stageSelector!.selectedSegmentIndex)),
+            "map":           stages.dataAtIndex(Int(stageSelector!.selectedSegmentIndex)),
             "is_win":        Int(isLoseSelector.selectedSegmentIndex) == 0,
             "kill":          Int(killsTextField.text!)!,
             "death":         Int(deathTextField.text!)!,
