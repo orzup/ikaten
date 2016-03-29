@@ -882,6 +882,7 @@
                         <outlet property="isLoseSegmentedControlContainer" destination="pWs-vV-uAb" id="cUF-df-Zat"/>
                         <outlet property="isTimeUpSegmentedControlContainer" destination="rTe-OQ-EXE" id="kUz-Xy-LaM"/>
                         <outlet property="killsTextField" destination="ldW-Lr-inF" id="IxP-dg-J3j"/>
+                        <outlet property="operationLabel" destination="Phb-gJ-YxI" id="OP1-Kg-mSO"/>
                         <outlet property="rankExpChangeTextField" destination="Gm8-Qh-AFz" id="lFa-gZ-upC"/>
                         <outlet property="stageSegmentedControlContainer" destination="P7g-Wa-ncV" id="9aG-zW-Yzl"/>
                         <outlet property="udemaeLabel" destination="qeh-HW-nu3" id="3uU-ZZ-sDe"/>

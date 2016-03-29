@@ -16,6 +16,7 @@ class CreateButtleViewController: UIViewController {
     @IBOutlet weak var deathTextField: UITextField!
     @IBOutlet weak var udemaeLabel: UILabel!
     @IBOutlet weak var rankExpChangeTextField: UITextField!
+    @IBOutlet weak var operationLabel: UILabel!
 
     @IBAction func singleTapView(sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -25,15 +26,30 @@ class CreateButtleViewController: UIViewController {
         createButtle()
     }
 
+    @IBAction func valueChangedIsLoseSelector(sender: AnyObject) {
+        if isLoseSelector.selectedSegmentIndex == 0 {
+            operationLabel.text = "+"
+        } else {
+            operationLabel.text = "-"
+        }
+    }
+
     override func viewDidLoad() {
         udemaeLabel.text = "\(battle.udemae.rank)\(battle.udemae.exp)"
     }
 
     override func viewDidLayoutSubviews() {
-        stageSelector = IkatenSegmentedControl(items: [stages.first().name, stages.second().name], container: stageSegmentedControlContainer)
-        isLoseSelector = IkatenSegmentedControl(items: ["WIN", "LOSE"], container: isLoseSegmentedControlContainer, font: UIFont(name: "ProjectPaintball", size: 30)!)
-        isTimeUpSelector = IkatenSegmentedControl(items: ["ノックアウト", "タイムアップ"], container: isTimeUpSegmentedControlContainer)
+        if stageSelector == nil {
+            stageSelector = IkatenSegmentedControl(items: [stages.first().name, stages.second().name], container: stageSegmentedControlContainer)
         }
+        if isLoseSelector == nil {
+            isLoseSelector = IkatenSegmentedControl(items: ["WIN", "LOSE"], container: isLoseSegmentedControlContainer, font: UIFont(name: "ProjectPaintball", size: 30)!)
+            isLoseSelector.addTarget(self, action: #selector(CreateButtleViewController.valueChangedIsLoseSelector(_:)), forControlEvents: .ValueChanged)
+        }
+        if isTimeUpSelector == nil {
+            isTimeUpSelector = IkatenSegmentedControl(items: ["ノックアウト", "タイムアップ"], container: isTimeUpSegmentedControlContainer)
+        }
+    }
 
     private func createButtle() {
         SVProgressHUD.show()
