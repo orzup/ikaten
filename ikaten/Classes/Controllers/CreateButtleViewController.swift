@@ -14,6 +14,7 @@ class CreateButtleViewController: UIViewController {
     @IBOutlet weak var isTimeUpSegmentedControlContainer: UIView!
     @IBOutlet weak var killsTextField: UITextField!
     @IBOutlet weak var deathTextField: UITextField!
+    @IBOutlet weak var udemaeLabel: UILabel!
     @IBOutlet weak var rankExpChangeTextField: UITextField!
 
     @IBAction func singleTapView(sender: UITapGestureRecognizer) {
@@ -22,6 +23,10 @@ class CreateButtleViewController: UIViewController {
 
     @IBAction func touchUpInsideNextBattleButton(sender: AnyObject) {
         createButtle()
+    }
+
+    override func viewDidLoad() {
+        udemaeLabel.text = "\(battle.udemae.rank)\(battle.udemae.exp)"
     }
 
     override func viewDidLayoutSubviews() {
@@ -38,7 +43,7 @@ class CreateButtleViewController: UIViewController {
             "kill":          Int(killsTextField.text!)!,
             "death":         Int(deathTextField.text!)!,
             "rankExpChange": Int(rankExpChangeTextField.text!)!,
-            "knock_out":     false
+            "knock_out":     Int(isTimeUpSelector.selectedSegmentIndex) == 0
             ])
 
         StatInk().createButtle(battle,

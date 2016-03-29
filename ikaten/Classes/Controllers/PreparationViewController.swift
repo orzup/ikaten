@@ -1,11 +1,12 @@
 import UIKit
 
-class PreparationViewController: UITableViewController {
+class PreparationViewController: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var squadDetailLabel: UILabel!
     @IBOutlet weak var weaponDetailLabel: UILabel!
     @IBOutlet weak var ruleDetailLabel: UILabel!
     @IBOutlet var stageDetailLabels: [UILabel]!
-    
+    @IBOutlet weak var rankTextField: UITextField!
+
     enum Data : Int {
         case Mode = 0
         case Weapon
@@ -18,6 +19,10 @@ class PreparationViewController: UITableViewController {
     var weapons: Weapons!
     var stages: Stages!
     var rules: Rules!
+
+    private var exps: Array<Int> = []
+    private var selectedRank = Udemae.ranks.first!
+    private var selectedExp: Int!
 
     override func viewDidLoad() {
         navigationItem.title = lobby.name
@@ -44,6 +49,15 @@ class PreparationViewController: UITableViewController {
             }
             }) { () -> Void in
         }
+
+
+        setExps()
+        selectedExp = exps.first!
+
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        rankTextField.inputView = pickerView
+        rankTextField.text = udemaeToString()
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -73,13 +87,51 @@ class PreparationViewController: UITableViewController {
         }
     }
 
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 2
+    }
+
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if component == 0 {
+            return Udemae.ranks.count
+        } else {
+            return Udemae.expMax
+        }
+    }
+
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if component == 0 {
+            return Udemae.ranks[row]
+        } else {
+            return String(exps[row])
+        }
+    }
+
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if component == 0 {
+            selectedRank = Udemae.ranks[row]
+        } else {
+            selectedExp = exps[row]
+        }
+        rankTextField.text = udemaeToString()
+    }
+
+    private func setExps() {
+        for i in Udemae.expMin ..< Udemae.expMax {
+            exps.append(i)
+        }
+    }
+
     private func params() -> Dictionary<String, AnyObject> {
         return [
             "lobby":    lobby,
             "rule":     rules.indexOf(ruleDetailLabel.text!)!,
             "weapon":   weapons.indexOf(weaponDetailLabel.text!)!,
-            "rank":     "s",
-            "rank_exp": 0,
+            "udemae":   Udemae(rank: selectedRank, exp: selectedExp)
         ]
+    }
+
+    private func udemaeToString() -> String {
+        return "\(selectedRank) \(selectedExp)"
     }
 }
