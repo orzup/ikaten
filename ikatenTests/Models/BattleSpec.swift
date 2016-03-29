@@ -3,17 +3,12 @@ import Nimble
 
 class BattleSpec: QuickSpec {
     override func spec() {
-        describe("バトルの成績をセット") {
-            let battle = Battle(data:[
-                    "lobby":    Lobby("レギュラーマッチ"),
-                    "rule":     Rule(["key": "hoko" ,"name": ["ja_JP": "ガチホコ"]]),
-                    "weapon":   Weapon(["key": "52gal" ,"name": ["ja_JP": "52ガロン"]]),
-                    "udemae":   Udemae(rank: "S", exp: 50)
-                ])
+        var battle: Battle?
+
         beforeEach() {
             battle = Battle(data:[
                 "lobby":    Lobby("ガチマッチ"),
-                "rule":     Rule("ガチエリア"),
+                "rule":     Rule(["key": "area" ,"name": ["ja_JP": "ガチエリア"]]),
                 "weapon":   Weapon(["key": "52gal" ,"name": ["ja_JP": ".52ガロン"]]),
                 "udemae":   Udemae(rank: "S", exp: 50)
             ])
