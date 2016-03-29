@@ -43,7 +43,7 @@ class CreateButtleViewController: UIViewController {
             "kill":          Int(killsTextField.text!)!,
             "death":         Int(deathTextField.text!)!,
             "rankExpChange": Int(rankExpChangeTextField.text!)!,
-            "knock_out":     false
+            "knock_out":     Int(isTimeUpSelector.selectedSegmentIndex) == 0
             ])
 
         StatInk().createButtle(battle,
