@@ -6,7 +6,7 @@ class BattleSpec: QuickSpec {
         describe("バトルの成績をセット") {
             let battle = Battle(data:[
                     "lobby":    Lobby("レギュラーマッチ"),
-                    "rule":     Rule("ガチエリア"),
+                    "rule":     Rule(["key": "hoko" ,"name": ["ja_JP": "ガチホコ"]]),
                     "weapon":   Weapon(["key": "52gal" ,"name": ["ja_JP": "52ガロン"]]),
                     "rank":     "s",
                     "rank_exp": 50

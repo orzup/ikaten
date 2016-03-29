@@ -17,7 +17,7 @@ class PreparationViewController: UITableViewController {
     var lobby: Lobby!
     var weapons: Weapons!
     var stages: Stages!
-    var rule: Rule!
+    var rules: Rules!
 
     override func viewDidLoad() {
         navigationItem.title = lobby.name
@@ -29,13 +29,16 @@ class PreparationViewController: UITableViewController {
         }
 
         StatInk().indexStage({ (stages) -> Void in
-            Splapi.checkStage(self.lobby, onSuccess: { (stageNames, rule) -> Void in
-                self.stages = stages
-                self.rule = rule
-                self.ruleDetailLabel.text = self.rule.name
+            StatInk().indexRule({ (rules) -> Void in
+                Splapi.checkStage(self.lobby, onSuccess: { (stageNames, rule) -> Void in
+                    self.stages = stages
+                    self.rules = rules.gachi()
+                    self.ruleDetailLabel.text = rules.indexOf(rule)?.name
 
-                for (index, stageName) in stageNames.enumerate() {
-                    self.stageDetailLabels[index].text = stages.indexOf(stageName)?.name
+                    for (index, stageName) in stageNames.enumerate() {
+                        self.stageDetailLabels[index].text = stages.indexOf(stageName)?.name
+                    }
+                    }) { () -> Void in
                 }
                 }) { () -> Void in
             }
@@ -63,6 +66,8 @@ class PreparationViewController: UITableViewController {
             self.performSegueWithIdentifier("toSelectViewController", sender: ["indexPath": indexPath, "collection": weapons])
         case Data.StageFirst.rawValue, Data.StageSecond.rawValue:
             self.performSegueWithIdentifier("toSelectViewController", sender: ["indexPath": indexPath, "collection": stages])
+        case Data.Rule.rawValue:
+            self.performSegueWithIdentifier("toSelectViewController", sender: ["indexPath": indexPath, "collection": rules])
         default:
             break
         }
@@ -71,7 +76,7 @@ class PreparationViewController: UITableViewController {
     private func params() -> Dictionary<String, AnyObject> {
         return [
             "lobby":    lobby,
-            "rule":     rule,
+            "rule":     rules.indexOf(ruleDetailLabel.text!)!,
             "weapon":   weapons.indexOf(weaponDetailLabel.text!)!,
             "rank":     "s",
             "rank_exp": 0,
