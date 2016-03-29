@@ -20,9 +20,9 @@ class PreparationViewController: UITableViewController, UIPickerViewDataSource, 
     var stages: Stages!
     var rule: Rule!
 
-    private var selectedRank = Udemae.ranks.first!
-    private var selectedExp = Udemae.exps().first!
     private var exps: Array<Int> = []
+    private var selectedRank = Udemae.ranks.first!
+    private var selectedExp: Int!
 
     override func viewDidLoad() {
         navigationItem.title = lobby.name
@@ -50,7 +50,9 @@ class PreparationViewController: UITableViewController, UIPickerViewDataSource, 
         let pickerView = UIPickerView()
         pickerView.delegate = self
         rankTextField.inputView = pickerView
-        exps = Udemae.exps()
+
+        setExps()
+        selectedExp = exps.first!
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -105,6 +107,12 @@ class PreparationViewController: UITableViewController, UIPickerViewDataSource, 
             selectedExp = exps[row]
         }
         rankTextField.text = "\(selectedRank) \(selectedExp)"
+    }
+
+    private func setExps() {
+        for i in Udemae.expMin ..< Udemae.expMax {
+            exps.append(i)
+        }
     }
 
     private func params() -> Dictionary<String, AnyObject> {

@@ -17,14 +17,6 @@ class Udemae {
         self.exp = exp
     }
 
-    class func exps() -> Array<Int> {
-        var array: Array<Int> = []
-        for i in expMin ..< expMax {
-            array.append(i)
-        }
-        return array
-    }
-
     func after(let isWin: Bool, let rankExpChange: Int) -> Udemae {
         var rankAfter = ""
         var rankExpAfter = 0
