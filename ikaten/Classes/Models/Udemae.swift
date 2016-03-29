@@ -6,8 +6,8 @@ class Udemae {
         "S", "S+"
     ]
 
-    static let expsMin = 0
-    static let expsMax = 100
+    static let expMin = 0
+    static let expMax = 100
 
     let rank: String
     let exp: Int
@@ -19,7 +19,7 @@ class Udemae {
 
     class func exps() -> Array<Int> {
         var array: Array<Int> = []
-        for i in expsMin ..< expsMax {
+        for i in expMin ..< expMax {
             array.append(i)
         }
         return array
@@ -31,7 +31,7 @@ class Udemae {
 
         if isWin {
             rankExpAfter = exp + rankExpChange
-            if rank != Udemae.ranks.last && rankExpAfter >= 100 {
+            if rank != Udemae.ranks.last && rankExpAfter >= Udemae.expMax {
                 rankExpAfter = 30
                 rankAfter = Udemae.ranks[Udemae.ranks.indexOf(rank)! + 1]
             } else {
@@ -39,7 +39,7 @@ class Udemae {
             }
         } else {
             rankExpAfter = exp - rankExpChange
-            if rank != Udemae.ranks.first && rankExpAfter < 0 {
+            if rank != Udemae.ranks.first && rankExpAfter < Udemae.expMin {
                 rankExpAfter = 70
                 rankAfter = Udemae.ranks[Udemae.ranks.indexOf(rank)! - 1]
             } else {

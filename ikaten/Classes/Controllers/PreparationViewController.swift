@@ -86,7 +86,7 @@ class PreparationViewController: UITableViewController, UIPickerViewDataSource, 
         if component == 0 {
             return Udemae.ranks.count
         } else {
-            return Udemae.expsMax
+            return Udemae.expMax
         }
     }
 
