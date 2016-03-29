@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4600F66D1CAAC11F0054840D /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600F66C1CAAC11F0054840D /* Rules.swift */; };
+		4600F66E1CAAC11F0054840D /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600F66C1CAAC11F0054840D /* Rules.swift */; };
 		46100B351CA01E43006B1051 /* DataCollectionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46100B341CA01E43006B1051 /* DataCollectionSpec.swift */; };
 		46100B371CA01E70006B1051 /* DataSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46100B361CA01E70006B1051 /* DataSpec.swift */; };
 		46100B391CA01EA2006B1051 /* WeaponSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46100B381CA01EA2006B1051 /* WeaponSpec.swift */; };
@@ -27,6 +29,8 @@
 		4640F1941C9702EF0036C1CD /* BattleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4640F1931C9702EF0036C1CD /* BattleSpec.swift */; };
 		466595DE1C8B357500258E42 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466595DD1C8B357500258E42 /* SessionViewController.swift */; };
 		466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466595DD1C8B357500258E42 /* SessionViewController.swift */; };
+		46811E7B1CA695F5009FF6F3 /* IkatenSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48CA8CC1CA66DFD005177D7 /* IkatenSegmentedControl.swift */; };
+		46811E801CA6CCA6009FF6F3 /* RulesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46811E7F1CA6CCA6009FF6F3 /* RulesSpec.swift */; };
 		B15A909AA67ED85BA717F7E6 /* Pods_ikaten.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C867FD8CEF3CED506E69059A /* Pods_ikaten.framework */; };
 		C40248ED1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */; };
 		C40248EF1C8B3B55007A3EF9 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40248EE1C8B3B55007A3EF9 /* Battle.swift */; };
@@ -92,6 +96,7 @@
 
 /* Begin PBXFileReference section */
 		32FBF78638341B225D5FF50A /* Pods-ikatenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ikatenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ikatenUITests/Pods-ikatenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4600F66C1CAAC11F0054840D /* Rules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rules.swift; path = Classes/Models/Rules.swift; sourceTree = "<group>"; };
 		46100B341CA01E43006B1051 /* DataCollectionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataCollectionSpec.swift; path = ikatenTests/Models/DataCollectionSpec.swift; sourceTree = SOURCE_ROOT; };
 		46100B361CA01E70006B1051 /* DataSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataSpec.swift; path = ikatenTests/Models/DataSpec.swift; sourceTree = SOURCE_ROOT; };
 		46100B381CA01EA2006B1051 /* WeaponSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeaponSpec.swift; path = Models/WeaponSpec.swift; sourceTree = "<group>"; };
@@ -105,6 +110,7 @@
 		46280ABD1CA6937F002BB090 /* String+ConvertWidth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+ConvertWidth.swift"; path = "Classes/Libraries/String+ConvertWidth.swift"; sourceTree = "<group>"; };
 		4640F1931C9702EF0036C1CD /* BattleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattleSpec.swift; path = Models/BattleSpec.swift; sourceTree = "<group>"; };
 		466595DD1C8B357500258E42 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionViewController.swift; path = Classes/Controllers/SessionViewController.swift; sourceTree = "<group>"; };
+		46811E7F1CA6CCA6009FF6F3 /* RulesSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RulesSpec.swift; path = Models/RulesSpec.swift; sourceTree = "<group>"; };
 		51CB08DE701A2ED86C36576B /* Pods_ikatenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ikatenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D2A481430E0C756A703ECE8 /* Pods-ikatenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ikatenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ikatenUITests/Pods-ikatenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		69539928D2C5B033EFFA4335 /* Pods_ikatenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ikatenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +193,7 @@
 				46100B381CA01EA2006B1051 /* WeaponSpec.swift */,
 				C4B56D691C9EC2DC003FC21A /* StagesSpec.swift */,
 				C4B56D671C9EC2C2003FC21A /* StageSpec.swift */,
+				46811E7F1CA6CCA6009FF6F3 /* RulesSpec.swift */,
 				C4B56D651C9EC274003FC21A /* RuleSpec.swift */,
 				C4511EFD1C9F2C6F00052EDA /* LobbySpec.swift */,
 				4640F1931C9702EF0036C1CD /* BattleSpec.swift */,
@@ -309,10 +316,11 @@
 			children = (
 				46280AB71CA6936E002BB090 /* Data.swift */,
 				46280AB81CA6936E002BB090 /* DataCollection.swift */,
-				46280AB11CA69362002BB090 /* Weapon.swift */,
 				46280AB21CA69362002BB090 /* Weapons.swift */,
+				46280AB11CA69362002BB090 /* Weapon.swift */,
 				C45F42AE1C9E8081005213B5 /* Stages.swift */,
 				C45F42AD1C9E8081005213B5 /* Stage.swift */,
+				4600F66C1CAAC11F0054840D /* Rules.swift */,
 				C45F42AC1C9E8081005213B5 /* Rule.swift */,
 				C40C114E1CA6957C008575B9 /* Udemae.swift */,
 				C4511EFA1C9F18A100052EDA /* Lobby.swift */,
@@ -621,6 +629,7 @@
 				C4511EFB1C9F18A100052EDA /* Lobby.swift in Sources */,
 				C4FC6A881C8B11C70023A85A /* Router.swift in Sources */,
 				C45F42AF1C9E8081005213B5 /* Rule.swift in Sources */,
+				4600F66D1CAAC11F0054840D /* Rules.swift in Sources */,
 				C40C114F1CA6957C008575B9 /* Udemae.swift in Sources */,
 				C4FC6A8C1C8B19BD0023A85A /* StatInk.swift in Sources */,
 				C4AE74861C96EC95005CFB48 /* Splapi.swift in Sources */,
@@ -648,6 +657,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46811E801CA6CCA6009FF6F3 /* RulesSpec.swift in Sources */,
 				461A06751C9EC7C000C15FF2 /* SelectViewController.swift in Sources */,
 				C4FC6A8F1C8B1F370023A85A /* StatInkTests.swift in Sources */,
 				C40248ED1C8B3AA1007A3EF9 /* PreparationViewController.swift in Sources */,
@@ -666,6 +676,7 @@
 				C4511EFE1C9F2C6F00052EDA /* LobbySpec.swift in Sources */,
 				46280ABC1CA6936E002BB090 /* DataCollection.swift in Sources */,
 				C4B56D681C9EC2C2003FC21A /* StageSpec.swift in Sources */,
+				4600F66E1CAAC11F0054840D /* Rules.swift in Sources */,
 				46100B3B1CA01EB1006B1051 /* WeaponsSpec.swift in Sources */,
 				4640F1941C9702EF0036C1CD /* BattleSpec.swift in Sources */,
 				C4A9B0001C8ADBDB00F8AA45 /* ikatenTests.swift in Sources */,

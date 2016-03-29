@@ -71,4 +71,19 @@ class StatInk {
                 }
             }
     }
+
+    func indexRule(
+        onSuccess: (Rules) -> Void,
+        onFailure: () -> Void
+        ) -> Void {
+            Alamofire.request(Router.IndexRule()).responseJSON { (response) -> Void in
+                switch response.result {
+                case .Success(let data):
+                    onSuccess(Rules(data as! Array<Dictionary<String, AnyObject>>))
+                case .Failure:
+                    onFailure()
+                }
+            }
+    }
+
 }

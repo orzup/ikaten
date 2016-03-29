@@ -8,7 +8,7 @@ class BattleSpec: QuickSpec {
         beforeEach() {
             battle = Battle(data:[
                 "lobby":    Lobby("ガチマッチ"),
-                "rule":     Rule("ガチエリア"),
+                "rule":     Rule(["key": "area" ,"name": ["ja_JP": "ガチエリア"]]),
                 "weapon":   Weapon(["key": "52gal" ,"name": ["ja_JP": ".52ガロン"]]),
                 "udemae":   Udemae(rank: "S", exp: 50)
             ])

@@ -32,7 +32,7 @@ class Battle {
     func decode() -> Dictionary<String, AnyObject> {
         return [
             "lobby":          lobby.toStatInkKey(),
-            "rule":           rule.toStatInkKey(),
+            "rule":           rule.key,
             "map":            map.key,
             "weapon":         weapon.key,
             "rank":           udemae.rank.lowercaseString,

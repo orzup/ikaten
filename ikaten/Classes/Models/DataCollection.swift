@@ -40,6 +40,15 @@ class DataCollection {
         return list.count
     }
 
+    func find(key: String) -> Int? {
+        for (index, data) in list.enumerate() {
+            if data.key == key {
+                return index
+            }
+        }
+        return nil
+    }
+
     func dataAtIndex(index: Int) -> Data {
         let data = list[index]
         return data
@@ -59,5 +68,9 @@ class DataCollection {
             }
         }
         return nil
+    }
+
+    func removeAtIndex(index: Int) {
+        list.removeAtIndex(index)
     }
 }
