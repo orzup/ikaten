@@ -47,12 +47,14 @@ class PreparationViewController: UITableViewController, UIPickerViewDataSource, 
             }) { () -> Void in
         }
 
-        let pickerView = UIPickerView()
-        pickerView.delegate = self
-        rankTextField.inputView = pickerView
 
         setExps()
         selectedExp = exps.first!
+
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        rankTextField.inputView = pickerView
+        rankTextField.text = udemaeToString()
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -106,7 +108,7 @@ class PreparationViewController: UITableViewController, UIPickerViewDataSource, 
         } else {
             selectedExp = exps[row]
         }
-        rankTextField.text = "\(selectedRank) \(selectedExp)"
+        rankTextField.text = udemaeToString()
     }
 
     private func setExps() {
@@ -122,5 +124,9 @@ class PreparationViewController: UITableViewController, UIPickerViewDataSource, 
             "weapon":   weapons.indexOf(weaponDetailLabel.text!)!,
             "udemae":   Udemae(rank: selectedRank, exp: selectedExp)
         ]
+    }
+
+    private func udemaeToString() -> String {
+        return "\(selectedRank) \(selectedExp)"
     }
 }
