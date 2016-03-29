@@ -30,10 +30,16 @@ class CreateButtleViewController: UIViewController {
     }
 
     override func viewDidLayoutSubviews() {
-        stageSelector = IkatenSegmentedControl(items: [stages.first().name, stages.second().name], container: stageSegmentedControlContainer)
-        isLoseSelector = IkatenSegmentedControl(items: ["WIN", "LOSE"], container: isLoseSegmentedControlContainer, font: UIFont(name: "ProjectPaintball", size: 30)!)
-        isTimeUpSelector = IkatenSegmentedControl(items: ["ノックアウト", "タイムアップ"], container: isTimeUpSegmentedControlContainer)
+        if stageSelector == nil {
+            stageSelector = IkatenSegmentedControl(items: [stages.first().name, stages.second().name], container: stageSegmentedControlContainer)
         }
+        if isLoseSelector == nil {
+            isLoseSelector = IkatenSegmentedControl(items: ["WIN", "LOSE"], container: isLoseSegmentedControlContainer, font: UIFont(name: "ProjectPaintball", size: 30)!)
+        }
+        if isTimeUpSelector == nil {
+            isTimeUpSelector = IkatenSegmentedControl(items: ["ノックアウト", "タイムアップ"], container: isTimeUpSegmentedControlContainer)
+        }
+    }
 
     private func createButtle() {
         SVProgressHUD.show()
