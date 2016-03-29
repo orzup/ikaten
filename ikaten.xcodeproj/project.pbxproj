@@ -630,6 +630,7 @@
 				C4FC6A881C8B11C70023A85A /* Router.swift in Sources */,
 				C45F42AF1C9E8081005213B5 /* Rule.swift in Sources */,
 				4600F66D1CAAC11F0054840D /* Rules.swift in Sources */,
+				C40C114F1CA6957C008575B9 /* Udemae.swift in Sources */,
 				C4FC6A8C1C8B19BD0023A85A /* StatInk.swift in Sources */,
 				C4AE74861C96EC95005CFB48 /* Splapi.swift in Sources */,
 				46280ABE1CA6937F002BB090 /* String+ConvertWidth.swift in Sources */,

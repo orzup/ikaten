@@ -8,9 +8,26 @@ class BattleSpec: QuickSpec {
                     "lobby":    Lobby("レギュラーマッチ"),
                     "rule":     Rule(["key": "hoko" ,"name": ["ja_JP": "ガチホコ"]]),
                     "weapon":   Weapon(["key": "52gal" ,"name": ["ja_JP": "52ガロン"]]),
-                    "rank":     "s",
-                    "rank_exp": 50
+                    "udemae":   Udemae(rank: "S", exp: 50)
                 ])
+        beforeEach() {
+            battle = Battle(data:[
+                "lobby":    Lobby("ガチマッチ"),
+                "rule":     Rule("ガチエリア"),
+                "weapon":   Weapon(["key": "52gal" ,"name": ["ja_JP": ".52ガロン"]]),
+                "udemae":   Udemae(rank: "S", exp: 50)
+            ])
+        }
+
+        describe("init") {
+            it("初期化できること") {
+                expect(battle!.lobby.name).to(equal("ガチマッチ"))
+                expect(battle!.rule.name).to(equal("ガチエリア"))
+                expect(battle!.weapon.name).to(equal(".52ガロン"))
+                expect(battle!.udemae.rank).to(equal("S"))
+                expect(battle!.udemae.exp).to(equal(50))
+            }
+        }
 
         describe("setResult") {
             let params : Dictionary<String, AnyObject> = [
