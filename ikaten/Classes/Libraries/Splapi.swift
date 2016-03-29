@@ -15,7 +15,7 @@ class Splapi {
                     } else {
                         let data = (result["result"] as! NSArray).firstObject as! Dictionary<String, AnyObject>
                         let stages = data["maps"] as! Array<String>
-                        let rule = data["rule"] as! String
+                        let rule = data["rule"] == nil ? "ナワバリバトル" : data["rule"] as! String
                         onSuccess(stages, rule)
                     }
                 case .Failure(_):

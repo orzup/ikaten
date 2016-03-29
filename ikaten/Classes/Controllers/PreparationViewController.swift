@@ -37,7 +37,7 @@ class PreparationViewController: UITableViewController, UIPickerViewDataSource, 
             StatInk().indexRule({ (rules) -> Void in
                 Splapi.checkStage(self.lobby, onSuccess: { (stageNames, rule) -> Void in
                     self.stages = stages
-                    self.rules = rules.gachi()
+                    self.rules = rules
                     self.ruleDetailLabel.text = rules.indexOf(rule)?.name
 
                     for (index, stageName) in stageNames.enumerate() {
