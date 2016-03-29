@@ -37,10 +37,9 @@ class CreateButtleViewController: UIViewController {
 
     private func createButtle() {
         SVProgressHUD.show()
-        let isWin = Int(isLoseSelector.selectedSegmentIndex) == 0
         battle.setResult([
             "map":           stages.dataAtIndex(Int(stageSelector!.selectedSegmentIndex)),
-            "is_win":        isWin,
+            "is_win":        Int(isLoseSelector.selectedSegmentIndex) == 0,
             "kill":          Int(killsTextField.text!)!,
             "death":         Int(deathTextField.text!)!,
             "rankExpChange": Int(rankExpChangeTextField.text!)!,
