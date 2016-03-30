@@ -27,11 +27,7 @@ class CreateButtleViewController: UIViewController {
     }
 
     @IBAction func valueChangedIsLoseSelector(sender: AnyObject) {
-        if isLoseSelector.selectedSegmentIndex == 0 {
-            operationLabel.text = "+"
-        } else {
-            operationLabel.text = "-"
-        }
+        setOperationLabel()
     }
 
     override func viewDidLoad() {
@@ -80,5 +76,14 @@ class CreateButtleViewController: UIViewController {
         killsTextField.text = ""
         deathTextField.text = ""
         udemaeLabel.text = "\(battle.udemae.rank)\(battle.udemae.exp)"
+        setOperationLabel()
+    }
+
+    private func setOperationLabel() {
+        if isLoseSelector.selectedSegmentIndex == 0 {
+            operationLabel.text = "+"
+        } else {
+            operationLabel.text = "-"
+        }
     }
 }
