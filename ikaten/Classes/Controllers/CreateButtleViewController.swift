@@ -35,7 +35,7 @@ class CreateButtleViewController: UIViewController {
     }
 
     override func viewDidLoad() {
-        udemaeLabel.text = "\(battle.udemae.rank)\(battle.udemae.exp)"
+        reseat()
     }
 
     override func viewDidLayoutSubviews() {
@@ -64,9 +64,21 @@ class CreateButtleViewController: UIViewController {
 
         StatInk().createButtle(battle,
             onSuccess: { (response) -> Void in
+                self.battle.nextBattle()
+                self.reseat()
                 SVProgressHUD.showSuccessWithStatus("キロク OK!")
             }, onFailure: { (errorResponse) -> Void in
                 SVProgressHUD.showErrorWithStatus("失敗")
         })
+    }
+
+    private func reseat() {
+        stageSelector?.selectedSegmentIndex = 0
+        isLoseSelector?.selectedSegmentIndex = 0
+        isTimeUpSelector?.selectedSegmentIndex = 0
+        rankExpChangeTextField.text = ""
+        killsTextField.text = ""
+        deathTextField.text = ""
+        udemaeLabel.text = "\(battle.udemae.rank)\(battle.udemae.exp)"
     }
 }
