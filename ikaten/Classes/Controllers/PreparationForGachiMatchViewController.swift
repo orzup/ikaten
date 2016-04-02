@@ -4,9 +4,9 @@ class PreparationForGachiMatchViewController: PreparationViewController, UIPicke
     @IBOutlet weak var rankTextField: UITextField!
 
     enum Data : Int {
-        case StageFirst = 0
+        case Rule = 0
+        case StageFirst
         case StageSecond
-        case Rule
         case Weapon
     }
 
