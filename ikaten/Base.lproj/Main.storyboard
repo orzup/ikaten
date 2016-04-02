@@ -310,14 +310,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.18823529410000001" green="0.20784313730000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qWZ-nT-u23">
-                            <rect key="frame" x="0.0" y="264" width="600" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="はじめる！"/>
-                            <connections>
-                                <segue destination="tr6-Or-tvG" kind="presentation" identifier="toCreateBattleView" id="AYy-WM-owV"/>
-                            </connections>
-                        </button>
                         <sections>
                             <tableViewSection id="KBw-XH-fHK">
                                 <cells>
@@ -507,6 +499,69 @@
                                                     <include reference="rLj-ax-Nov"/>
                                                     <include reference="4ya-zk-j8s"/>
                                                     <include reference="dEF-I9-bCU"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.18823529410000001" green="0.20784313730000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="kiq-HU-1X1">
+                                        <rect key="frame" x="0.0" y="220" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kiq-HU-1X1" id="bUl-iX-itw">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWZ-nT-u23" customClass="RoundedCornersButton" customModule="ikaten" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="264" width="600" height="30"/>
+                                                    <color key="backgroundColor" red="0.1843137255" green="0.75294117650000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="Mfx-B6-Y6e"/>
+                                                        <constraint firstAttribute="width" constant="220" id="vaE-Ac-gfv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ikamodoki" family="イカモドキ" pointSize="20"/>
+                                                    <state key="normal" title="はじめる！"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="Mfx-B6-Y6e"/>
+                                                            <exclude reference="vaE-Ac-gfv"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="Mfx-B6-Y6e"/>
+                                                            <include reference="vaE-Ac-gfv"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <connections>
+                                                        <segue destination="tr6-Or-tvG" kind="presentation" identifier="toCreateBattleView" id="AYy-WM-owV"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qWZ-nT-u23" firstAttribute="centerX" secondItem="bUl-iX-itw" secondAttribute="centerX" id="g7L-iL-Xl6"/>
+                                                <constraint firstItem="qWZ-nT-u23" firstAttribute="centerY" secondItem="bUl-iX-itw" secondAttribute="centerY" id="jAb-tr-GHX"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="qWZ-nT-u23"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="g7L-iL-Xl6"/>
+                                                    <exclude reference="jAb-tr-GHX"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="qWZ-nT-u23"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="g7L-iL-Xl6"/>
+                                                    <include reference="jAb-tr-GHX"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
