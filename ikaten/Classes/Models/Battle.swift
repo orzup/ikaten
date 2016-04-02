@@ -28,17 +28,6 @@ class Battle {
         udemaeAfter  = udemae.after(isWin, rankExpChange: data["rankExpChange"] as! Int)
     }
 
-    func nextBattle() {
-        udemae = udemaeAfter
-        map = nil
-        udemaeAfter = nil
-        isWin = nil
-        kill = nil
-        death = nil
-        knockOut = nil
-    }
-    
-
     func decode() -> Dictionary<String, AnyObject> {
         return [
             "lobby":          lobby.toStatInkKey(),

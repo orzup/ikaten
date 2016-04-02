@@ -60,7 +60,7 @@ class CreateButtleViewController: UIViewController {
 
         StatInk().createButtle(battle,
             onSuccess: { (response) -> Void in
-                self.battle.nextBattle()
+                self.nextBattle()
                 self.reset()
                 SVProgressHUD.showSuccessWithStatus("キロク OK!")
             }, onFailure: { (errorResponse) -> Void in
@@ -72,15 +72,25 @@ class CreateButtleViewController: UIViewController {
         stageSelector?.selectedSegmentIndex = 0
         isLoseSelector?.selectedSegmentIndex = 0
         isTimeUpSelector?.selectedSegmentIndex = 0
+        udemaeLabel.text = "\(battle.udemae.rank)\(battle.udemae.exp)"
+        operationLabel.text = "+"
         rankExpChangeTextField.text = ""
         killsTextField.text = ""
         deathTextField.text = ""
-        udemaeLabel.text = "\(battle.udemae.rank)\(battle.udemae.exp)"
-        setOperationLabel()
+    }
+
+    private func nextBattle() {
+        battle.udemae = battle.udemaeAfter
+        battle.map = nil
+        battle.udemaeAfter = nil
+        battle.isWin = nil
+        battle.kill = nil
+        battle.death = nil
+        battle.knockOut = nil
     }
 
     private func setOperationLabel() {
-        if isLoseSelector.selectedSegmentIndex == 0 {
+        if isLoseSelector?.selectedSegmentIndex == 0 {
             operationLabel.text = "+"
         } else {
             operationLabel.text = "-"
