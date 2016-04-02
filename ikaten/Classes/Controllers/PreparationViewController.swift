@@ -20,7 +20,7 @@ class PreparationViewController: UITableViewController, UIPickerViewDataSource, 
     var stages: Stages!
     var rules: Rules!
 
-    private var exps: Array<Int> = []
+    private var exps: Array<Int> = ([Int])(Udemae.expMin..<Udemae.expMax)
     private var selectedRank = Udemae.ranks.first!
     private var selectedExp: Int!
 
@@ -50,8 +50,6 @@ class PreparationViewController: UITableViewController, UIPickerViewDataSource, 
             }) { () -> Void in
         }
 
-
-        setExps()
         selectedExp = exps.first!
 
         let pickerView = UIPickerView()
@@ -114,12 +112,6 @@ class PreparationViewController: UITableViewController, UIPickerViewDataSource, 
             selectedExp = exps[row]
         }
         rankTextField.text = udemaeToString()
-    }
-
-    private func setExps() {
-        for i in Udemae.expMin ..< Udemae.expMax {
-            exps.append(i)
-        }
     }
 
     private func params() -> Dictionary<String, AnyObject> {
