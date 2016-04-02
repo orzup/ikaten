@@ -27,15 +27,11 @@ class CreateButtleViewController: UIViewController {
     }
 
     @IBAction func valueChangedIsLoseSelector(sender: AnyObject) {
-        if isLoseSelector.selectedSegmentIndex == 0 {
-            operationLabel.text = "+"
-        } else {
-            operationLabel.text = "-"
-        }
+        setOperationLabel()
     }
 
     override func viewDidLoad() {
-        udemaeLabel.text = "\(battle.udemae.rank)\(battle.udemae.exp)"
+        reset()
     }
 
     override func viewDidLayoutSubviews() {
@@ -64,9 +60,40 @@ class CreateButtleViewController: UIViewController {
 
         StatInk().createButtle(battle,
             onSuccess: { (response) -> Void in
+                self.nextBattle()
+                self.reset()
                 SVProgressHUD.showSuccessWithStatus("キロク OK!")
             }, onFailure: { (errorResponse) -> Void in
                 SVProgressHUD.showErrorWithStatus("失敗")
         })
+    }
+
+    private func reset() {
+        stageSelector?.selectedSegmentIndex = 0
+        isLoseSelector?.selectedSegmentIndex = 0
+        isTimeUpSelector?.selectedSegmentIndex = 0
+        udemaeLabel.text = "\(battle.udemae.rank)\(battle.udemae.exp)"
+        operationLabel.text = "+"
+        rankExpChangeTextField.text = ""
+        killsTextField.text = ""
+        deathTextField.text = ""
+    }
+
+    private func nextBattle() {
+        battle.udemae = battle.udemaeAfter
+        battle.map = nil
+        battle.udemaeAfter = nil
+        battle.isWin = nil
+        battle.kill = nil
+        battle.death = nil
+        battle.knockOut = nil
+    }
+
+    private func setOperationLabel() {
+        if isLoseSelector?.selectedSegmentIndex == 0 {
+            operationLabel.text = "+"
+        } else {
+            operationLabel.text = "-"
+        }
     }
 }

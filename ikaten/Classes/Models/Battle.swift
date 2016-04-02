@@ -2,7 +2,7 @@ class Battle {
     let lobby: Lobby
     let rule: Rule
     let weapon: Weapon
-    let udemae: Udemae
+    var udemae: Udemae
     var map: Stage!
     var udemaeAfter: Udemae!
     var isWin: Bool!
@@ -27,7 +27,6 @@ class Battle {
         knockOut     = data["knock_out"] as! Bool
         udemaeAfter  = udemae.after(isWin, rankExpChange: data["rankExpChange"] as! Int)
     }
-    
 
     func decode() -> Dictionary<String, AnyObject> {
         return [
