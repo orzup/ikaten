@@ -31,7 +31,7 @@ class CreateButtleViewController: UIViewController {
     }
 
     override func viewDidLoad() {
-        reseat()
+        reset()
     }
 
     override func viewDidLayoutSubviews() {
@@ -61,14 +61,14 @@ class CreateButtleViewController: UIViewController {
         StatInk().createButtle(battle,
             onSuccess: { (response) -> Void in
                 self.battle.nextBattle()
-                self.reseat()
+                self.reset()
                 SVProgressHUD.showSuccessWithStatus("キロク OK!")
             }, onFailure: { (errorResponse) -> Void in
                 SVProgressHUD.showErrorWithStatus("失敗")
         })
     }
 
-    private func reseat() {
+    private func reset() {
         stageSelector?.selectedSegmentIndex = 0
         isLoseSelector?.selectedSegmentIndex = 0
         isTimeUpSelector?.selectedSegmentIndex = 0
