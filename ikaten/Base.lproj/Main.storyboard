@@ -707,42 +707,16 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rTe-OQ-EXE">
                                         <rect key="frame" x="0.0" y="184" width="756" height="60"/>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vnh-Oc-Uos">
-                                        <rect key="frame" x="0.0" y="254" width="756" height="671"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vnh-Oc-Uos">
+                                        <rect key="frame" x="0.0" y="294" width="756" height="671"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BaI-0Q-DOD">
-                                                <rect key="frame" x="0.0" y="636" width="373" height="35"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="g51-9z-aF6">
+                                                <rect key="frame" x="0.0" y="0.0" width="373" height="671"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="S+99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeh-HW-nu3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="35"/>
-                                                        <fontDescription key="fontDescription" name="ProjectPaintball" family="Project Paintball" pointSize="30"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phb-gJ-YxI">
-                                                        <rect key="frame" x="76" y="0.0" width="12" height="35"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="12" id="ZFY-Zl-giv"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="ProjectPaintball" family="Project Paintball" pointSize="20"/>
-                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gm8-Qh-AFz">
-                                                        <rect key="frame" x="93" y="0.0" width="280" height="35"/>
-                                                        <color key="textColor" red="0.24313725529999999" green="0.270588249" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="deviceRGB"/>
-                                                        <fontDescription key="fontDescription" name="ProjectPaintball" family="Project Paintball" pointSize="30"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="g51-9z-aF6">
-                                                <rect key="frame" x="383" y="0.0" width="373" height="671"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2we-FZ-gRt">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2we-FZ-gRt">
                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="333"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="kill" translatesAutoresizingMaskIntoConstraints="NO" id="Hs6-Pa-2J3">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="kill" translatesAutoresizingMaskIntoConstraints="NO" id="Hs6-Pa-2J3">
                                                                 <rect key="frame" x="5" y="0.0" width="333" height="333"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="40" id="Cvw-pJ-8ne"/>
@@ -758,7 +732,7 @@
                                                                     </mask>
                                                                 </variation>
                                                             </imageView>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ldW-Lr-inF">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ldW-Lr-inF">
                                                                 <rect key="frame" x="343" y="0.0" width="30" height="333"/>
                                                                 <color key="textColor" red="0.24313725529999999" green="0.270588249" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="deviceRGB"/>
                                                                 <fontDescription key="fontDescription" name="ProjectPaintball" family="Project Paintball" pointSize="30"/>
@@ -780,13 +754,13 @@
                                                             </mask>
                                                         </variation>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="w9Z-ix-2AQ">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="w9Z-ix-2AQ">
                                                         <rect key="frame" x="0.0" y="338" width="373" height="333"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="death" translatesAutoresizingMaskIntoConstraints="NO" id="CnY-Vg-sEG">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="death" translatesAutoresizingMaskIntoConstraints="NO" id="CnY-Vg-sEG">
                                                                 <rect key="frame" x="0.0" y="0.0" width="333" height="333"/>
                                                             </imageView>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hqm-rC-KYx">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hqm-rC-KYx">
                                                                 <rect key="frame" x="338" y="0.0" width="35" height="333"/>
                                                                 <color key="textColor" red="0.24313725529999999" green="0.270588249" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="deviceRGB"/>
                                                                 <fontDescription key="fontDescription" name="ProjectPaintball" family="Project Paintball" pointSize="30"/>
@@ -811,6 +785,32 @@
                                                         <include reference="Gdc-1Z-t5X"/>
                                                     </mask>
                                                 </variation>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BaI-0Q-DOD">
+                                                <rect key="frame" x="383" y="0.0" width="373" height="35"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="S+99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeh-HW-nu3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="35"/>
+                                                        <fontDescription key="fontDescription" name="ProjectPaintball" family="Project Paintball" pointSize="30"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phb-gJ-YxI">
+                                                        <rect key="frame" x="76" y="0.0" width="12" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="12" id="ZFY-Zl-giv"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="ProjectPaintball" family="Project Paintball" pointSize="20"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gm8-Qh-AFz">
+                                                        <rect key="frame" x="93" y="0.0" width="280" height="35"/>
+                                                        <color key="textColor" red="0.24313725529999999" green="0.270588249" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="deviceRGB"/>
+                                                        <fontDescription key="fontDescription" name="ProjectPaintball" family="Project Paintball" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                </subviews>
                                             </stackView>
                                         </subviews>
                                         <constraints>
