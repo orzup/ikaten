@@ -68,6 +68,8 @@
 		C4B56D661C9EC274003FC21A /* RuleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B56D651C9EC274003FC21A /* RuleSpec.swift */; };
 		C4B56D681C9EC2C2003FC21A /* StageSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B56D671C9EC2C2003FC21A /* StageSpec.swift */; };
 		C4B56D6A1C9EC2DC003FC21A /* StagesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B56D691C9EC2DC003FC21A /* StagesSpec.swift */; };
+		C4E1F0101CAFA8A800680FE5 /* PreparationForGachiMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E1F00F1CAFA8A800680FE5 /* PreparationForGachiMatchViewController.swift */; };
+		C4E1F0111CAFA8A800680FE5 /* PreparationForGachiMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E1F00F1CAFA8A800680FE5 /* PreparationForGachiMatchViewController.swift */; };
 		C4FC6A881C8B11C70023A85A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A871C8B11C70023A85A /* Router.swift */; };
 		C4FC6A8A1C8B18D40023A85A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A871C8B11C70023A85A /* Router.swift */; };
 		C4FC6A8C1C8B19BD0023A85A /* StatInk.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC6A8B1C8B19BD0023A85A /* StatInk.swift */; };
@@ -147,6 +149,7 @@
 		C4B56D651C9EC274003FC21A /* RuleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuleSpec.swift; path = Models/RuleSpec.swift; sourceTree = "<group>"; };
 		C4B56D671C9EC2C2003FC21A /* StageSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StageSpec.swift; path = Models/StageSpec.swift; sourceTree = "<group>"; };
 		C4B56D691C9EC2DC003FC21A /* StagesSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StagesSpec.swift; path = Models/StagesSpec.swift; sourceTree = "<group>"; };
+		C4E1F00F1CAFA8A800680FE5 /* PreparationForGachiMatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreparationForGachiMatchViewController.swift; path = Classes/Controllers/PreparationForGachiMatchViewController.swift; sourceTree = "<group>"; };
 		C4FC6A871C8B11C70023A85A /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Classes/Libraries/Router.swift; sourceTree = "<group>"; };
 		C4FC6A8B1C8B19BD0023A85A /* StatInk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatInk.swift; path = Classes/Libraries/StatInk.swift; sourceTree = "<group>"; };
 		C4FC6A8E1C8B1F370023A85A /* StatInkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatInkTests.swift; path = Libraries/StatInkTests.swift; sourceTree = "<group>"; };
@@ -335,6 +338,7 @@
 				466595DD1C8B357500258E42 /* SessionViewController.swift */,
 				C4511EF81C9F131C00052EDA /* LobbyViewController.swift */,
 				C40248EB1C8B3AA1007A3EF9 /* PreparationViewController.swift */,
+				C4E1F00F1CAFA8A800680FE5 /* PreparationForGachiMatchViewController.swift */,
 				C40248F11C8B5B01007A3EF9 /* CreateButtleViewController.swift */,
 				461A06731C9EC7C000C15FF2 /* SelectViewController.swift */,
 			);
@@ -627,6 +631,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4511EFB1C9F18A100052EDA /* Lobby.swift in Sources */,
+				C4E1F0101CAFA8A800680FE5 /* PreparationForGachiMatchViewController.swift in Sources */,
 				C4FC6A881C8B11C70023A85A /* Router.swift in Sources */,
 				C45F42AF1C9E8081005213B5 /* Rule.swift in Sources */,
 				4600F66D1CAAC11F0054840D /* Rules.swift in Sources */,
@@ -673,6 +678,7 @@
 				C4511EFC1C9F18A100052EDA /* Lobby.swift in Sources */,
 				C4B552221CA6E683004F4B25 /* IkatenSegmentedControl.swift in Sources */,
 				466595DF1C8B357500258E42 /* SessionViewController.swift in Sources */,
+				C4E1F0111CAFA8A800680FE5 /* PreparationForGachiMatchViewController.swift in Sources */,
 				C4511EFE1C9F2C6F00052EDA /* LobbySpec.swift in Sources */,
 				46280ABC1CA6936E002BB090 /* DataCollection.swift in Sources */,
 				C4B56D681C9EC2C2003FC21A /* StageSpec.swift in Sources */,
